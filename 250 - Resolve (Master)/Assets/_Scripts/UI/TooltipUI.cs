@@ -47,7 +47,7 @@ public class TooltipUI : MonoBehaviour {
         }
         else if (targetStat == Stats.Exposure)
         {
-            activeValue = player.exposure;
+            activeValue = player.currentExposure;
         }
         else if (targetStat == Stats.Fatigue)
         {

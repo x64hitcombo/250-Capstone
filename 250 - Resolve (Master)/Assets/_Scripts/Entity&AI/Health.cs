@@ -14,8 +14,8 @@ public class Health : MonoBehaviour
     ///     - Death Particle System
     /// </summary>
 
-    public int maxHealth;
-    public int curHealth;
+    public float maxHealth;
+    public float curHealth;
     FireDamage fire;
 
     public bool canTakeDamage = true;
@@ -58,7 +58,7 @@ public class Health : MonoBehaviour
     }
 
     //Applies damage to the health variable
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         if (canTakeDamage)
         {

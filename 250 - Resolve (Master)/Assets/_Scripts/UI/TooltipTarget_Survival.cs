@@ -20,7 +20,7 @@ public class TooltipTarget_Survival : TooltipTarget, IPointerEnterHandler, IPoin
 
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public new void OnPointerEnter(PointerEventData eventData)
     {
         if (activeStat == SurvStats.Thirst)
         {
@@ -45,7 +45,7 @@ public class TooltipTarget_Survival : TooltipTarget, IPointerEnterHandler, IPoin
         tip.ShowToolTip();
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public new void OnPointerExit(PointerEventData eventData)
     {
         tip.targetStat = TooltipUI.Stats.Null;
         tip.HideToolTip();

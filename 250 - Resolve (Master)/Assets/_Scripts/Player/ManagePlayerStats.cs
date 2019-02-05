@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class ManagePlayerStats : MonoBehaviour
 {
     public float maxValue = 100;
+    public float hpRefill;
+
     [Header("Hunger")]
     public float hungerDrain = 0.5f; //use fractions (1 will be max)
     public Image hungerBar;
@@ -15,20 +17,19 @@ public class ManagePlayerStats : MonoBehaviour
     [Header("Fatigue")]
     public float fatigueDrain = .2f;
     public Image fatigueBar;
-
+    [Header("Exposure")]
     public float exposureRating = 0;
-    public Slider exposureBar;
+    public Slider exposureSlider;
 
-    public float hpRefill;
-    public Image healthBarLeft;
-    public Image healthBarRight;
-
+    //public Image healthBarLeft;
+    //public Image healthBarRight;
+    [Header("Stamina")]
     public float staminaRefill;
     public Image staminaBar;
     
 
     //[HideInInspector]
-    public float currentHealth, currentHunger, currentThirst, exposure, currentFatigue, currentStamina;
+    public float currentHunger, currentThirst, currentExposure, currentFatigue, currentStamina;
 
     public TemperatureManager tempManager;
 
@@ -38,17 +39,19 @@ public class ManagePlayerStats : MonoBehaviour
         tempManager = this.gameObject.GetComponent<TemperatureManager>();
         currentHunger = maxValue;
         currentThirst = maxValue;
-        currentHealth = maxValue;
+        //currentHealth = maxValue;
         currentFatigue = maxValue;
         currentStamina = maxValue;
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         ManageDecreaseOverTime();
         HandleBarDisplays();
-        exposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
+        this.gameObject.GetComponent<Health>().curHealth += Time.deltaTime * hpRefill;
+        currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
 	}
 
     public void ManageDecreaseOverTime()
@@ -63,7 +66,7 @@ public class ManagePlayerStats : MonoBehaviour
         thirstBar.fillAmount = currentThirst / maxValue;
         hungerBar.fillAmount = currentHunger / maxValue;
         fatigueBar.fillAmount = currentFatigue / maxValue;
-        exposureBar.value = exposure / maxValue;
+        exposureSlider.value = currentExposure / maxValue;
         //healthBarLeft.fillAmount = currentHealth / maxValue;
         //healthBarRight.fillAmount = currentHealth / maxValue;
     }

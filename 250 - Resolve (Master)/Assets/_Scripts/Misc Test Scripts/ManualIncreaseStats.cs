@@ -19,11 +19,11 @@ public class ManualIncreaseStats : MonoBehaviour
     {
 		if (Input.GetKey(KeyCode.RightArrow))
         {
-            playerStats.currentHealth += 1;
+            //playerStats.currentHealth += 1;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            playerStats.currentHealth -= 1;
+            //playerStats.currentHealth -= 1;
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
