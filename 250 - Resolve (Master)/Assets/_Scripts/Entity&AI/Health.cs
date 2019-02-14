@@ -46,6 +46,11 @@ public class Health : MonoBehaviour
         {
             healthTxt.text = curHealth.ToString();
         }
+
+        if (curHealth > maxHealth)
+        {
+            curHealth = maxHealth;
+        }
     }
 
     //Detects contact with hurtbox

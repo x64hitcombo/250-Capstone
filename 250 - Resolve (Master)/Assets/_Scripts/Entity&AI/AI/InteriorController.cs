@@ -7,7 +7,7 @@ public class InteriorController : MonoBehaviour
     public bool inside;
 
     public GameObject[] floors; //Floors in order from first to last
-    public GameObject[] weatherOverlays;
+    //public GameObject[] weatherOverlays;
     public GameObject[] wallsToDisable;
 
     GameObject[] worldLights;
@@ -27,10 +27,10 @@ public class InteriorController : MonoBehaviour
             {
                 obj.SetActive(false);
             }
-            foreach (GameObject obj in weatherOverlays)
-            {
-                obj.SetActive(false);
-            }
+            //foreach (GameObject obj in weatherOverlays)
+            //{
+            //    obj.SetActive(false);
+            //}
             foreach (GameObject obj in wallsToDisable)
             {
                 obj.SetActive(false);
@@ -46,10 +46,10 @@ public class InteriorController : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-            foreach (GameObject obj in weatherOverlays)
-            {
-                obj.SetActive(true);
-            }
+            //foreach (GameObject obj in weatherOverlays)
+            //{
+            //    obj.SetActive(true);
+            //}
             foreach (GameObject obj in wallsToDisable)
             {
                 obj.SetActive(true);
