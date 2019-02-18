@@ -18,20 +18,20 @@ public class WeatherSetter : MonoBehaviour
     public double timeTryChange = 60;
     private string previousWeather;
     private bool resetTimer;
-    private GameTimer gameTimer;
+    private MainTimeScript gameTimer;
 
 	// Use this for initialization
 	void Start ()
     {
         previousWeather = weather;
-        gameTimer = GameObject.FindGameObjectWithTag("Player").GetComponent<GameTimer>();
+        gameTimer = GameObject.FindGameObjectWithTag("TimeController").GetComponent<MainTimeScript>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         DetermineWeather();
-        currentTime = (gameTimer.hour * 60) + gameTimer.minute;
+        currentTime = (gameTimer._fCurrentHour * 60) + gameTimer._fCurrentMinute;
 	}
 
     public void DetermineWeather()

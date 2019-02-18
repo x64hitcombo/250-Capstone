@@ -5,6 +5,7 @@ using UnityEngine;
 public class HandleCamera : MonoBehaviour
 {
     public GameObject playerCamera;
+    public Transform cameraLookPosition;
     public Transform minimumHeightPoint;
     public Transform maximumHeightPoint;
 
@@ -34,6 +35,7 @@ public class HandleCamera : MonoBehaviour
         CameraHandler();
         AdjustCameraOnHeight();
         CameraViewPlayer();
+        playerCamera.transform.LookAt(cameraLookPosition);
     }
 
     public void SetupCamera()

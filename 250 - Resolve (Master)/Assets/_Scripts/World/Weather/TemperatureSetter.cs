@@ -10,20 +10,20 @@ public class TemperatureSetter : MonoBehaviour
     public int hourDayStart = 8;
     public int hourNightStart = 20;
 
-    private GameTimer gameTimer;
+    private MainTimeScript gameTimer;
 
     private void Start()
     {
-        gameTimer = GameObject.FindGameObjectWithTag("Player").GetComponent<GameTimer>();
+        gameTimer = GameObject.FindGameObjectWithTag("TimeController").GetComponent<MainTimeScript>();
     }
 
     private void Update()
     {
-        if (gameTimer.hour == hourNightStart)
+        if (gameTimer._fCurrentHour == hourNightStart)
         {
             baseTemperature = nightBaseTemperature;
         }
-        else if (gameTimer.hour == hourDayStart)
+        else if (gameTimer._fCurrentHour == hourDayStart)
         {
             baseTemperature = dayBaseTemperature;
         }

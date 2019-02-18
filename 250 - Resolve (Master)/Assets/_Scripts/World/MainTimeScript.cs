@@ -168,6 +168,8 @@ public class MainTimeScript : MonoBehaviour
     public Color Night;
     public Color Sunrise;
     public Color Day;
+
+    public Text clockText;
     
     /// Unity function - See Unity documentation
     void Start()
@@ -204,6 +206,8 @@ public class MainTimeScript : MonoBehaviour
             _fCurrentTimeOfDay = 0.0f;
             _iAmountOfDaysPlayed += 1;
         }
+
+        CalculateTime();
     }
 
     /// This is used inside Unitys Update() to update our SUN and MOON (if you have the MOON turned on). 
@@ -269,5 +273,58 @@ public class MainTimeScript : MonoBehaviour
     {
         RenderSettings.ambientLight = Color.Lerp(Sunset, Night, Time.timeScale);
         lSun.intensity = 0f;
+    }
+
+    public void CalculateTime()
+    {
+        int hour = (int)_fCurrentHour;
+        int minute = (int)_fCurrentMinute;
+
+        //How to display Time
+        if (hour >= 10 && minute >= 10)
+        {
+            if (minute >= 10)
+            {
+                clockText.text = string.Format("{0}:{1}", hour, minute);
+            }
+            else if (minute < 10 && minute > 0)
+            {
+                clockText.text = string.Format("{0}:0{1}", hour, minute);
+            }
+            else if (minute == 0)
+            {
+                clockText.text = string.Format("{0}:00", hour);
+            }
+        }
+        else if (hour <= 10 && hour > 0)
+        {
+            if (minute >= 10)
+            {
+                clockText.text = string.Format("0{0}:{1}", hour, minute);
+            }
+            else if (minute < 10 && minute > 0)
+            {
+                clockText.text = string.Format("0{0}:0{1}", hour, minute);
+            }
+            else if (minute == 0)
+            {
+                clockText.text = string.Format("0{0}:00", hour);
+            }
+        }
+        else if (hour == 0)
+        {
+            if (minute >= 10)
+            {
+                clockText.text = string.Format("00:{1}", hour, minute);
+            }
+            else if (minute < 10 && minute > 0)
+            {
+                clockText.text = string.Format("00:0{1}", hour, minute);
+            }
+            else if (minute == 0)
+            {
+                clockText.text = string.Format("00:00");
+            }
+        }
     }
 }
