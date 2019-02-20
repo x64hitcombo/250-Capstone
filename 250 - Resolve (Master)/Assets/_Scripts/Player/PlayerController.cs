@@ -5,6 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
     float movementSpeed;        //Speed for movement
+    public float staminaLossRate;
     public float baseMovementSpeed;
     public float climbingSpeed;
     public bool movement = true;
@@ -20,6 +21,9 @@ public class PlayerController : MonoBehaviour {
 
     public Transform wayPoint;
 
+    private bool canClimb;
+    private Transform climbLookPosition;
+
     void Start()
     {
         rbody = GetComponent<Rigidbody>();
@@ -28,10 +32,31 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
+        DetermineClimb();
+        MovementControls();
+    }
+
+
+    void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            movementSpeed = baseMovementSpeed * 2;
+            ConsumeStamina();
+        }
+        else
+        {
+            movementSpeed = baseMovementSpeed;
+        }
+    }
+
+    private void MovementControls()
+    {
         if (movement == true)
         {
             if (climbing == false)
             {
+                GetComponent<Rigidbody>().useGravity = true;
                 #region Face Cursor
                 Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
                 Plane groundTerrain = new Plane(Vector3.up, Vector3.zero);
@@ -46,6 +71,7 @@ public class PlayerController : MonoBehaviour {
                 }
                 #endregion
 
+                
                 #region Movement
                 Vector3 moveDirection = Vector3.zero;
                 if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -79,6 +105,9 @@ public class PlayerController : MonoBehaviour {
             else if (climbing == true)
             {
                 #region Climbing
+                GetComponent<Rigidbody>().useGravity = false;
+                ConsumeStamina();
+
                 if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                 {
                     transform.position += Vector3.left * climbingSpeed * Time.deltaTime;
@@ -107,19 +136,6 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-
-    void FixedUpdate()
-    {
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            movementSpeed = baseMovementSpeed * 2;
-        }
-        else
-        {
-            movementSpeed = baseMovementSpeed;
-        }
-    }
-
     #region AI Movement Control
     public void GotoWaypoint()
     {
@@ -144,5 +160,42 @@ public class PlayerController : MonoBehaviour {
     }
 
     #endregion
+
+    private void DetermineClimb()
+    {
+        if (climbing && Input.GetKeyDown(KeyCode.E))
+        {
+            climbing = false;
+        }
+        else if (canClimb && Input.GetKeyDown(KeyCode.E))
+        {
+            climbing = true;
+        }
+    }
+
+    private void ConsumeStamina()
+    {
+        ManagePlayerStats mps = GetComponent<ManagePlayerStats>();
+        mps.currentStamina -= Time.deltaTime * staminaLossRate;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "WallClimbZone")
+        {
+            canClimb = true;
+            climbLookPosition = other.gameObject.transform;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "WallClimbZone")
+        {
+            canClimb = false;
+            climbing = false;
+            climbLookPosition = null;
+        }
+    }
 
 }

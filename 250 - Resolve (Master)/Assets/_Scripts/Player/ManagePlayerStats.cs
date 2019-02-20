@@ -57,6 +57,7 @@ public class ManagePlayerStats : MonoBehaviour
     void Update ()
     {
         ManageDecreaseOverTime();
+        ManageIncreaseOverTime();
         HandleBarDisplays();
         currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
 	}
@@ -105,6 +106,39 @@ public class ManagePlayerStats : MonoBehaviour
         {
             fDebuff2 = true;
         }
+    }
+
+    public void ManageIncreaseOverTime()
+    {
+        //Handle Stamina refill when below 100 and make sure it stays within 0-100
+        if (currentStamina < maxValue)
+        {
+            currentStamina += Time.deltaTime * staminaRefill;
+        }
+
+        if (currentStamina < 0)
+        {
+            currentStamina = 0;
+        }
+        else if (currentStamina > maxValue)
+        {
+            currentStamina = maxValue;
+        }
+
+        //Change Color based on usability
+        if (currentStamina == 0)
+        {
+            //wait till 20% full - turn bar red
+            if (currentStamina <= maxValue / 5)
+            {
+                staminaBar.color = Color.red;
+            }
+        }
+        else if (currentStamina > maxValue / 5)
+        {
+            staminaBar.color = Color.green;
+        }
+
     }
 
     public void HandleDebuffs()
@@ -156,6 +190,7 @@ public class ManagePlayerStats : MonoBehaviour
         hungerBar.fillAmount = currentHunger / maxValue;
         fatigueBar.fillAmount = currentFatigue / maxValue;
         exposureSlider.value = currentExposure / maxValue;
+        staminaBar.fillAmount = currentStamina / maxValue;
         //healthBarLeft.fillAmount = currentHealth / maxValue;
         //healthBarRight.fillAmount = currentHealth / maxValue;
     }
