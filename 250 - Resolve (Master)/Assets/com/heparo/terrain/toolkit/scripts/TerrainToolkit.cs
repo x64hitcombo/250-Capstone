@@ -4,7 +4,7 @@
 /* This script is part of the TerrainToolkit2017 asset from the Unity Asset Store 
  * Please refer to : https://unity3d.com/asset-store
  *
- * Author : HervÈ PARONNAUD 
+ * Author : Herv√© PARONNAUD 
  * Contact / Support : contact@heparo.com
  *
  * Asset Store Terms of Service and EULA
@@ -19,7 +19,7 @@
  * The Unity Terrain Toolkit
  * Unity Summer of Code 2009
  * Terrain Toolkit for Unity (Version 1.0.2)
- * All code by S·ndor Mold·n, except where noted.
+ * All code by S√°ndor Mold√°n, except where noted.
  * Contains an implementation of Perlin noise by Daniel Greenheck.
  * Contains an implementation of the Diamond-Square algorithm by Jim George.
  *
@@ -30,7 +30,7 @@
  * The present version of the Unity Terrain Toolkit is based on :
  * 
  * The Unity Terrain Toolkit V1.0.2 from the Unity Summer of Code 2009
- * All code by S·ndor Mold·n, except where noted.
+ * All code by S√°ndor Mold√°n, except where noted.
  * Contains an implementation of Perlin noise by Daniel Greenheck.
  * Contains an implementation of the Diamond-Square algorithm by Jim George.
  * 
@@ -815,7 +815,14 @@ public class TerrainToolkit : MonoBehaviour {
 									blendAmount = 1 - ((tAverage - maxSlopeBlendMin) / blendRange); // maxSlopeBlendMin = 1; maxSlopeBlendMax = 0
 								}
 							}
-							float m = tMin / 2 * blendAmount;
+							
+							// From SDudzic on version 20180515170000 in user reviews
+							// In fastErosion method this line seems to be bugged: 
+							// float m = tMin / 2 * blendAmount; 
+							// Thermal erosion is producing artifacts, when I have changed this to: 
+							float m = tAverage / 2 * blendAmount; 
+							// It started generating smooth terrain, no sharp edges. I also cannot find any reason to use tMin. If any surrounding point is higher erosion will never happen.
+							
 							float pointValue = heightMap[Tx + xIndex + xShift, Ty + yIndex + yShift];
 							if( p_erosionMode==ErosionMode.Filter || (p_erosionMode==ErosionMode.Brush && useDifferenceMaps) ){
 								// Pass to difference map...
