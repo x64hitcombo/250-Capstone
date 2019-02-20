@@ -45,7 +45,7 @@ public class ColorSwapAll : MonoBehaviour
     {
         foreach (Image i in FindObjectsOfType<Image>())
         {
-            if (i.tag == "UI")
+            if (i.tag != "UI_noSwap")
             {
                 i.color = col;
             }
@@ -56,7 +56,7 @@ public class ColorSwapAll : MonoBehaviour
     {
         foreach (Text t in FindObjectsOfType<Text>())
         {
-            if (t.tag == "UI")
+            if (t.tag != "UI_noSwap")
             {
                 t.color = col;
             }

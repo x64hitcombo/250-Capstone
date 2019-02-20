@@ -184,6 +184,28 @@ public class ManagePlayerStats : MonoBehaviour
         }
     }
 
+    public void HandleReplinishment (Item item)
+    {
+        for (int i = 0; i < item.itemAttributes.Count; i++)
+        {
+            if (item.itemAttributes[i].attributeName == "Hunger")
+            {
+                if ((currentHunger + item.itemAttributes[i].attributeValue) > maxValue)
+                    currentHunger = maxValue;
+                else
+                    currentHunger += item.itemAttributes[i].attributeValue;
+            }
+
+            if (item.itemAttributes[i].attributeName == "Thirst")
+            {
+                if ((currentThirst + item.itemAttributes[i].attributeValue) > maxValue)
+                    currentThirst = maxValue;
+                else
+                    currentThirst += item.itemAttributes[i].attributeValue;
+            }
+        }
+    }
+
     public void HandleBarDisplays()
     {
         thirstBar.fillAmount = currentThirst / maxValue;
@@ -193,6 +215,8 @@ public class ManagePlayerStats : MonoBehaviour
         staminaBar.fillAmount = currentStamina / maxValue;
         //healthBarLeft.fillAmount = currentHealth / maxValue;
         //healthBarRight.fillAmount = currentHealth / maxValue;
+
+        //HP management has moved to the Health script
     }
 
     
