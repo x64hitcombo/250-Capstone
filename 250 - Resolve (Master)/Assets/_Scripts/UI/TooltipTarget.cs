@@ -23,14 +23,14 @@ public class TooltipTarget : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (tip.tipIcon != null)
+        if (tip.sprite.GetComponent<Image>().sprite)
         {
-            tip.tipIcon.sprite = newTipIcon;
-            tip.tipValue.text = null;
+            tip.sprite.GetComponent<Image>().sprite = newTipIcon;
+            tip.tipValue.text = "";
         }
         else
         {
-            tip.tipIcon.sprite = null;
+            tip.sprite.GetComponent<Image>().sprite = null;
             tip.tipValue.text = newTipValue;
         }
         tip.tipTitle.text = newTipTitle;

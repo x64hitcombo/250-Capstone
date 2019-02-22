@@ -7,12 +7,13 @@ public class TooltipUI : MonoBehaviour {
 
     private ManagePlayerStats player;
 
-    public Image tipIcon;
+    public GameObject sprite;
+    //public Sprite tipIcon;
     public Text tipValue;
     public Text tipTitle;
     public Text tipDesc;
 
-    public float activeValue = 0;
+    public string activeValue;
 
     public enum Stats
     {
@@ -30,7 +31,7 @@ public class TooltipUI : MonoBehaviour {
     {
         HideToolTip();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<ManagePlayerStats>();
-
+        //tipIcon = sprite.GetComponent<SpriteRenderer>().sprite;
     }
 
     private void Update()
@@ -39,26 +40,26 @@ public class TooltipUI : MonoBehaviour {
 
         if (targetStat == Stats.Thirst)
         {
-            activeValue = player.currentThirst;
+            activeValue = player.currentThirst.ToString();
         }
         else if (targetStat == Stats.Hunger)
         {
-            activeValue = player.currentHunger;
+            activeValue = player.currentHunger.ToString();
         }
         else if (targetStat == Stats.Exposure)
         {
-            activeValue = player.currentExposure;
+            activeValue = player.currentExposure.ToString();
         }
         else if (targetStat == Stats.Fatigue)
         {
-            activeValue = player.currentFatigue;
+            activeValue = player.currentFatigue.ToString();
         }
         else
         {
-            activeValue = 0;
+            activeValue = " ";
         }
 
-        tipValue.text = activeValue.ToString();
+        tipValue.text = activeValue;
     }
 
     public void HandleTransform()
