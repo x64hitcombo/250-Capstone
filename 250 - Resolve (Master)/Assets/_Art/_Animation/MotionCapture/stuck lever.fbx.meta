@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 413a029cde0b0224896ce844f35af54b
+guid: 0584f8ccbda3b864b83f6420be8d726d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -47,7 +47,7 @@ ModelImporter:
     400038: Skeleton1_Spine
     400040: Skeleton1_Spine1
     400042: //RootNode
-    7400000: 'sleeping '
+    7400000: 'stuck lever '
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -65,9 +65,9 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'sleeping ' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Skeleton1_Spine1' has translation animation
+    animationImportWarnings: "\nClip 'stuck lever ' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Skeleton1_Spine1' has translation animation
       that will be discarded.\n\t'Skeleton1_Head' has translation animation that will
       be discarded.\n\t'Skeleton1_LeftHand' has translation animation that will be
       discarded.\n\t'Skeleton1_RightHand' has translation animation that will be discarded.\n\t'Skeleton1_LeftFoot'
@@ -84,35 +84,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: 'sleeping '
-      takeName: 'sleeping '
-      firstFrame: 29
-      lastFrame: 301
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -321,115 +293,115 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: sleeping(Clone)
+    - name: stuck lever(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_Hips
-      parentName: sleeping(Clone)
-      position: {x: -0.045131095, y: 0.875529, z: 0.061608355}
-      rotation: {x: -0.00020769691, y: 0.055952404, z: 0.005984574, w: 0.99841547}
+      parentName: stuck lever(Clone)
+      position: {x: -0.0075406097, y: 0.87308073, z: 0.017650418}
+      rotation: {x: 0.0004419203, y: 0.02439547, z: 0.0018936741, w: 0.9997005}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_Spine
       parentName: Skeleton1_Hips
       position: {x: -0, y: 0.07584272, z: 0}
-      rotation: {x: -0.01729085, y: -0.0014834136, z: -0.005945831, w: 0.99983174}
+      rotation: {x: 0.0048557157, y: -0.0015578931, z: 0.0034161797, w: 0.99998116}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_Spine1
       parentName: Skeleton1_Spine
-      position: {x: 0.0000023953617, y: 0.19662498, z: -0.000002630055}
-      rotation: {x: -0.011947205, y: -0.00049508753, z: 0.0028639631, w: 0.9999244}
+      position: {x: -5.820766e-10, y: 0.19954078, z: -9.313226e-10}
+      rotation: {x: -0.03977653, y: -0.0005277119, z: -0.0052478164, w: 0.9991947}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_Neck
       parentName: Skeleton1_Spine1
       position: {x: -0, y: 0.19689848, z: 0.017899862}
-      rotation: {x: 0.12543319, y: -0.011033661, z: -0.002518817, w: 0.99203753}
+      rotation: {x: 0.12582037, y: -0.0024540836, z: 0.000692645, w: 0.9920498}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_Head
       parentName: Skeleton1_Neck
-      position: {x: -0.0000013820827, y: 0.13012123, z: -0.018589184}
-      rotation: {x: -0.019968163, y: -0.0096956855, z: 0.012169294, w: 0.99967957}
+      position: {x: -4.656613e-10, y: 0.13328658, z: -0.019040689}
+      rotation: {x: -0.008338573, y: -0.002055969, z: 0.004734221, w: 0.99995196}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftShoulder
       parentName: Skeleton1_Spine1
       position: {x: -0.03646166, y: 0.16998559, z: -0.0020262934}
-      rotation: {x: -0.008354061, y: -0.0576599, z: -0.12503985, w: 0.9904396}
+      rotation: {x: -0.016172672, y: -0.06773201, z: -0.16216265, w: 0.9843039}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftArm
       parentName: Skeleton1_LeftShoulder
       position: {x: -0.14034794, y: 0, z: 0}
-      rotation: {x: -0.014348271, y: 0.018713547, z: 0.18678434, w: 0.9821179}
+      rotation: {x: -0.019236779, y: 0.011761041, z: 0.18269372, w: 0.98291135}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftForeArm
       parentName: Skeleton1_LeftArm
       position: {x: -0.256289, y: 0, z: 0}
-      rotation: {x: 0.07611695, y: -0.0008309252, z: -0.004288682, w: 0.9970893}
+      rotation: {x: 0.058616105, y: -0.011880667, z: -0.012243988, w: 0.99813485}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftHand
       parentName: Skeleton1_LeftForeArm
-      position: {x: -0.24105878, y: 0.0000019073486, z: 0.0000014901161}
-      rotation: {x: 0.07610905, y: -0.003968897, z: 0.014570433, w: 0.9969852}
+      position: {x: -0.2408355, y: -0.00000071525574, z: 0}
+      rotation: {x: 0.058569875, y: 0.017966043, z: 0.03927251, w: 0.9973487}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightShoulder
       parentName: Skeleton1_Spine1
       position: {x: 0.037137058, y: 0.16998559, z: -0.0020262934}
-      rotation: {x: 0.017221408, y: -0.06226371, z: 0.11512119, w: 0.9912486}
+      rotation: {x: 0.011280401, y: -0.043839313, z: 0.13660857, w: 0.9895903}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightArm
       parentName: Skeleton1_RightShoulder
       position: {x: 0.14034794, y: 0, z: 0}
-      rotation: {x: 0.026842479, y: 0.05101092, z: -0.17068714, w: 0.9836378}
+      rotation: {x: 0.007306133, y: 0.06803736, z: -0.16606858, w: 0.9837372}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightForeArm
       parentName: Skeleton1_RightArm
       position: {x: 0.256289, y: 0, z: 0}
-      rotation: {x: -0.053248823, y: -0.00053121045, z: -0.00012682975, w: 0.9985811}
+      rotation: {x: -0.058738764, y: -0.003882205, z: -0.0015294738, w: 0.9982647}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightHand
       parentName: Skeleton1_RightForeArm
-      position: {x: 0.24299128, y: 0.0000026226044, z: 0.00000097882}
-      rotation: {x: -0.05324786, y: 0.0054506203, z: -0.0025403332, w: 0.99856323}
+      position: {x: 0.2414873, y: 0.00000023841858, z: -0.000000037252903}
+      rotation: {x: -0.058704752, y: -0.033579987, z: -0.007073984, w: 0.9976854}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftUpLeg
       parentName: Skeleton1_Hips
       position: {x: -0.09249113, y: 0, z: 0}
-      rotation: {x: 0.052177917, y: -0.013108178, z: -0.04955558, w: 0.99732137}
+      rotation: {x: 0.058233224, y: -0.030625448, z: -0.040287204, w: 0.9970195}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftLeg
       parentName: Skeleton1_LeftUpLeg
       position: {x: -0, y: -0.4040836, z: 0}
-      rotation: {x: 0.035092544, y: 0.0020343678, z: 0.05542182, w: 0.9978441}
+      rotation: {x: 0.026496783, y: 0.010538946, z: 0.05764804, w: 0.99792963}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftFoot
       parentName: Skeleton1_LeftLeg
-      position: {x: -0.0014172494, y: -0.3826741, z: -0.00092007965}
-      rotation: {x: -0.090364784, y: -0.07816395, z: -0.004284896, w: 0.9928274}
+      position: {x: -0.00055458397, y: -0.38186225, z: -0.0015484169}
+      rotation: {x: -0.088600256, y: -0.08161978, z: -0.009044298, w: 0.9926764}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_LeftToeBase
       parentName: Skeleton1_LeftFoot
       position: {x: -0, y: -0.060119227, z: 0.1387367}
-      rotation: {x: 0.0032689273, y: -0.0038035922, z: 0.0009931487, w: 0.99998695}
+      rotation: {x: 0.0068332395, y: -0.00627808, z: 0.0016565437, w: 0.9999556}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightUpLeg
       parentName: Skeleton1_Hips
       position: {x: 0.09249113, y: 0, z: 0}
-      rotation: {x: -0.011193021, y: 0.013899249, z: 0.018121574, w: 0.9996765}
+      rotation: {x: 0.0025492723, y: 0.011806656, z: 0.030551862, w: 0.9994602}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightLeg
       parentName: Skeleton1_RightUpLeg
       position: {x: -0, y: -0.4040836, z: 0}
-      rotation: {x: 0.120835945, y: 0.0042072427, z: -0.02694406, w: 0.9922978}
+      rotation: {x: 0.11391774, y: 0.015380839, z: -0.023845099, w: 0.9930849}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightFoot
       parentName: Skeleton1_RightLeg
-      position: {x: 0.00068950653, y: -0.3817593, z: 0.0017206147}
-      rotation: {x: -0.11012557, y: 0.032103166, z: 0.004198459, w: 0.9933902}
+      position: {x: 0.0011892021, y: -0.38082373, z: 0.0006188452}
+      rotation: {x: -0.1151159, y: -0.010223454, z: -0.0032746596, w: 0.9932941}
       scale: {x: 1, y: 1, z: 1}
     - name: Skeleton1_RightToeBase
       parentName: Skeleton1_RightFoot
       position: {x: -0, y: -0.060119227, z: 0.1387367}
-      rotation: {x: -0.00060266256, y: -0.0020252801, z: 0.0003448399, w: 0.99999774}
+      rotation: {x: -0.0023319125, y: 0.00017539784, z: 0.000089084264, w: 0.99999726}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
