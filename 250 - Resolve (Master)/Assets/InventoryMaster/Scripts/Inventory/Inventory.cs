@@ -621,6 +621,8 @@ public class Inventory : MonoBehaviour
                 itemOnObject.item.indexItemInList = ItemsInInventory.Count - 1;
                 if (inputManagerDatabase == null)
                     inputManagerDatabase = (InputManager)Resources.Load("InputManager");
+                item.GetComponent<TooltipTarget_inv>().SetTooltipRef();
+
                 return item;
             }
         }

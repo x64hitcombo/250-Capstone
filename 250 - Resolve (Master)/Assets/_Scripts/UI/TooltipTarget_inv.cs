@@ -4,25 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TooltipTarget_inv : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class TooltipTarget_inv : TooltipTarget, IPointerEnterHandler, IPointerExitHandler {
 
-    public TooltipUI tip;
     public Item item;
-
-    public Color titleColor = new Color(1, 1, 1, 1f);
-
     private ItemDataBaseList itemDatabase;
 
-    private void Start()
+    public void Start()
     {
-        tip = GameObject.Find("Tooltip").GetComponent<TooltipUI>();
-        item = GetComponent<ItemOnObject>().item;                   //we get the item (requires ItemOnObject component)
-
+        item = GetComponent<ItemOnObject>().item;                   //we get the item (requires ItemOnObject componen
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        tip.tipValue.text = "-";
         tip.tipTitle.text = item.itemName;
         tip.sprite.GetComponent<Image>().sprite = item.itemIcon;
         tip.tipDesc.text = item.itemDesc;

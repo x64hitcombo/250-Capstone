@@ -15,10 +15,16 @@ public class TooltipTarget : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public Color titleColor = new Color(1, 1, 1, 1f);
     public string newTipDesc;
 
-    private void Start()
+    public void Start()
     {
-        //tip = GameObject.Find("Tooltip").GetComponent<TooltipUI>();
-        
+        //tip = TooltipUI._instance.GetComponent<TooltipUI>();
+        SetTooltipRef();
+    }
+
+    public void SetTooltipRef()
+    {
+        tip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<TooltipUI>();
+        Debug.Log("Yeet");
     }
 
     public void OnPointerEnter(PointerEventData eventData)

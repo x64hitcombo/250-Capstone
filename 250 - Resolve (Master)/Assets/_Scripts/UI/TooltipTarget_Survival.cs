@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 
 public class TooltipTarget_Survival : TooltipTarget, IPointerEnterHandler, IPointerExitHandler {
 
-    public TooltipUI tt;
-
     public enum SurvStats 
     {
         Thirst,
@@ -16,9 +14,9 @@ public class TooltipTarget_Survival : TooltipTarget, IPointerEnterHandler, IPoin
     };
     public SurvStats activeStat = SurvStats.Thirst;
 
-    private void Start()
+    public void Start()
     {
-        tt = GameObject.Find("Tooltip").GetComponent<TooltipUI>();
+        tip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<TooltipUI>();
     }
 
     public new void OnPointerEnter(PointerEventData eventData)

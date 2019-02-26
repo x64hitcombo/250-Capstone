@@ -25,7 +25,25 @@ public class TooltipUI : MonoBehaviour {
     };
     public Stats targetStat;
 
-    GameObject target;
+    public static TooltipUI _instance;
+    public static TooltipUI Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<TooltipUI>();
+
+                if (_instance == null)
+                {
+                    GameObject container = new GameObject("Tooltip");
+                    _instance = container.AddComponent<TooltipUI>();
+                }
+            }
+
+            return _instance;
+        }
+    }
 
     private void Start()
     {

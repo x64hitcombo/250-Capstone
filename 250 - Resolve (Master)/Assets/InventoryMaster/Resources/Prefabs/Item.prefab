@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 11400004}
   - component: {fileID: 22500000}
   - component: {fileID: 11400008}
-  - component: {fileID: 11400010}
   - component: {fileID: 11400012}
   - component: {fileID: 2251289284875932875}
   m_Layer: 0
@@ -180,22 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inv: {fileID: 0}
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5a9582e04e1c1428e86495f3d1e082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltip: {fileID: 0}
-  tooltipGameObject: {fileID: 0}
-  canvasRectTransform: {fileID: 0}
-  tooltipRectTransform: {fileID: 0}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +219,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tip: {fileID: 0}
+  newTipIcon: {fileID: 0}
+  newTipValue: 
+  valueColor: {r: 1, g: 1, b: 1, a: 1}
+  newTipTitle: 
+  titleColor: {r: 1, g: 1, b: 1, a: 1}
+  newTipDesc: 
   item:
     itemName: 
     itemID: 0
@@ -249,7 +238,6 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  titleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
