@@ -177,6 +177,11 @@ public class PlayerController : MonoBehaviour {
     {
         ManagePlayerStats mps = GetComponent<ManagePlayerStats>();
         mps.currentStamina -= Time.deltaTime * staminaLossRate;
+        if (mps.currentStamina <= 0)
+        {
+            canClimb = false;
+            climbing = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -134,6 +134,11 @@ public class ManagePlayerStats : MonoBehaviour
                 staminaBar.color = Color.red;
             }
         }
+
+        if (currentStamina <= maxValue / 5)
+        {
+            staminaBar.color = Color.red;
+        }
         else if (currentStamina > maxValue / 5)
         {
             staminaBar.color = Color.green;

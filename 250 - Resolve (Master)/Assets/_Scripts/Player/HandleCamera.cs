@@ -33,7 +33,7 @@ public class HandleCamera : MonoBehaviour
 	void Update ()
     {
         CameraHandler();
-        AdjustCameraOnHeight();
+        //AdjustCameraOnHeight();
         CameraViewPlayer();
         playerCamera.transform.LookAt(cameraLookPosition);
     }
@@ -119,32 +119,32 @@ public class HandleCamera : MonoBehaviour
         }
     }
 
-    public void AdjustCameraOnHeight()
-    {
-        float distanceBetweenMinMax = maximumHeightPoint.position.y - minimumHeightPoint.position.y;
-        float currentDistanceBetween = maximumHeightPoint.position.y - transform.position.y;
+    //public void AdjustCameraOnHeight()
+    //{
+    //    float distanceBetweenMinMax = maximumHeightPoint.position.y - minimumHeightPoint.position.y;
+    //    float currentDistanceBetween = maximumHeightPoint.position.y - transform.position.y;
 
-        if (transform.position.y <= minimumHeightPoint.position.y)
-        {
-            referRotation.x = 45;
-            referPosition.y = defaultCameraPosition.y;
-        }
-        else if (transform.position.y >= maximumHeightPoint.position.y)
-        {
-            referRotation.x = 0;
-            referPosition.y = 0f;
-        }
-        else if (transform.position.y >= minimumHeightPoint.position.y && transform.position.y < maximumHeightPoint.position.y)
-        {
-            float difference = currentDistanceBetween / distanceBetweenMinMax;
-            referRotation.x = 45 * difference;
-            referPosition.y = defaultCameraPosition.y * difference;
-        }
+    //    if (transform.position.y <= minimumHeightPoint.position.y)
+    //    {
+    //        referRotation.x = 45;
+    //        referPosition.y = defaultCameraPosition.y;
+    //    }
+    //    else if (transform.position.y >= maximumHeightPoint.position.y)
+    //    {
+    //        referRotation.x = 0;
+    //        referPosition.y = 0f;
+    //    }
+    //    else if (transform.position.y >= minimumHeightPoint.position.y && transform.position.y < maximumHeightPoint.position.y)
+    //    {
+    //        float difference = currentDistanceBetween / distanceBetweenMinMax;
+    //        referRotation.x = 45 * difference;
+    //        referPosition.y = defaultCameraPosition.y * difference;
+    //    }
 
-        referPosition.y += transform.position.y;
-        playerCamera.transform.rotation = Quaternion.Euler(referRotation);
-        playerCamera.transform.position = referPosition;
-    }
+    //    referPosition.y += transform.position.y;
+    //    playerCamera.transform.rotation = Quaternion.Euler(referRotation);
+    //    playerCamera.transform.position = referPosition;
+    //}
 
     private void OnDrawGizmos()
     {

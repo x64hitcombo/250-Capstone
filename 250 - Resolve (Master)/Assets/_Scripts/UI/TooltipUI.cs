@@ -13,17 +13,8 @@ public class TooltipUI : MonoBehaviour {
     public Text tipTitle;
     public Text tipDesc;
 
+    public string targetStat;
     public string activeValue;
-
-    public enum Stats
-    {
-        Null,
-        Thirst,
-        Hunger,
-        Exposure,
-        Fatigue
-    };
-    public Stats targetStat;
 
     public static TooltipUI _instance;
     public static TooltipUI Instance
@@ -49,26 +40,25 @@ public class TooltipUI : MonoBehaviour {
     {
         HideToolTip();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<ManagePlayerStats>();
-        //tipIcon = sprite.GetComponent<SpriteRenderer>().sprite;
     }
 
     private void Update()
     {
         HandleTransform();
 
-        if (targetStat == Stats.Thirst)
+        if (targetStat == "Thirst")
         {
             activeValue = player.currentThirst.ToString();
         }
-        else if (targetStat == Stats.Hunger)
+        else if (targetStat == "Hunger")
         {
             activeValue = player.currentHunger.ToString();
         }
-        else if (targetStat == Stats.Exposure)
+        else if (targetStat == "Exposure")
         {
             activeValue = player.currentExposure.ToString();
         }
-        else if (targetStat == Stats.Fatigue)
+        else if (targetStat == "Fatigue")
         {
             activeValue = player.currentFatigue.ToString();
         }

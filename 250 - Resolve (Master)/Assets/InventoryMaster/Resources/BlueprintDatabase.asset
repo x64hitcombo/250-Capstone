@@ -30,70 +30,175 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 0
     timeToCraft: 0
-  - ingredients: 0e000000
-    amount: 010000000000000000000000
+  - ingredients: 02000000
+    amount: 0200000000000000
     finalItem:
-      itemName: Cooked Meat
-      itemID: 15
-      itemDesc: 'Very nice cooked meat.
-
-        + 20 Health'
-      itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
-      itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 3}
+      itemName: Fruit Medley S
+      itemID: 8
+      itemDesc: A bushel of various fruit. Stores hunger, thirst, fatigue by 15.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 0}
       itemValue: 1
       itemType: 2
       itemWeight: 0
-      maxStack: 5
+      maxStack: 1
       indexItemInList: 999
       rarity: 0
       itemAttributes:
-      - attributeName: Health
+      - attributeName: Hunger
+        attributeValue: 15
+      - attributeName: Thirst
+        attributeValue: 15
+      - attributeName: Fatigue
+        attributeValue: 15
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0300000002000000
+    amount: 0100000002000000
+    finalItem:
+      itemName: Fruit Medley L
+      itemID: 13
+      itemDesc: 
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 30
+      - attributeName: Thirst
+        attributeValue: 20
+      - attributeName: Fatigue
         attributeValue: 20
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 0e00000010000000
-    amount: 0100000001000000
+  - ingredients: 01000000
+    amount: 0200000000000000
     finalItem:
-      itemName: Hamburger
-      itemID: 17
-      itemDesc: 'This hamburger gives you health and mana back.
-
-        + 20 Health
-
-        + 20 Mana'
-      itemIcon: {fileID: 21300000, guid: bad82843ddb69514c9b6b8e381d175f3, type: 3}
-      itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 3}
+      itemName: Salad S
+      itemID: 6
+      itemDesc: A mix of greens. Restores Hunger by 15.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 0}
       itemValue: 1
       itemType: 2
       itemWeight: 0
-      maxStack: 5
+      maxStack: 1
       indexItemInList: 999
       rarity: 0
       itemAttributes:
-      - attributeName: Health
-        attributeValue: 20
-      - attributeName: Mana
-        attributeValue: 20
-    amountOfFinalItem: 2
+      - attributeName: Hunger
+        attributeValue: 15
+    amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 0c0000000d000000
-    amount: 0100000001000000
+  - ingredients: 0100000004000000
+    amount: 0200000001000000
     finalItem:
-      itemName: Applejuice
-      itemID: 18
-      itemDesc: 'This applejuice gives you alot of health back.
-
-        + 50 Health'
-      itemIcon: {fileID: 21300000, guid: 6dc5762501dd2df4da399f6c16a85907, type: 3}
-      itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 3}
-      itemValue: 2
+      itemName: Salad L
+      itemID: 7
+      itemDesc: A large mix of veggies. Restore hunger by 20, thirst by 10.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 0}
+      itemValue: 1
       itemType: 2
       itemWeight: 0
-      maxStack: 5
+      maxStack: 1
       indexItemInList: 999
       rarity: 0
       itemAttributes:
-      - attributeName: Health
-        attributeValue: 50
-    amountOfFinalItem: 2
+      - attributeName: Hunger
+        attributeValue: 20
+      - attributeName: Fatigue
+        attributeValue: 10
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0e000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Pork
+      itemID: 9
+      itemDesc: A little bit of cooked meat. Restores hunger by 20, fatigue by 5.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 999602110197768072, guid: fd300ff4e2454934ca4531a441e03a72,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 20
+      - attributeName: Fatigue
+        attributeValue: 5
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0f000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Ham
+      itemID: 10
+      itemDesc: A slab of grilled meat. Restores hunger by 30, fatigue by 10.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 30
+      - attributeName: Fatigue
+        attributeValue: 10
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 10000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Ribs
+      itemID: 11
+      itemDesc: The BBQd carcass of a beast. Restores hunger by 40, fatigue by 15.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 40
+      - attributeName: Fatigue
+        attributeValue: 15
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 11000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Fish
+      itemID: 18
+      itemDesc: 
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 30
+      - attributeName: Fatigue
+        attributeValue: 10
+    amountOfFinalItem: 1
     timeToCraft: 0

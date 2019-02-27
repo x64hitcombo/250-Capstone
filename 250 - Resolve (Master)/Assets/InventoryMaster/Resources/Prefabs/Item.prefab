@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 22500000}
   - component: {fileID: 11400008}
   - component: {fileID: 11400012}
-  - component: {fileID: 2251289284875932875}
+  - component: {fileID: 9072748291383802193}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -206,7 +206,7 @@ MonoBehaviour:
     itemAttributes: []
   itemTypeOfSlot: 
   duplication: {fileID: 0}
---- !u!114 &2251289284875932875
+--- !u!114 &9072748291383802193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,29 +215,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c696fb7abe9c69e42911b9a1b3dffee2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7452671eed8f96b4ca854ca33ef6d850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tip: {fileID: 0}
-  newTipIcon: {fileID: 0}
-  newTipValue: 
-  valueColor: {r: 1, g: 1, b: 1, a: 1}
+  Type: 0
+  Stats: 0
   newTipTitle: 
   titleColor: {r: 1, g: 1, b: 1, a: 1}
+  newTipValue: 
+  valueColor: {r: 1, g: 1, b: 1, a: 1}
   newTipDesc: 
-  item:
-    itemName: 
-    itemID: 0
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
+  newTipIcon: {fileID: 0}
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
