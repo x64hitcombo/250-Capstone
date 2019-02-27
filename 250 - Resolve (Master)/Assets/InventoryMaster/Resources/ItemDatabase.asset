@@ -31,8 +31,8 @@ MonoBehaviour:
   - itemName: Radish
     itemID: 1
     itemDesc: A small root vegetable. Restores hunger by 5.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 6579704764720841871, guid: 79e7e1932490ce04cb76288437e16423,
+    itemIcon: {fileID: 21300000, guid: f5e3cda33bf476b4087cba80fc4154f4, type: 3}
+    itemModel: {fileID: 8321072320344476045, guid: fda649a7bcdece243b6757426cf2d365,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -46,8 +46,8 @@ MonoBehaviour:
   - itemName: Berries
     itemID: 2
     itemDesc: A handful of berries. Restores hunger, thirst, and fatigue by 5.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 4584445180566013236, guid: f92e0299834fd2c4b89e40ea5120eb28,
+    itemIcon: {fileID: 21300000, guid: 0797e5aba30f572468ab084b24a2b359, type: 3}
+    itemModel: {fileID: 4633561256848782069, guid: f773887a8ebe79343b32f26a90b6fc47,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -59,14 +59,14 @@ MonoBehaviour:
     - attributeName: Hunger
       attributeValue: 5
     - attributeName: Thirst
-      attributeValue: 10
+      attributeValue: 5
     - attributeName: Fatigue
       attributeValue: 5
   - itemName: Apple
     itemID: 3
     itemDesc: An apple. Restores hunger and thirst by 10, fatigue by 5.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
+    itemIcon: {fileID: 21300000, guid: a4d3f378d1a88f346af15ee906321f2a, type: 3}
+    itemModel: {fileID: 7903250261116931768, guid: 660873801aa70c04daf88c32c7757848,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -83,8 +83,8 @@ MonoBehaviour:
       attributeValue: 5
   - itemName: Potato
     itemID: 4
-    itemDesc: A bushy head of lettuce. Restores hunger by 10.
-    itemIcon: {fileID: 0}
+    itemDesc: The humble Potato. Restores hunger by 10.
+    itemIcon: {fileID: 21300000, guid: 0288dbaa9a46b7a4fa8f0b0b773b6024, type: 3}
     itemModel: {fileID: 429246607076405423, guid: dab4a99304e3c9c49868701960ae0b27,
       type: 3}
     itemValue: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: Thirst
       attributeValue: 25
-  - itemName: Salad S
+  - itemName: Radish Salad
     itemID: 6
     itemDesc: A mix of greens. Restores Hunger by 15.
     itemIcon: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: Hunger
       attributeValue: 15
-  - itemName: Salad L
+  - itemName: Better Potato
     itemID: 7
     itemDesc: A large mix of veggies. Restore hunger by 20, thirst by 10.
     itemIcon: {fileID: 0}
@@ -142,11 +142,11 @@ MonoBehaviour:
       attributeValue: 20
     - attributeName: Fatigue
       attributeValue: 10
-  - itemName: Fruit Medley S
+  - itemName: Berry Pouch
     itemID: 8
     itemDesc: A bushel of various fruit. Stores hunger, thirst, fatigue by 15.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 4584445180566013236, guid: f92e0299834fd2c4b89e40ea5120eb28,
+    itemIcon: {fileID: 21300000, guid: 397e3859cc04495449e3361ac9c5c48f, type: 3}
+    itemModel: {fileID: 4633163937392219736, guid: 187dd7d72967e6f40b827af02e2c0fa0,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -164,8 +164,8 @@ MonoBehaviour:
   - itemName: Cooked Pork
     itemID: 9
     itemDesc: A little bit of cooked meat. Restores hunger by 20, fatigue by 5.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 999602110197768072, guid: fd300ff4e2454934ca4531a441e03a72,
+    itemIcon: {fileID: 21300000, guid: 5dac1d635cb0baf4292608e0ca519144, type: 3}
+    itemModel: {fileID: 7190555284723781730, guid: bfc4fedfe05e195468936bd3e2b60964,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -181,8 +181,8 @@ MonoBehaviour:
   - itemName: Cooked Ham
     itemID: 10
     itemDesc: A slab of grilled meat. Restores hunger by 30, fatigue by 10.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 1843928275848456822, guid: 96c355139449d034a8a6fc30d8b3b98d,
+    itemIcon: {fileID: 21300000, guid: b29cbbd10ecf3fd40991d4734d556c17, type: 3}
+    itemModel: {fileID: 7303801348928241969, guid: 52ec26de7567f2844a20c6291bd75f71,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -198,8 +198,8 @@ MonoBehaviour:
   - itemName: Cooked Ribs
     itemID: 11
     itemDesc: The BBQd carcass of a beast. Restores hunger by 40, fatigue by 15.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 7614149123880271891, guid: 2f0fb2d95533dd74eba2681edcc04a25,
+    itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
+    itemModel: {fileID: 291559982787766595, guid: fa08795edbf81214aac00f1f9c38c549,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -306,8 +306,8 @@ MonoBehaviour:
   - itemName: Cooked Fish
     itemID: 18
     itemDesc: Cooked fish that restores hunger and fatigue.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 5623692047886632407, guid: 032fb16583f6d7e4c81dedc1dfd3de43,
+    itemIcon: {fileID: 21300000, guid: 13ff6d9115912c34b9fd03472bb03734, type: 3}
+    itemModel: {fileID: 2966607694823346875, guid: b0a17f470e3e2364f9a11080aeec09be,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -323,8 +323,8 @@ MonoBehaviour:
   - itemName: Dirty Water
     itemID: 19
     itemDesc: Water that is murky and dirty though drinkable. Restores thirst.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 2960098124519161274, guid: f708eed30b20035488ca4a91a0618d04,
+    itemIcon: {fileID: 21300000, guid: e914d9bc0cfcd4f47a1c7150fc7b2ff8, type: 3}
+    itemModel: {fileID: 3614020799163088551, guid: 4718bb5b3926c9c4e94b4780d5ef3e4c,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -337,6 +337,60 @@ MonoBehaviour:
       attributeValue: 30
   - itemName: New Item
     itemID: 20
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: New Item
+    itemID: 21
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Winter Coat
+    itemID: 22
+    itemDesc: A thick fur coat. +20 Exposure
+    itemIcon: {fileID: 21300000, guid: 34ce9c8524e37f549bc4de2bbdd96429, type: 3}
+    itemModel: {fileID: 612096295450660008, guid: fc9f07cc2b4991c4dbc2abb6948610c4,
+      type: 3}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: 20
+  - itemName: Poncho
+    itemID: 23
+    itemDesc: Keeps you cool and protected from the sun. -20 exposure.
+    itemIcon: {fileID: 21300000, guid: 94feb6ac7e57fb34bb8d8f48f554ff82, type: 3}
+    itemModel: {fileID: 8205654381306932480, guid: d749bf3fbe7258042aeb319345c77797,
+      type: 3}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: -20
+  - itemName: New Item
+    itemID: 24
     itemDesc: 
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}

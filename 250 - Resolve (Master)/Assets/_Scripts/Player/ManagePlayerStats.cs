@@ -41,6 +41,9 @@ public class ManagePlayerStats : MonoBehaviour
 
     public TemperatureManager tempManager;
 
+    public SleepMenuScript sleep;
+    public bool byBed = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -60,7 +63,15 @@ public class ManagePlayerStats : MonoBehaviour
         ManageIncreaseOverTime();
         HandleBarDisplays();
         currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
-	}
+        if (byBed == true && Input.GetKeyDown(KeyCode.Tab))
+        {
+            sleep.SleepMenuOn();
+        }
+        if (byBed == false)
+        {
+            sleep.SleepMenuOff();
+        }
+    }
 
     public void ManageDecreaseOverTime()
     {
@@ -144,6 +155,16 @@ public class ManagePlayerStats : MonoBehaviour
             staminaBar.color = Color.green;
         }
 
+    }
+
+    public void Sleep()
+    {
+        if (byBed)
+        {
+            currentFatigue = maxValue;
+            currentHunger -= 15;
+            currentThirst -= 20;
+        }
     }
 
     public void HandleDebuffs()

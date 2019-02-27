@@ -17,11 +17,12 @@ public class SleepMenuScript : MonoBehaviour
     public Text SelectedHour;
     
     private bool SleepTime;
+    public PlayerController player;
 
     void Start()
     {
         TimeMain = FindObjectOfType<MainTimeScript>();
-
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         SleepTime = false;
     }
 
@@ -35,14 +36,6 @@ public class SleepMenuScript : MonoBehaviour
             FastForward();
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            SleepMenuOn();
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            SleepMenuOff();
-        }
         Debug.Log("Updating:)");
     }
 
@@ -62,16 +55,19 @@ public class SleepMenuScript : MonoBehaviour
     //Increases game speed to fast forward to the designated hour
     public void FastForward()
     {
+
         Debug.Log("Clicked");
         SleepTime = true;
 
         if (TimeMain._fCurrentHour != Slider.value)
         {
             TimeMain.GetSet_fTimeMultiplier = 100f;
+            player.movement = false;
         }
         if (TimeMain._fCurrentHour >= Slider.value && TimeMain._fCurrentHour <= Slider.value + 0.99)
         {
             SleepTime = false;
+            player.movement = true;
             SleepMenuOff();
         }
     }

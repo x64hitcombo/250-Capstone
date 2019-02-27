@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour {
                 }
                 #endregion
 
-                
+
                 #region Movement
                 Vector3 moveDirection = Vector3.zero;
                 if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
