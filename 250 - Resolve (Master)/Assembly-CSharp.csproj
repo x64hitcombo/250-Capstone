@@ -67,6 +67,7 @@
     <Compile Include="Assets\_Art\RPG Food &amp; Drinks Pack\Assets\Scripts\Consumer.cs" />
     <Compile Include="Assets\_Art\RPG Food &amp; Drinks Pack\Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\_Scripts\AnimationScripts\TestAnimation.cs" />
+    <Compile Include="Assets\_Scripts\ChangeScene.cs" />
     <Compile Include="Assets\_Scripts\Entity&amp;AI\AI\AIFoV.cs" />
     <Compile Include="Assets\_Scripts\Entity&amp;AI\AI\Grid.cs" />
     <Compile Include="Assets\_Scripts\Entity&amp;AI\AI\InteriorController.cs" />
@@ -104,11 +105,6 @@
     <Compile Include="Assets\_Scripts\Misc Test Scripts\TempBowScript.cs" />
     <Compile Include="Assets\_Scripts\Misc Test Scripts\TempHealth.cs" />
     <Compile Include="Assets\_Scripts\Misc Test Scripts\TestCameraZoom.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\BoardingManager.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\ClimbEntrance.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\ClimbExit.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\EntranceWaypoint.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\ExitWaypoint.cs" />
     <Compile Include="Assets\_Scripts\Player\HandleCamera.cs" />
     <Compile Include="Assets\_Scripts\Player\ManagePlayerStats.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
@@ -136,7 +132,6 @@
     <Compile Include="Assets\_Scripts\World\Weather\TemperatureManager.cs" />
     <Compile Include="Assets\_Scripts\World\Weather\TemperatureSetter.cs" />
     <Compile Include="Assets\_Scripts\World\Weather\WeatherSetter.cs" />
-    <Compile Include="Assets\ChangeScene.cs" />
     <Compile Include="Assets\com\heparo\terrain\toolkit\scripts\TerrainToolkit.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Call.cs" />
@@ -749,7 +744,7 @@
     <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
     <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
-    <None Include="Assets\_Art\!ToBeSorted\HolyShift\readme.txt" />
+    <None Include="Assets\_Art\HolyShift\readme.txt" />
     <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
     <None Include="Assets\Fungus\Docs\README.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
@@ -760,7 +755,7 @@
     <None Include="Assets\Fungus\Docs\LICENSE.txt" />
     <None Include="Assets\Fungus\Integrations\Playmaker\ReadMe.txt" />
     <None Include="Assets\Fungus\Scripts\link.xml" />
-    <None Include="Assets\_Art\!ToBeSorted\HolyShift\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\_Art\HolyShift\Shaders\WaterInclude.cginc" />
     <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
     <None Include="Assets\FungusExamples\FungusLua\Narrative\Resources\Lua\junglestory.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
@@ -787,17 +782,16 @@
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
     <None Include="Assets\Fungus\Thirdparty\Reorderable List Field\LICENSE.txt" />
     <None Include="Assets\InventoryMaster\readme.txt" />
-    <None Include="Assets\_Art\!ToBeSorted\Wand and Circles\Polygon City Free Pack - Environment and Interior\Materials\Double Sided Standard Diffuse Bump.shader" />
     <None Include="Assets\Fungus\Textures\Attribution.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
-    <None Include="Assets\Wispy Sky\ReadMe.txt" />
+    <None Include="Assets\_Art\Wispy Sky\ReadMe.txt" />
     <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Lua\inspect.txt" />
     <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Lua\fungus.txt" />
     <None Include="Assets\_Art\!ToBeSorted\LowPolyWeapon\Shaders\AlphaTest-DiffuseBack.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
-    <None Include="Assets\_Art\!ToBeSorted\HolyShift\Shaders\FXWaterLowpoly.shader" />
+    <None Include="Assets\_Art\HolyShift\Shaders\FXWaterLowpoly.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/x64hi/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

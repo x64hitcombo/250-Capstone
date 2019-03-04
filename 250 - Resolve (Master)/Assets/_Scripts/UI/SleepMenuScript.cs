@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SleepMenuScript : MonoBehaviour
 {
 
-    private MainTimeScript TimeMain;
+    public MainTimeScript TimeMain;
 
     public GameObject SleepPanel;
 

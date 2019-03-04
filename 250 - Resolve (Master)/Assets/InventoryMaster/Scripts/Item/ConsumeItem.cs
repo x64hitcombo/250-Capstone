@@ -51,7 +51,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
                     cS.deleteItems(item);
                     CraftResultSlot result = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().craftSystem.transform.GetChild(3).GetComponent<CraftResultSlot>();
                     result.temp = 0;
-                    tooltip.HideToolTip();
+                    TooltipManager.Instance.mHideTip();
                     gearable = true;
                     GameObject.FindGameObjectWithTag("MainInventory").GetComponent<Inventory>().updateItemList();
                 }
@@ -154,7 +154,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
                         if (itemFromDup.itemValue <= 0)
                         {
                             if (tooltip != null)
-                                tooltip.HideToolTip();
+                                TooltipManager.Instance.mHideTip();
                             inventory.deleteItemFromInventory(item);
                             Destroy(duplication.gameObject); 
                         }
@@ -162,7 +162,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
                     if (item.itemValue <= 0)
                     {
                         if (tooltip != null)
-                            tooltip.HideToolTip();
+                            TooltipManager.Instance.mHideTip();
                         inventory.deleteItemFromInventory(item);
                         Destroy(this.gameObject);                        
                     }
@@ -284,7 +284,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
                 if (itemFromDup.itemValue <= 0)
                 {
                     if (tooltip != null)
-                        tooltip.HideToolTip();
+                        TooltipManager.Instance.mHideTip();
                     inventory.deleteItemFromInventory(item);
                     Destroy(duplication.gameObject);
 
@@ -293,7 +293,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
             if (item.itemValue <= 0)
             {
                 if (tooltip != null)
-                    tooltip.HideToolTip();
+                    TooltipManager.Instance.mHideTip();
                 inventory.deleteItemFromInventory(item);
                 Destroy(this.gameObject); 
             }

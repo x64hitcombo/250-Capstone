@@ -7,7 +7,6 @@ public class ObjectInspection : MonoBehaviour {
 
     // Text for UI (Shows what is being examined)
     public GameObject inspectUI;
-    public Text inspectText;
 
     // True/False if player is present near the object
     public bool playerView = false;
@@ -33,7 +32,7 @@ public class ObjectInspection : MonoBehaviour {
             {
                 Debug.Log("Inspected");
                 inspectUI.SetActive(true);
-                inspectText.text = inspectString;
+                inspectUI.GetComponentInChildren<Text>().text = inspectString;
                 enabled = true;
             }
         }
@@ -41,8 +40,14 @@ public class ObjectInspection : MonoBehaviour {
 
     public void OnTriggerExit(Collider other)
     {
-        inspectUI.SetActive(false);
+        CloseWindow();
         playerView = false;
         enabled = false;
+    }
+
+    public void CloseWindow()
+    {
+        inspectUI.SetActive(false);
+
     }
 }

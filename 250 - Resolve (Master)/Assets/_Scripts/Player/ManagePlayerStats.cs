@@ -139,6 +139,7 @@ public class ManagePlayerStats : MonoBehaviour
         //Change Color based on usability
         if (currentStamina == 0)
         {
+            this.GetComponent<PlayerController>().canSprint = false;
             //wait till 20% full - turn bar red
             if (currentStamina <= maxValue / 5)
             {
@@ -153,6 +154,8 @@ public class ManagePlayerStats : MonoBehaviour
         else if (currentStamina > maxValue / 5)
         {
             staminaBar.color = Color.green;
+            this.GetComponent<PlayerController>().canSprint = true;
+
         }
 
     }

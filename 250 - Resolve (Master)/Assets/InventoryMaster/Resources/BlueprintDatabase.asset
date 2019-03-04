@@ -30,93 +30,6 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 0
     timeToCraft: 0
-  - ingredients: 0200000002000000
-    amount: 010000000100000000000000
-    finalItem:
-      itemName: Fruit Medley S
-      itemID: 8
-      itemDesc: A bushel of various fruit. Stores hunger, thirst, fatigue by 15.
-      itemIcon: {fileID: 0}
-      itemModel: {fileID: 0}
-      itemValue: 1
-      itemType: 2
-      itemWeight: 0
-      maxStack: 1
-      indexItemInList: 999
-      rarity: 0
-      itemAttributes:
-      - attributeName: Hunger
-        attributeValue: 15
-      - attributeName: Thirst
-        attributeValue: 15
-      - attributeName: Fatigue
-        attributeValue: 15
-    amountOfFinalItem: 1
-    timeToCraft: 0
-  - ingredients: 0300000002000000
-    amount: 0100000002000000
-    finalItem:
-      itemName: Fruit Medley L
-      itemID: 13
-      itemDesc: 
-      itemIcon: {fileID: 0}
-      itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
-        type: 3}
-      itemValue: 1
-      itemType: 2
-      itemWeight: 0
-      maxStack: 1
-      indexItemInList: 999
-      rarity: 0
-      itemAttributes:
-      - attributeName: Hunger
-        attributeValue: 30
-      - attributeName: Thirst
-        attributeValue: 20
-      - attributeName: Fatigue
-        attributeValue: 20
-    amountOfFinalItem: 1
-    timeToCraft: 0
-  - ingredients: 0100000001000000
-    amount: 010000000100000000000000
-    finalItem:
-      itemName: Salad S
-      itemID: 6
-      itemDesc: A mix of greens. Restores Hunger by 15.
-      itemIcon: {fileID: 0}
-      itemModel: {fileID: 0}
-      itemValue: 1
-      itemType: 2
-      itemWeight: 0
-      maxStack: 1
-      indexItemInList: 999
-      rarity: 0
-      itemAttributes:
-      - attributeName: Hunger
-        attributeValue: 15
-    amountOfFinalItem: 1
-    timeToCraft: 0
-  - ingredients: 0100000004000000
-    amount: 0200000001000000
-    finalItem:
-      itemName: Salad L
-      itemID: 7
-      itemDesc: A large mix of veggies. Restore hunger by 20, thirst by 10.
-      itemIcon: {fileID: 0}
-      itemModel: {fileID: 0}
-      itemValue: 1
-      itemType: 2
-      itemWeight: 0
-      maxStack: 1
-      indexItemInList: 999
-      rarity: 0
-      itemAttributes:
-      - attributeName: Hunger
-        attributeValue: 20
-      - attributeName: Fatigue
-        attributeValue: 10
-    amountOfFinalItem: 1
-    timeToCraft: 0
   - ingredients: 0e000000
     amount: 01000000
     finalItem:
@@ -201,4 +114,72 @@ MonoBehaviour:
       - attributeName: Fatigue
         attributeValue: 10
     amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0300000002000000
+    amount: 0100000002000000
+    finalItem:
+      itemName: Fruit Medley
+      itemID: 13
+      itemDesc: 
+      itemIcon: {fileID: 21300000, guid: 771d8f22d4d4a7d45a9edfb147db2464, type: 3}
+      itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 30
+      - attributeName: Thirst
+        attributeValue: 20
+      - attributeName: Fatigue
+        attributeValue: 20
+    amountOfFinalItem: 0
+    timeToCraft: 0
+  - ingredients: 02000000
+    amount: 02000000
+    finalItem:
+      itemName: Berry Pouch
+      itemID: 8
+      itemDesc: A bushel of various fruit. Stores hunger, thirst, fatigue by 15.
+      itemIcon: {fileID: 21300000, guid: 397e3859cc04495449e3361ac9c5c48f, type: 3}
+      itemModel: {fileID: 4633163937392219736, guid: 187dd7d72967e6f40b827af02e2c0fa0,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 15
+      - attributeName: Thirst
+        attributeValue: 15
+      - attributeName: Fatigue
+        attributeValue: 15
+    amountOfFinalItem: 0
+    timeToCraft: 0
+  - ingredients: 13000000
+    amount: 01000000
+    finalItem:
+      itemName: Water
+      itemID: 5
+      itemDesc: Refreshing! Restores thirst by 50.
+      itemIcon: {fileID: 21300000, guid: b50b97c8f9c10a3499187da7c6bdd61d, type: 3}
+      itemModel: {fileID: 8876792427102076144, guid: 5bc1386995b4216488f32009d63b2133,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Thirst
+        attributeValue: 50
+    amountOfFinalItem: 0
     timeToCraft: 0

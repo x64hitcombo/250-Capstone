@@ -34,8 +34,22 @@ public class TooltipManager : MonoBehaviour {
 
     public void Start()
     {
-        tip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<TooltipUI>();
         target = null;
+    }
+
+    public void Update()
+    {
+        if (target != null)
+        {
+            if (tip.isActiveAndEnabled && !target.isActiveAndEnabled)
+            {
+                mHideTip();
+            }
+        }
+        else
+        {
+            mHideTip();
+        }
     }
 
     public void setTooltip()

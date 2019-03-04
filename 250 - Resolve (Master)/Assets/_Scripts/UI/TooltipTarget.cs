@@ -39,6 +39,7 @@ public class TooltipTarget : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        TooltipManager.Instance.target = null;
         TooltipManager.Instance.mHideTip();
 
     }

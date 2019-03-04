@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody rbody;    //Rigid body for gravity
 
-    private Camera mainCamera;  //Camera for face cursor
+    public Camera mainCamera;  //Camera for face cursor
 
     public bool climbing = false;
     public bool transferClimb = false;
@@ -21,13 +21,13 @@ public class PlayerController : MonoBehaviour {
 
     public Transform wayPoint;
 
+    public bool canSprint = true;
     private bool canClimb;
     private Transform climbLookPosition;
 
     void Start()
     {
         rbody = GetComponent<Rigidbody>();
-        mainCamera = FindObjectOfType<Camera>();
     }
 
     void Update()
@@ -39,11 +39,12 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            movementSpeed = baseMovementSpeed * 2;
-            ConsumeStamina();
-        }
+            if (Input.GetKey(KeyCode.LeftShift) && canSprint)
+            {
+                movementSpeed = baseMovementSpeed * 2;
+                ConsumeStamina();
+            }
+
         else
         {
             movementSpeed = baseMovementSpeed;
@@ -129,37 +130,37 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (aiControl == true)
-        {
-            float step = climbingSpeed * Time.deltaTime;                                            // The step size is equal to climbing speed times frame time.
-            transform.position = Vector3.MoveTowards(transform.position, wayPoint.position, step);  //Move position closer to waypoint
-        }
+        //if (aiControl == true)
+        //{
+        //    float step = climbingSpeed * Time.deltaTime;                                            // The step size is equal to climbing speed times frame time.
+        //    transform.position = Vector3.MoveTowards(transform.position, wayPoint.position, step);  //Move position closer to waypoint
+        //}
     }
 
-    #region AI Movement Control
-    public void GotoWaypoint()
-    {
-        rbody.useGravity = false;
-        movement = false;
-        aiControl = true;
-    }
+    //#region AI Movement Control
+    //public void GotoWaypoint()
+    //{
+    //    rbody.useGravity = false;
+    //    movement = false;
+    //    aiControl = true;
+    //}
 
-    public void StopWaypoint()
-    {
-        aiControl = false;
-        climbing = true;
-        movement = true;
-    }
+    //public void StopWaypoint()
+    //{
+    //    aiControl = false;
+    //    climbing = true;
+    //    movement = true;
+    //}
 
-    public void ResetMovement()
-    {
-        aiControl = false;
-        rbody.useGravity = true;
-        climbing = false;
-        movement = true;
-    }
+    //public void ResetMovement()
+    //{
+    //    aiControl = false;
+    //    rbody.useGravity = true;
+    //    climbing = false;
+    //    movement = true;
+    //}
 
-    #endregion
+    //#endregion
 
     private void DetermineClimb()
     {
