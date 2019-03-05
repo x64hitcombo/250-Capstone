@@ -266,13 +266,13 @@
       <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/bheaton2/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/bheaton2/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/bheaton2/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -344,6 +344,7 @@
     <Compile Include="Assets\_Art\RPG Food &amp; Drinks Pack\Assets\Scripts\Consumer.cs" />
     <Compile Include="Assets\_Art\RPG Food &amp; Drinks Pack\Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\_Scripts\AnimationScripts\TestAnimation.cs" />
+    <Compile Include="Assets\_Scripts\ChangeScene.cs" />
     <Compile Include="Assets\_Scripts\Entity&amp;AI\AI\AIFoV.cs" />
     <Compile Include="Assets\_Scripts\Entity&amp;AI\AI\Grid.cs" />
     <Compile Include="Assets\_Scripts\Entity&amp;AI\AI\InteriorController.cs" />
@@ -381,11 +382,6 @@
     <Compile Include="Assets\_Scripts\Misc Test Scripts\TempBowScript.cs" />
     <Compile Include="Assets\_Scripts\Misc Test Scripts\TempHealth.cs" />
     <Compile Include="Assets\_Scripts\Misc Test Scripts\TestCameraZoom.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\BoardingManager.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\ClimbEntrance.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\ClimbExit.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\EntranceWaypoint.cs" />
-    <Compile Include="Assets\_Scripts\Player\Climbing (Revise)\ExitWaypoint.cs" />
     <Compile Include="Assets\_Scripts\Player\HandleCamera.cs" />
     <Compile Include="Assets\_Scripts\Player\ManagePlayerStats.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
@@ -413,7 +409,6 @@
     <Compile Include="Assets\_Scripts\World\Weather\TemperatureManager.cs" />
     <Compile Include="Assets\_Scripts\World\Weather\TemperatureSetter.cs" />
     <Compile Include="Assets\_Scripts\World\Weather\WeatherSetter.cs" />
-    <Compile Include="Assets\ChangeScene.cs" />
     <Compile Include="Assets\com\heparo\terrain\toolkit\scripts\TerrainToolkit.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Call.cs" />
@@ -1102,14 +1097,14 @@
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
-    <None Include="Assets\Wispy Sky\ReadMe.txt" />
-    <None Include="Assets\_Art\!ToBeSorted\HolyShift\Shaders\FXWaterLowpoly.shader" />
-    <None Include="Assets\_Art\!ToBeSorted\HolyShift\Shaders\WaterInclude.cginc" />
-    <None Include="Assets\_Art\!ToBeSorted\HolyShift\readme.txt" />
     <None Include="Assets\_Art\!ToBeSorted\LowPolyWeapon\Shaders\AlphaTest-DiffuseBack.shader" />
     <None Include="Assets\_Art\!ToBeSorted\LowPolyWeapon\Shaders\AlphaTest-DiffuseDoublesided.shader" />
     <None Include="Assets\_Art\!ToBeSorted\Paper Environment Pack vol. 1\ReadMe.txt" />
+    <None Include="Assets\_Art\HolyShift\Shaders\FXWaterLowpoly.shader" />
+    <None Include="Assets\_Art\HolyShift\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\_Art\HolyShift\readme.txt" />
     <None Include="Assets\_Art\LowpolyStyle\Arctic Tundra\LowpolyStyleArcticTundraReadme.txt" />
+    <None Include="Assets\_Art\Wispy Sky\ReadMe.txt" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryDark.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
