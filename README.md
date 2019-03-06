@@ -1,18 +1,27 @@
 # 250-Capstone
 
-1) Before attempting to merge, place these following lines inside C:\Program Files\Unity\Editor\Data\Tools\mergespecfile.txt
+1) Open Notepad as administrator, and use the file menu to open this file C:\Program Files\Unity\Editor\Data\Tools\mergespecfile.txt
 
-# Tortoise Git Merge
+Place these following lines at the bottom of the .txt file:
+
+ # Tortoise Git Merge
 * use "%programs%\TortoiseGit\bin\TortoiseGitMerge.exe" -base:"%b" -mine:"%l" -theirs:"%r" -merged:"%d"
 
-If it doesn't save, open notepad as administrator and then open the .txt file
+2) In the github folder, click view and enable hidden files. Open .git, and open config.txt Paste these following lines in this .txt:
 
-2) When you're prompted with conflicting files, click to open cmd and type:
+	[merge]
+	tool = unityyamlmerge
+	
+	[mergetool "unityyamlmerge"]
+	trustExitCode = false
+	cmd = 'C:\Program Files\Unity\Editor\Data\Tools\UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED" 
+
+3) When you're prompted with conflicting files, click to open cmd and type:
 
 git mergetool
 
 This will open the merge tool, TortoiseMerge, which is preinstalled on the school alienware. 
 
-3) Right click on the conflicted lines in the left column of ToirtoiseMerge, and select replace with this (default)
+4) Right click on the conflicted lines in the left column of ToirtoiseMerge, and select "replace with this (default)"
 
-4) File save within tortoise, and close it. The scene should now be merged. There will be several copies within the scene folder, leave these alone. - Resolve (LocalMaster)\Assets\rInventoryManager\ItemDatabase.asset
+5) File save within tortoise, and close it. The scene should now be merged. There will be several copies within the scene folder, leave these alone.
