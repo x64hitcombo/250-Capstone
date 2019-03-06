@@ -4,8 +4,8 @@
 
 Place these following lines at the bottom of the .txt file:
 
-# Tortoise Git Merge
-* use "%programs%\TortoiseGit\bin\TortoiseGitMerge.exe" -base:"%b" -mine:"%l" -theirs:"%r" -merged:"%d"
+    # Tortoise Git Merge
+    * use "%programs%\TortoiseGit\bin\TortoiseGitMerge.exe" -base:"%b" -mine:"%l" -theirs:"%r" -merged:"%d"
 
 3) In the github folder, click view and enable hidden files. Open .git, and open config.txt Paste these following lines in this .txt:
 
