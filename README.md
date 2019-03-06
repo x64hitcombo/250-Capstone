@@ -9,7 +9,7 @@ Place these following lines at the bottom of the .txt file:
 
 3) In the github folder, click view and enable hidden files. Open .git, and open config.txt Paste these following lines in this .txt:
 
-[merge]
+    [merge]
     tool = unityyamlmerge
 
     [mergetool "unityyamlmerge"]
