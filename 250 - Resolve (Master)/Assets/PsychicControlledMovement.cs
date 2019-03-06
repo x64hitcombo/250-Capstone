@@ -6,6 +6,7 @@ public class PsychicControlledMovement : MonoBehaviour
 {
     public float movementSpeed = 4f;
     public Camera mainCamera;
+    public Transform cameraLookPosition;
 
     // Start is called before the first frame update
     void Start()

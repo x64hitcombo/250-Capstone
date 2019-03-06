@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HandleCamera : MonoBehaviour
 {
-    public GameObject playerCamera;
+    public Camera playerCamera;
     public Transform cameraLookPosition;
     public Transform minimumHeightPoint;
     public Transform maximumHeightPoint;
@@ -19,6 +19,10 @@ public class HandleCamera : MonoBehaviour
 
     public float fadeSpeed = 0.05f;
     public float fadeAmount = 0.20f;
+
+    public bool controllingObject = false;
+    public Vector3 targetDefaultCameraPosition;
+    public GameObject objectToControl;
 
     // Use this for initialization
     void Start ()
@@ -35,17 +39,31 @@ public class HandleCamera : MonoBehaviour
         CameraHandler();
         //AdjustCameraOnHeight();
         CameraViewPlayer();
-        playerCamera.transform.LookAt(cameraLookPosition);
+        ControlObject();
+        
     }
 
     public void SetupCamera()
     {
-        playerCamera.transform.position = transform.position + defaultCameraPosition;
+        if (!controllingObject)
+        {
+            playerCamera.transform.position = transform.position + defaultCameraPosition;
+            playerCamera.transform.LookAt(cameraLookPosition);
+            GetComponent<PlayerController>().enabled = true;
+        }
+        else if (controllingObject)
+        {
+            //This will change to the targets stuff to follow
+            playerCamera.transform.position = objectToControl.transform.position + defaultCameraPosition;
+            playerCamera.transform.LookAt(objectToControl.GetComponent<PsychicControlledMovement>().cameraLookPosition);
+            objectToControl.GetComponent<PsychicControlledMovement>().enabled = true;
+            GetComponent<PlayerController>().enabled = false;
+        }
     }
 
     public void CameraHandler()
     {
-        playerCamera.transform.position = transform.position + defaultCameraPosition;
+        SetupCamera();
         referRotation = playerCamera.transform.rotation.eulerAngles;
         referPosition = playerCamera.transform.position;
         distanceBetweenCameraPlayer = Vector3.Distance(transform.position, playerCamera.transform.position);
@@ -116,6 +134,27 @@ public class HandleCamera : MonoBehaviour
                 Color oldColor = hitObject.GetComponent<Material>().color;
                 hitObject.GetComponent<Material>().color = new Color(oldColor.r, oldColor.g, oldColor.b, 0.5f);
             }
+        }
+    }
+
+    public void ControlObject()
+    {
+        Ray mousePos = playerCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(mousePos, out hit, 1000))
+        {
+            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.tag == "ControlledObject")
+            {
+                controllingObject = true;
+                objectToControl = hit.collider.gameObject;
+            }
+        }
+
+        if (controllingObject && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            controllingObject = false;
+            GetComponent<PlayerController>().enabled = true;
+            objectToControl.GetComponent<PsychicControlledMovement>().enabled = false;
         }
     }
 
