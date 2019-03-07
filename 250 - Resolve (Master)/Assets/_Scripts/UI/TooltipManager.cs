@@ -65,7 +65,6 @@ public class TooltipManager : MonoBehaviour {
                 tip.tipTitle.text = item.itemName;
                 tip.sprite.GetComponent<Image>().sprite = item.itemIcon;
                 tip.tipDesc.text = item.itemDesc;
-                tip.tipTitle.color = target.titleColor;
             }
 
 

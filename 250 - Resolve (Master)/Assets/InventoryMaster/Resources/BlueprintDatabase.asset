@@ -137,10 +137,10 @@ MonoBehaviour:
         attributeValue: 20
       - attributeName: Fatigue
         attributeValue: 20
-    amountOfFinalItem: 0
+    amountOfFinalItem: 1
     timeToCraft: 0
   - ingredients: 02000000
-    amount: 02000000
+    amount: 0200000000000000
     finalItem:
       itemName: Berry Pouch
       itemID: 8
@@ -161,7 +161,7 @@ MonoBehaviour:
         attributeValue: 15
       - attributeName: Fatigue
         attributeValue: 15
-    amountOfFinalItem: 0
+    amountOfFinalItem: 1
     timeToCraft: 0
   - ingredients: 13000000
     amount: 01000000
@@ -181,5 +181,25 @@ MonoBehaviour:
       itemAttributes:
       - attributeName: Thirst
         attributeValue: 50
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 01000000
+    amount: 02000000
+    finalItem:
+      itemName: Radish Salad
+      itemID: 6
+      itemDesc: A mix of greens. Restores Hunger by 15.
+      itemIcon: {fileID: 21300000, guid: bca15cf925033604bac21b8b127e36b6, type: 3}
+      itemModel: {fileID: 6579704764720841871, guid: 79e7e1932490ce04cb76288437e16423,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 15
     amountOfFinalItem: 0
     timeToCraft: 0
