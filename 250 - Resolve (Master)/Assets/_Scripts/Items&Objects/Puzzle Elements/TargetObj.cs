@@ -8,11 +8,16 @@ public class TargetObj : MonoBehaviour {
 
     public bool objectHit = false;
 
+    public Animator outAnimate;
+
+    public bool confirm = false;
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Projectile")
         {
             objectHit = true;
+            outAnimate.GetComponent<Animator>().SetBool("objEvent", true);
         }
     }
 

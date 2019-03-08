@@ -1157,14 +1157,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaLossRate: 15
-  baseMovementSpeed: 5
+  baseMovementSpeed: 7
   climbingSpeed: 1
   movement: 1
   aiControl: 0
+  mainCamera: {fileID: 0}
   climbing: 0
   transferClimb: 0
   allowFall: 1
   wayPoint: {fileID: 0}
+  canSprint: 1
 --- !u!114 &2610033390289270926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,6 +1188,9 @@ MonoBehaviour:
   distanceBetweenCameraPlayer: 0
   fadeSpeed: 0.05
   fadeAmount: 0.2
+  controllingObject: 0
+  targetDefaultCameraPosition: {x: 0, y: 0, z: 0}
+  objectToControl: {fileID: 0}
 --- !u!114 &2610033390289270962
 MonoBehaviour:
   m_ObjectHideFlags: 0
