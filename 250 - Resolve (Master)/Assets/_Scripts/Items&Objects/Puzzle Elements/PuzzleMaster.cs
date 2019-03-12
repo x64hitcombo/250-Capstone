@@ -5,8 +5,10 @@ using UnityEngine;
 public class PuzzleMaster : MonoBehaviour
 {
     public GameObject[] puzzleObjects;
-    public bool allConfirm = false;
+    //public bool allConfirm = true;
 
+    public GameObject reward;
+    public Transform rewardDropSpot;
     public GameObject outAnimate;
 
     // Start is called before the first frame update
@@ -18,24 +20,31 @@ public class PuzzleMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VictoryCheck();
+        //VictoryCheck();
+
+        if (VictoryCheck())
+        {
+            Debug.Log("Yeebers");
+            AllComplete();
+        }
     }
 
-    public void VictoryCheck()
+    public bool VictoryCheck()
     {
-        foreach (GameObject pObject in puzzleObjects)
+        for (int i = 0; i < puzzleObjects.Length; i++)
         {
-            if (pObject.GetComponent<PuzzleObject>().confirm)
+            if (puzzleObjects[i].GetComponent<PuzzleObject>().confirm == false)
             {
-                allConfirm = true;
-                AllComplete();
+                return false;
             }
         }
+
+        return true;
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (!allConfirm && other.gameObject.tag == "Player")
+        if (!VictoryCheck() && other.gameObject.tag == "Player")
         {
             foreach (GameObject pObject in puzzleObjects)
             {
@@ -51,6 +60,14 @@ public void AllComplete()
         {
             outAnimate.GetComponent<Animator>().SetBool("objEvent", true);
             Debug.Log("Yeah hahaa"); 
+        }
+
+        if (reward)
+        {
+            if (rewardDropSpot)
+            {
+                Instantiate(reward, rewardDropSpot);
+            }
         }
     }
 }
