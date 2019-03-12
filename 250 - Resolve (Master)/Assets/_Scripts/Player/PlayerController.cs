@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerController : MonoBehaviour {
-    float movementSpeed;        //Speed for movement
+public class PlayerController : MonoBehaviour
+{
+    [HideInInspector]
+    public float movementSpeed;        //Speed for movement
     public float staminaLossRate;
     public float baseMovementSpeed;
     public float climbingSpeed;

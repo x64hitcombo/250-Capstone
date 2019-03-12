@@ -22,7 +22,9 @@ public class HandleCamera : MonoBehaviour
 
     public bool controllingObject = false;
     public Vector3 targetDefaultCameraPosition;
-    public GameObject objectToControl;
+    public GameObject objectToControl; //Don't need to put anything in here this just is to show the connection
+
+    public GameObject linkedKineticObject; //Don't need to put anything in here this just is to show the connection
 
     // Use this for initialization
     void Start ()
@@ -40,6 +42,7 @@ public class HandleCamera : MonoBehaviour
         //AdjustCameraOnHeight();
         CameraViewPlayer();
         ControlObject();
+        KineticControl();
         
     }
 
@@ -155,6 +158,28 @@ public class HandleCamera : MonoBehaviour
             controllingObject = false;
             GetComponent<PlayerController>().enabled = true;
             objectToControl.GetComponent<PsychicControlledMovement>().enabled = false;
+        }
+    }
+
+    public void KineticControl()
+    {
+        Ray mousePos = playerCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(mousePos, out hit, 1000))
+        {
+            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.tag == "KineticObject")
+            {
+                linkedKineticObject = hit.collider.gameObject;
+                linkedKineticObject.GetComponent<KineticControlledMovement>().enabled = true;
+                linkedKineticObject.GetComponent<Rigidbody>().useGravity = false;
+            }
+        }
+
+        if (linkedKineticObject.GetComponent<KineticControlledMovement>().enabled && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            linkedKineticObject.GetComponent<KineticControlledMovement>().enabled = false;
+            linkedKineticObject.GetComponent<Rigidbody>().useGravity = true;
+            linkedKineticObject = null;
         }
     }
 

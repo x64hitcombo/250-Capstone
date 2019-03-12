@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PsychicControlledMovement : MonoBehaviour
 {
-    public float movementSpeed = 4f;
+    public float movementSpeed;
     public Camera mainCamera;
     public Transform cameraLookPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
