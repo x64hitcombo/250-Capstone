@@ -203,3 +203,83 @@ MonoBehaviour:
         attributeValue: 15
     amountOfFinalItem: 0
     timeToCraft: 0
+  - ingredients: 0300000002000000
+    amount: 0200000002000000
+    finalItem:
+      itemName: Grilled Fruit
+      itemID: 12
+      itemDesc: BBQd apples. Restore hunger by 30, thirst, fatigue by 15.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 30
+      - attributeName: Thirst
+        attributeValue: 15
+      - attributeName: Fatigue
+        attributeValue: 15
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0900000001000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Small Kebob
+      itemID: 22
+      itemDesc: A kebob that has both pork and a radish that will replenish hunger.
+      itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 50
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0a00000001000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Medium Kebob
+      itemID: 23
+      itemDesc: A kebob that contains both a ham and a radish to replenish hunger.
+      itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 50
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0b00000004000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Large Kebob
+      itemID: 24
+      itemDesc: A kebob that contains a rib and potato that replenishes health.
+      itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 50
+    amountOfFinalItem: 1
+    timeToCraft: 0
