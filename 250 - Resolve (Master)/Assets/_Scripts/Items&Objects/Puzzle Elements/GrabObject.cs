@@ -3,24 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GrabObject : MonoBehaviour {
-
-    public GameObject player;
-
-    public GameObject targetObject;
-
-    public float objectMass = 0;
-
+    private GameObject player;
     public bool isGrabbed = false;
-
     public bool playerPresent = false;
 
-    public void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.gameObject.tag == "Player")
-        {
-            playerPresent = true;
-            objectGrab();
-        }
+        this.gameObject.GetComponent<PuzzleObject>().confirm = true;
     }
 
     public void OnTriggerStay(Collider other)
@@ -28,8 +17,8 @@ public class GrabObject : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             playerPresent = true;
+            player = other.gameObject;
             objectGrab();
-            checkLetGo();
         }
     }
 
@@ -42,27 +31,22 @@ public class GrabObject : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            isGrabbed = !isGrabbed;
-            targetObject.transform.parent = player.transform;
+            isGrabbed = true;
+            this.gameObject.transform.parent = player.transform;
             Debug.Log("Object grabbed");
-        }
-    }
-
-    public void checkLetGo()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ObjectLetGo();
         }
     }
 
     public void ObjectLetGo()
     {
-        if (isGrabbed == false)
+        if (isGrabbed)
         {
-            //isGrabbed = false;
-            targetObject.transform.parent = null;
-            Debug.Log("Object let go");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                this.gameObject.transform.parent = null;
+                Debug.Log("Object let go");
+            }
+
         }
     }
 }
