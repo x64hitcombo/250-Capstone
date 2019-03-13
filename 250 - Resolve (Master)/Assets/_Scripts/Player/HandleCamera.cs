@@ -175,7 +175,7 @@ public class HandleCamera : MonoBehaviour
             }
         }
 
-        if (linkedKineticObject.GetComponent<KineticControlledMovement>().enabled && Input.GetKeyDown(KeyCode.LeftShift))
+        if (linkedKineticObject != null && linkedKineticObject.GetComponent<KineticControlledMovement>().enabled && Input.GetKeyDown(KeyCode.LeftShift))
         {
             linkedKineticObject.GetComponent<KineticControlledMovement>().enabled = false;
             linkedKineticObject.GetComponent<Rigidbody>().useGravity = true;
