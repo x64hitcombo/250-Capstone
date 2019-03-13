@@ -10,6 +10,7 @@ public class PuzzleMaster : MonoBehaviour
     public GameObject reward;
     public Transform rewardDropSpot;
     public GameObject outAnimate;
+    private bool isCreated;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +67,11 @@ public void AllComplete()
         {
             if (rewardDropSpot)
             {
-                Instantiate(reward, rewardDropSpot);
+                if (!isCreated)
+                {
+                    Instantiate(reward, rewardDropSpot);
+                    isCreated = true;
+                }
             }
         }
     }
