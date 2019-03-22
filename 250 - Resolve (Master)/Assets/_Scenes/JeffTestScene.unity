@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17757899, g: 0.22232254, b: 0.3045191, a: 1}
+  m_IndirectSpecularColor: {r: 0.17757864, g: 0.22232203, b: 0.30451745, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -167,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &163619556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +509,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1331655691}
     m_Modifications:
+    - target: {fileID: 8455546264686406956, guid: cd691d586c06fa545ac0b96c5ccddd6f,
+        type: 3}
+      propertyPath: m_Name
+      value: SleepUI
+      objectReference: {fileID: 0}
     - target: {fileID: 8455546264686406957, guid: cd691d586c06fa545ac0b96c5ccddd6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -613,11 +618,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8455546264686406956, guid: cd691d586c06fa545ac0b96c5ccddd6f,
-        type: 3}
-      propertyPath: m_Name
-      value: SleepUI
       objectReference: {fileID: 0}
     - target: {fileID: 8455546263611101828, guid: cd691d586c06fa545ac0b96c5ccddd6f,
         type: 3}
@@ -812,6 +812,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 925899911}
     m_Modifications:
+    - target: {fileID: 3188129142880270690, guid: 9ab63d80e928a834e93f0dfc4c6d7ae8,
+        type: 3}
+      propertyPath: m_Name
+      value: EquipmentUI
+      objectReference: {fileID: 0}
     - target: {fileID: 3188129142880270689, guid: 9ab63d80e928a834e93f0dfc4c6d7ae8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -916,11 +921,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3188129142880270690, guid: 9ab63d80e928a834e93f0dfc4c6d7ae8,
-        type: 3}
-      propertyPath: m_Name
-      value: EquipmentUI
       objectReference: {fileID: 0}
     - target: {fileID: 3188129142891117207, guid: 9ab63d80e928a834e93f0dfc4c6d7ae8,
         type: 3}
@@ -1098,6 +1098,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2610033390289270923, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerController
+      objectReference: {fileID: 0}
     - target: {fileID: 2610033390289270927, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1253,11 +1258,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 653431953}
-    - target: {fileID: 2610033390289270923, guid: e6ae89e456b934740a09fa632f1ac3d2,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerController
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ae89e456b934740a09fa632f1ac3d2, type: 3}
 --- !u!114 &781493784 stripped
@@ -1349,9 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempRadius: 5
-  hot: 0
-  cold: 0
-  neither: 1
+  temp: 0
 --- !u!135 &869219764
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1539,6 +1537,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 925899911}
     m_Modifications:
+    - target: {fileID: 8311848132283515909, guid: b995ffb8373e4ca4ebfe1548a27249c5,
+        type: 3}
+      propertyPath: m_Name
+      value: CraftingUI
+      objectReference: {fileID: 0}
     - target: {fileID: 8311848132283515910, guid: b995ffb8373e4ca4ebfe1548a27249c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1643,11 +1646,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8311848132283515909, guid: b995ffb8373e4ca4ebfe1548a27249c5,
-        type: 3}
-      propertyPath: m_Name
-      value: CraftingUI
       objectReference: {fileID: 0}
     - target: {fileID: 8311848132697956977, guid: b995ffb8373e4ca4ebfe1548a27249c5,
         type: 3}
@@ -1911,6 +1909,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 249987613}
     m_Modifications:
+    - target: {fileID: 8470750894654080363, guid: 78ecb4465a7a65748962c20aa36ff311,
+        type: 3}
+      propertyPath: m_Name
+      value: InventoryUI
+      objectReference: {fileID: 0}
     - target: {fileID: 8470750894654080360, guid: 78ecb4465a7a65748962c20aa36ff311,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2015,11 +2018,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470750894654080363, guid: 78ecb4465a7a65748962c20aa36ff311,
-        type: 3}
-      propertyPath: m_Name
-      value: InventoryUI
       objectReference: {fileID: 0}
     - target: {fileID: 8470750895209670902, guid: 78ecb4465a7a65748962c20aa36ff311,
         type: 3}
@@ -3862,7 +3860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e293136f1c3c4ab853942744f0451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!135 &1588772198
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4541,6 +4538,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1331655691}
     m_Modifications:
+    - target: {fileID: 5309224777544645877, guid: c6f3c93857a978b478e486d47320c443,
+        type: 3}
+      propertyPath: m_Name
+      value: DraggingItem(Clone)
+      objectReference: {fileID: 0}
     - target: {fileID: 5309224777544645642, guid: c6f3c93857a978b478e486d47320c443,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4645,11 +4647,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5309224777544645877, guid: c6f3c93857a978b478e486d47320c443,
-        type: 3}
-      propertyPath: m_Name
-      value: DraggingItem(Clone)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f3c93857a978b478e486d47320c443, type: 3}

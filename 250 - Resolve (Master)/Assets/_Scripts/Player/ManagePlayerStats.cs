@@ -42,7 +42,8 @@ public class ManagePlayerStats : MonoBehaviour
     public TemperatureManager tempManager;
 
     public SleepMenuScript sleep;
-    public bool byBed = false;
+
+    public float proxFieldRadius = 5f;
 
 	// Use this for initialization
 	void Start ()
@@ -62,15 +63,8 @@ public class ManagePlayerStats : MonoBehaviour
         ManageDecreaseOverTime();
         ManageIncreaseOverTime();
         HandleBarDisplays();
+        ProximityField();
         currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
-        if (byBed == true && Input.GetKeyDown(KeyCode.Tab))
-        {
-            sleep.SleepMenuOn();
-        }
-        if (byBed == false)
-        {
-            sleep.SleepMenuOff();
-        }
     }
 
     public void ManageDecreaseOverTime()
@@ -91,6 +85,11 @@ public class ManagePlayerStats : MonoBehaviour
         {
             hDebuff2 = true;
         }
+        else
+        {
+            hDebuff1 = false;
+            hDebuff2 = false;
+        }
 
         currentThirst -= Time.deltaTime * thirstDrain;
         if (currentThirst < 0)
@@ -106,6 +105,11 @@ public class ManagePlayerStats : MonoBehaviour
         {
             tDebuff2 = true;
         }
+        else
+        {
+            tDebuff1 = false;
+            tDebuff2 = false;
+        }
 
         currentFatigue -= Time.deltaTime * fatigueDrain;
 
@@ -116,6 +120,11 @@ public class ManagePlayerStats : MonoBehaviour
         else if (currentFatigue <= (maxValue / 4))
         {
             fDebuff2 = true;
+        }
+        else
+        {
+            fDebuff1 = false;
+            fDebuff2 = false;
         }
     }
 
@@ -162,12 +171,9 @@ public class ManagePlayerStats : MonoBehaviour
 
     public void Sleep()
     {
-        if (byBed)
-        {
             currentFatigue = maxValue;
             currentHunger -= 15;
             currentThirst -= 20;
-        }
     }
 
     public void HandleDebuffs()
@@ -248,5 +254,41 @@ public class ManagePlayerStats : MonoBehaviour
         //HP management has moved to the Health script
     }
 
-    
+    public void ProximityField()
+    {
+        List<Collider> overlaps = new List<Collider>();
+        overlaps.AddRange(Physics.OverlapSphere(transform.position, proxFieldRadius));
+
+        if (overlaps != null)
+        {
+            foreach (Collider collider in overlaps)
+            {
+                if (collider.GetComponent<proxTarget>())
+                {
+                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.Bed)
+                    {
+                        Debug.Log("bed here");
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            sleep.ToggleUI();
+                        }
+                    }
+                    else
+                    {
+                        sleep.gameObject.SetActive(false);
+                    }
+
+                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.Fire)
+                    {
+
+                    }
+                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.water)
+                    {
+
+                    }
+
+                }
+            }
+        }
+    }   
 }
