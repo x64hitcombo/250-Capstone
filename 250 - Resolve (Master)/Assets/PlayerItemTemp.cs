@@ -5,13 +5,9 @@ using UnityEngine;
 public class PlayerItemTemp : MonoBehaviour
 {
     public float tempRadius = 5f;
-
-    public enum tempSet
-    {
-        Hot,
-        Cold
-    }
-    public tempSet temp;
+    public bool hot = false;
+    public bool cold = false;
+    public bool neither = true;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +18,8 @@ public class PlayerItemTemp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InTempZone();
         ChangeItemTemp();
+        InTempZone();
     }
 
     public void InTempZone()
@@ -37,14 +33,14 @@ public class PlayerItemTemp : MonoBehaviour
             {
                 if (collider.gameObject.tag == "ChangeTempObject")
                 {
-                    if (temp == tempSet.Hot)
+                    if (hot)
                     {
                         collider.gameObject.GetComponent<HandleObjectTemperature>().hot = true;
                         collider.gameObject.GetComponent<HandleObjectTemperature>().cold = false;
                         collider.gameObject.GetComponent<HandleObjectTemperature>().neither = false;
                         collider.gameObject.GetComponent<HandleObjectTemperature>().changeColor = true;
                     }
-                    else if (temp == tempSet.Cold)
+                    else if (cold)
                     {
                         collider.gameObject.GetComponent<HandleObjectTemperature>().hot = false;
                         collider.gameObject.GetComponent<HandleObjectTemperature>().cold = true;
@@ -58,15 +54,22 @@ public class PlayerItemTemp : MonoBehaviour
 
     public void ChangeItemTemp()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (temp == tempSet.Hot)
+            if (hot)
             {
-                temp = tempSet.Cold;
+                hot = false;
+                cold = true;
             }
-            else if (temp == tempSet.Cold)
+            else if (cold)
             {
-                temp = tempSet.Hot;
+                cold = false;
+                neither = true;
+            }
+            else if (neither)
+            {
+                neither = false;
+                hot = true;
             }
         }
     }
