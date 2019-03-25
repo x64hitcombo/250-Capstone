@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private bool canClimb;
     private Transform climbLookPosition;
 
+    public GameObject hackingGame;
+
     void Start()
     {
         rbody = GetComponent<Rigidbody>();
@@ -203,6 +205,25 @@ public class PlayerController : MonoBehaviour
             canClimb = false;
             climbing = false;
             climbLookPosition = null;
+        }
+        if (other.tag == "HackingGame")
+        {
+            hackingGame.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "HackingGame")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                hackingGame.SetActive(true);
+            }
+            else if (hackingGame.activeSelf && Input.GetKey(KeyCode.Escape))
+            {
+                hackingGame.SetActive(false);
+            }
         }
     }
 
