@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1738168967576449119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784832884661934345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5137de96d149c84eab2cb9b70af85d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: []
+  cam: {fileID: 8394544030424742244}
+  compassArrow: {fileID: 0}
+  arrowRotation: {x: 0, y: 0, z: 0, w: 0}
+  northDir: {x: 0, y: 0, z: 0}
 --- !u!1 &8394544029602915085
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +495,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ae89e456b934740a09fa632f1ac3d2, type: 3}
+--- !u!1 &5784832884661934345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610033390289270923, guid: e6ae89e456b934740a09fa632f1ac3d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8394544030534099330}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5784832884661934349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2610033390289270927, guid: e6ae89e456b934740a09fa632f1ac3d2,
