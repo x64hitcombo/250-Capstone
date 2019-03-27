@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ManagePlayerStats : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class ManagePlayerStats : MonoBehaviour
     [Header("Hunger")]
     public float hungerDrain = 0.3f; //use fractions (1 will be max)
     public Image hungerBar;
-    private bool hDebuff1 = false;
-    private bool hDebuff2 = false;
+    public bool hDebuff1 = false;
+    public bool hDebuff2 = false;
     [Header("Thirst")]
     public float thirstDrain = .4f;
     public Image thirstBar;
@@ -77,11 +78,11 @@ public class ManagePlayerStats : MonoBehaviour
             currentHunger = 0;
         }
 
-        if (currentHunger <= (maxValue / 2) && currentHunger >= (maxValue / 4))
+        if (currentHunger <= (maxValue / 2))
         {
             hDebuff1 = true;
         }
-        else if (currentHunger <= (maxValue / 4))
+        else if (currentHunger <= (maxValue / 4) && currentHunger >= (maxValue / 2))
         {
             hDebuff2 = true;
         }
@@ -125,6 +126,10 @@ public class ManagePlayerStats : MonoBehaviour
         {
             fDebuff1 = false;
             fDebuff2 = false;
+        }
+        if (currentFatigue <= 0)
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 
@@ -183,7 +188,7 @@ public class ManagePlayerStats : MonoBehaviour
 
         if (hDebuff1)
         {
-            fatigueDrain += drainValueOne; //this may be changed later
+            fatigueDrain = fatigueDrain + drainValueOne; //this may be changed later
         }
 
         if (hDebuff2)
