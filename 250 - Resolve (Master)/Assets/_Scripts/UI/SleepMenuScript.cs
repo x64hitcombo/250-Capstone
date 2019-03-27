@@ -69,8 +69,9 @@ public class SleepMenuScript : MonoBehaviour
         if (TimeMain._fCurrentHour >= Slider.value && TimeMain._fCurrentHour <= Slider.value + 0.99)
         {
             SleepTime = false;
+            TimeMain.GetSet_fTimeMultiplier = 1f;
             player.movement = true;
-            toggle = false;
+            ToggleUI();
         }
     }
 

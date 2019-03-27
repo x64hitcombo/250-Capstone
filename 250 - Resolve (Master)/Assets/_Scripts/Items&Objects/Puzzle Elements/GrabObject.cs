@@ -18,7 +18,21 @@ public class GrabObject : MonoBehaviour {
         {
             playerPresent = true;
             player = other.gameObject;
-            objectGrab();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                toggleGrab();
+            }
+
+            if (isGrabbed)
+            {
+                this.gameObject.transform.parent = player.transform;
+
+            }
+            else
+            {
+                this.gameObject.transform.parent = null;
+
+            }
         }
     }
 
@@ -27,26 +41,34 @@ public class GrabObject : MonoBehaviour {
         playerPresent = false;
     }
 
-    public void objectGrab()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            isGrabbed = true;
-            this.gameObject.transform.parent = player.transform;
-            Debug.Log("Object grabbed");
-        }
-    }
+    //public void objectGrab()
+    //{
+    //    if (!isGrabbed)
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.E))
+    //        {
+    //            isGrabbed = true;
+    //            this.gameObject.transform.parent = player.transform;
+    //            Debug.Log("Object grabbed");
+    //        }
+    //    }
+    //}
 
-    public void ObjectLetGo()
-    {
-        if (isGrabbed)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                this.gameObject.transform.parent = null;
-                Debug.Log("Object let go");
-            }
+    //public void ObjectLetGo()
+    //{
+    //    if (isGrabbed)
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.E))
+    //        {
+    //            this.gameObject.transform.parent = null;
+    //            Debug.Log("Object let go");
+    //        }
 
-        }
+    //    }
+    //}
+
+    public void toggleGrab()
+    {
+        isGrabbed = !isGrabbed;
     }
 }

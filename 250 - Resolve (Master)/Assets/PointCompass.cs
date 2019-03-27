@@ -6,7 +6,7 @@ public class PointCompass : MonoBehaviour
 {
     public Transform[] targets;
     public Transform cam;
-    private int activeTarget;
+    public int activeTarget;
 
     public RectTransform compassArrow;
     public Quaternion arrowRotation;

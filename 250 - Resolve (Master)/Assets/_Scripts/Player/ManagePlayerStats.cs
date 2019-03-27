@@ -46,6 +46,8 @@ public class ManagePlayerStats : MonoBehaviour
 
     public float proxFieldRadius = 5f;
 
+    public bool atfire = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -65,7 +67,15 @@ public class ManagePlayerStats : MonoBehaviour
         ManageIncreaseOverTime();
         HandleBarDisplays();
         ProximityField();
-        currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
+        if (atfire == false)
+        {
+            currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
+
+        }
+        else
+        {
+            currentExposure = 60;
+        }
     }
 
     public void ManageDecreaseOverTime()
@@ -285,7 +295,11 @@ public class ManagePlayerStats : MonoBehaviour
 
                     if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.Fire)
                     {
-
+                        atfire = true;
+                    }
+                    else
+                    {
+                        atfire = false;
                     }
                     if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.water)
                     {
