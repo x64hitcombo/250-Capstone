@@ -13,7 +13,6 @@ public class ObjectInspection : MonoBehaviour {
 
     public string playerTag = "Player";
     public string inspectString;
-
     public void OnTriggerEnter(Collider other)
     {
         playerView = true;

@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &789676069425808190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8058890111238909917}
+  - component: {fileID: 2119043135248065377}
+  - component: {fileID: 4958583077660135689}
+  - component: {fileID: 5355322552273151164}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8058890111238909917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789676069425808190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.131, z: 0}
+  m_LocalScale: {x: 0.72576, y: 0.05186, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9093725104882723706}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2119043135248065377
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789676069425808190}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4958583077660135689
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789676069425808190}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &5355322552273151164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789676069425808190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3704529409868399353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9093725104882723706}
+  - component: {fileID: 1984839796942372485}
+  - component: {fileID: 2138922162427514731}
+  m_Layer: 0
+  m_Name: Greater Loadstone  Expedition Team Log - Suzzanne Murphy - 29
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9093725104882723706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704529409868399353}
+  m_LocalRotation: {x: -0, y: 0.38268274, z: -0, w: 0.9238798}
+  m_LocalPosition: {x: 7.9411316, y: 0.5, z: -46.79157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8058890111238909917}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1984839796942372485
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704529409868399353}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2138922162427514731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704529409868399353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f3b4dc9f01afa4ab9980a5e4666b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inspectUI: {fileID: 0}
+  playerView: 0
+  playerTag: Player
+  inspectString: "We found it, our journey lead us from Europe to the United States
+    where we got a major lead on where to find the Stone, and we found it. We oddly
+    enough found it inside a large underwater mansion off the coast of Massachusetts.
+    The house, along with the cliff it sat on, collapsed into the ocean almost a century
+    ago after some big earthquake rocked the region. We hired a diving crew to go
+    down and retrieve the Stone and had it sent back to Daegan ahead of us, we\u2019ll
+    be following suit in a week once we wrap up here in Boston.  \tWhat originally
+    turned us onto the Stones location was a journal kept by a detective named Dick
+    Tracey. The journal details a case that he worked on revolving around the mansion
+    just before it collapsed into the ocean. While we\u2019ve been wrapping up I\u2019ve
+    taken the time to dive into the journal and see what happened. Needless to say
+    I\u2019m absolutely terrified, the journal detailed a case revolving around people
+    who had been going missing in the area near the mansion. Apparently a cult of
+    fenatics (perhaps the same cult we found hints of in China) were kidnapping people
+    and sacrificing them to the Stone. But that's not what terrified me, what terrified
+    me was what the cultists were attempting to build around the Stone. The journal
+    featured an elaborate schematic (presumably drawn by the cultists or Dick himself)
+    of a machine that the cultists were attempting to build, it looks exactly like
+    the machine my husband is building. At first I figured I was mistaken, I\u2019m
+    not an expert on schematics so it was entirely possible I was mistaken. But then
+    I found a drawing in the journal that shook me the second I saw it, it was a drawing
+    of a Mark. How could that be? The journal and the case date back to the late 1940\u2019s
+    , well before the Saviors arrived on Earth. Yet here they were drawn and described
+    to the T in this journal. Marks of Madness it calls them, giving people enhanced
+    physical attributes all while slowly driving the bearer of the Mark insane over
+    multiple years. The journal even described normal Loadstones and what they\u2019re
+    used for, exactly the same as the ones the Saviors gave us. The Saviors are lying
+    to us, either about when they actually came to Earth for the first time and/or
+    about their true intentions. I need to get this journal back to my husband as
+    soon as possible, I need him to see this for himself and see if he reaches the
+    same conclusion as I did. "
