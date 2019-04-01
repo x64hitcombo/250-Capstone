@@ -12,6 +12,24 @@ public class GrabObject : MonoBehaviour {
         this.gameObject.GetComponent<PuzzleObject>().confirm = true;
     }
 
+    public void Update()
+    {
+        if (isGrabbed)
+        {
+            this.gameObject.transform.parent = player.transform;
+        }
+        else
+        {
+            this.gameObject.transform.parent = null;
+        }
+
+        if (!playerPresent)
+        {
+            this.gameObject.transform.parent = null;
+            isGrabbed = false;
+        }
+    }
+
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -21,17 +39,6 @@ public class GrabObject : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 toggleGrab();
-            }
-
-            if (isGrabbed)
-            {
-                this.gameObject.transform.parent = player.transform;
-
-            }
-            else
-            {
-                this.gameObject.transform.parent = null;
-
             }
         }
     }

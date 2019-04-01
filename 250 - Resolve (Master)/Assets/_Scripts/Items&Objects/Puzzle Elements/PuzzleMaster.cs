@@ -50,6 +50,7 @@ public class PuzzleMaster : MonoBehaviour
             foreach (GameObject pObject in puzzleObjects)
             {
                 Debug.Log("All reset, captain!");
+
                 pObject.gameObject.transform.position = pObject.GetComponent<PuzzleObject>().ogTrans;
             }
         }

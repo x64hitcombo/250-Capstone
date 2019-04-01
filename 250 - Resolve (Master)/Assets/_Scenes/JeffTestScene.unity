@@ -5479,6 +5479,7 @@ MonoBehaviour:
   hotColor: {r: 1, g: 0, b: 0, a: 0}
   coldMaterial: {fileID: 0}
   coldColor: {r: 0.24644002, g: 0.32642224, b: 0.735849, a: 0}
+  targTemp: 0
   changeColor: 0
 --- !u!65 &1394147944
 BoxCollider:
@@ -6498,6 +6499,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 114624479556762782, guid: 26470db775e414949aa70ebf57b8e952,
+        type: 3}
+      propertyPath: clockText
+      value: 
+      objectReference: {fileID: 2085984074}
     - target: {fileID: 4321925071127866, guid: 26470db775e414949aa70ebf57b8e952, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.816185
@@ -6542,11 +6548,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114624479556762782, guid: 26470db775e414949aa70ebf57b8e952,
-        type: 3}
-      propertyPath: clockText
-      value: 
-      objectReference: {fileID: 2085984074}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26470db775e414949aa70ebf57b8e952, type: 3}
 --- !u!4 &1720906069 stripped

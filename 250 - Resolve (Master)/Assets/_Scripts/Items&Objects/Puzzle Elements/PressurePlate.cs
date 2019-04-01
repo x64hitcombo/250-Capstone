@@ -10,7 +10,7 @@ public class PressurePlate : MonoBehaviour {
 
 	void Start ()
     {
-        animate = GetComponent<Animator>();
+
 	}
 
     public void OnTriggerStay(Collider other)
