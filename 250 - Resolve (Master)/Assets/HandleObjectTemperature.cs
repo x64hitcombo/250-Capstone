@@ -17,6 +17,13 @@ public class HandleObjectTemperature : MonoBehaviour
     public Material coldMaterial;
     public Color coldColor;
 
+    public enum targetTemp
+    {
+        Hot,
+        Cold
+    }
+    public targetTemp targTemp;
+
     //Only needs to be seen for other scripts not in the inspector
     [HideInInspector]
     public bool changeColor = false;
@@ -33,6 +40,20 @@ public class HandleObjectTemperature : MonoBehaviour
         if (changeColor)
         {
             SetMaterialColorForTemperature();
+        }
+
+        if (hot && targTemp == targetTemp.Hot)
+        {
+            this.GetComponent<PuzzleObject>().confirm = true;
+        }
+        else if (cold && targTemp == targetTemp.Cold)
+        {
+            this.GetComponent<PuzzleObject>().confirm = true;
+        }
+        else
+        {
+            this.GetComponent<PuzzleObject>().confirm = false;
+
         }
     }
 

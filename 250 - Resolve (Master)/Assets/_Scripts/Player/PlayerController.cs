@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerController : MonoBehaviour {
-    float movementSpeed;        //Speed for movement
+public class PlayerController : MonoBehaviour
+{
+    [HideInInspector]
+    public float movementSpeed;        //Speed for movement
     public float staminaLossRate;
     public float baseMovementSpeed;
     public float climbingSpeed;
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour {
     public bool canSprint = true;
     private bool canClimb;
     private Transform climbLookPosition;
+
+    public GameObject hackingGame;
 
     void Start()
     {
@@ -201,6 +205,25 @@ public class PlayerController : MonoBehaviour {
             canClimb = false;
             climbing = false;
             climbLookPosition = null;
+        }
+        if (other.tag == "HackingGame")
+        {
+            hackingGame.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "HackingGame")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                hackingGame.SetActive(true);
+            }
+            else if (hackingGame.activeSelf && Input.GetKey(KeyCode.Escape))
+            {
+                hackingGame.SetActive(false);
+            }
         }
     }
 

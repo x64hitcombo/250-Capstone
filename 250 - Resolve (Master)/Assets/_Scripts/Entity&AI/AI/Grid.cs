@@ -19,8 +19,8 @@ public class Grid : MonoBehaviour
     private void Start()
     {
         nodeDiameter = nodeRadius * 2;
-        gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
-        gridSizeY = Mathf.RoundToInt(gridWorldSize.y / nodeDiameter);
+        gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter); // 30 / 2 = 15
+        gridSizeY = Mathf.RoundToInt(gridWorldSize.y / nodeDiameter); // 30 / 2 = 15
         CreateGrid();
     }
 
@@ -63,6 +63,25 @@ public class Grid : MonoBehaviour
             int y = Mathf.RoundToInt((gridSizeY - 1) * percentY);
 
             return grid[x, y];
+        }
+        return null;
+    }
+
+    public Node NodeFromGridPosition(Vector3 _gridPosition)
+    {
+        if (grid != null)
+        {
+            //Assuming Start Position is at x:-30 y:1 z:0
+            float percentX = ((_gridPosition.x + (gridWorldSize.x - (_gridPosition.x)) / 2) / gridWorldSize.x); // ((-30 + (30 - -30)) / 2) / 30 = 0.5
+            float percentY = ((_gridPosition.z + (gridWorldSize.y - (_gridPosition.z)) / 2) / gridWorldSize.y); // ((0 + (30 - 0)) / 2) / 30 = 0.5
+
+            percentX = Mathf.Clamp01(percentX); // 0.5
+            percentY = Mathf.Clamp01(percentY); // 0.5
+
+            int x = Mathf.RoundToInt((gridSizeX - 1) * percentX); // (15 - 1) * 0 = 7
+            int y = Mathf.RoundToInt((gridSizeY - 1) * percentY); // (15 - 1) * 0.5 = 7
+
+            return grid[x, y]; // return grid[0, 7]
         }
         return null;
     }
@@ -170,7 +189,12 @@ public class Grid : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 0.2f, gridWorldSize.y));
-        Node aiNode = NodeFromWorldPosition(startPosition.position);
+        //Node aiNode = NodeFromWorldPosition(startPosition.position);
+        //Test aiNode below
+        Node aiNode = NodeFromGridPosition(startPosition.position);
+
+        print(aiNode.gridX);
+        print(aiNode.gridY);
 
         if (grid != null)
         {

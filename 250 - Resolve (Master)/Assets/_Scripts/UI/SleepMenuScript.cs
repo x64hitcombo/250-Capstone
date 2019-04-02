@@ -18,12 +18,14 @@ public class SleepMenuScript : MonoBehaviour
     
     private bool SleepTime;
     public PlayerController player;
+    public bool toggle = true;
 
     void Start()
     {
         TimeMain = FindObjectOfType<MainTimeScript>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         SleepTime = false;
+        this.gameObject.SetActive(false);
     }
 
     void Update()
@@ -36,7 +38,7 @@ public class SleepMenuScript : MonoBehaviour
             FastForward();
         }
 
-        Debug.Log("Updating:)");
+        Debug.Log("Updating:");
     }
 
     //Show what time it currently is in the game world
@@ -67,22 +69,16 @@ public class SleepMenuScript : MonoBehaviour
         if (TimeMain._fCurrentHour >= Slider.value && TimeMain._fCurrentHour <= Slider.value + 0.99)
         {
             SleepTime = false;
+            TimeMain.GetSet_fTimeMultiplier = 1f;
             player.movement = true;
-            SleepMenuOff();
+            ToggleUI();
         }
     }
 
-    //Freezes game time & activates sleep menu
-    public void SleepMenuOn()
+    public void ToggleUI()
     {
-        TimeMain.GetSet_fTimeMultiplier = 0f;
-        SleepPanel.SetActive(true);
+        toggle = !toggle;
+        this.gameObject.SetActive(toggle);
     }
 
-    //Resumes game time & deactivates sleep menu
-    public void SleepMenuOff()
-    {
-        TimeMain.GetSet_fTimeMultiplier = 1f;
-        SleepPanel.SetActive(false);
-    }
 }

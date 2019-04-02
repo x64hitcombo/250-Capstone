@@ -3,23 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GrabObject : MonoBehaviour {
-
-    public GameObject player;
-
-    public GameObject targetObject;
-
-    public float objectMass = 0;
-
+    private GameObject player;
     public bool isGrabbed = false;
-
     public bool playerPresent = false;
 
-    public void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.gameObject.tag == "Player")
+        this.gameObject.GetComponent<PuzzleObject>().confirm = true;
+    }
+
+    public void Update()
+    {
+        if (isGrabbed)
         {
-            playerPresent = true;
-            objectGrab();
+            this.gameObject.transform.parent = player.transform;
+        }
+        else
+        {
+            this.gameObject.transform.parent = null;
+        }
+
+        if (!playerPresent)
+        {
+            this.gameObject.transform.parent = null;
+            isGrabbed = false;
         }
     }
 
@@ -28,8 +35,11 @@ public class GrabObject : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             playerPresent = true;
-            objectGrab();
-            checkLetGo();
+            player = other.gameObject;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                toggleGrab();
+            }
         }
     }
 
@@ -38,31 +48,34 @@ public class GrabObject : MonoBehaviour {
         playerPresent = false;
     }
 
-    public void objectGrab()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            isGrabbed = !isGrabbed;
-            targetObject.transform.parent = player.transform;
-            Debug.Log("Object grabbed");
-        }
-    }
+    //public void objectGrab()
+    //{
+    //    if (!isGrabbed)
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.E))
+    //        {
+    //            isGrabbed = true;
+    //            this.gameObject.transform.parent = player.transform;
+    //            Debug.Log("Object grabbed");
+    //        }
+    //    }
+    //}
 
-    public void checkLetGo()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ObjectLetGo();
-        }
-    }
+    //public void ObjectLetGo()
+    //{
+    //    if (isGrabbed)
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.E))
+    //        {
+    //            this.gameObject.transform.parent = null;
+    //            Debug.Log("Object let go");
+    //        }
 
-    public void ObjectLetGo()
+    //    }
+    //}
+
+    public void toggleGrab()
     {
-        if (isGrabbed == false)
-        {
-            //isGrabbed = false;
-            targetObject.transform.parent = null;
-            Debug.Log("Object let go");
-        }
+        isGrabbed = !isGrabbed;
     }
 }

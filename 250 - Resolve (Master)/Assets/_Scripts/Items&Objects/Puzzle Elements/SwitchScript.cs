@@ -4,25 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SwitchScript : MonoBehaviour {
-
-    // For Text UI
-    public GameObject SwitchText;
-
-    // Given Object
-    public GameObject designatedObject;
-
     // True/False Switch being pressed
     public bool switchPressed = false;
 
     // True/False if player is present near the object
     public bool playerPresent = false;
 
+    public enum confirmState
+    {
+        On,
+        Off
+    }
+
+    public confirmState confirm;
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            SwitchText.SetActive(true);
-            SwitchText.GetComponent<Text>().text = "Press E activate Switch";
             playerPresent = true;
         }
     }
@@ -33,7 +32,7 @@ public class SwitchScript : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                switchPressed = true;
+                switchPressed = !switchPressed;
                 Debug.Log("Switch Pressed");
             }
         }
@@ -41,17 +40,34 @@ public class SwitchScript : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        SwitchText.SetActive(false);
-        SwitchText.GetComponent<Text>().text = "";
         playerPresent = false;
     }
 
     public void Update()
     {
-        if (switchPressed == true)
+        if (confirm == confirmState.On)
         {
-            designatedObject.transform.Translate(Vector3.down * Time.deltaTime);
-            switchPressed = true;
+            if (switchPressed == true)
+            {
+                this.GetComponent<PuzzleObject>().confirm = true;
+            }
+            if (switchPressed == false)
+            {
+                this.GetComponent<PuzzleObject>().confirm = false;
+            }
+        }
+
+        if (confirm == confirmState.Off)
+        {
+            if (switchPressed == false)
+            {
+                this.GetComponent<PuzzleObject>().confirm = true;
+            }
+            else
+            {
+                this.GetComponent<PuzzleObject>().confirm = false;
+
+            }
         }
     }
 }

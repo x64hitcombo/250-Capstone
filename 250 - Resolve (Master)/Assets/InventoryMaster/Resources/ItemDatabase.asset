@@ -336,32 +336,8 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: Thirst
       attributeValue: 30
-  - itemName: New Item
-    itemID: 20
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
-  - itemName: New Item
-    itemID: 21
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
   - itemName: Winter Coat
-    itemID: 22
+    itemID: 20
     itemDesc: A thick fur coat. +20 Exposure
     itemIcon: {fileID: 21300000, guid: 34ce9c8524e37f549bc4de2bbdd96429, type: 3}
     itemModel: {fileID: 612096295450660008, guid: fc9f07cc2b4991c4dbc2abb6948610c4,
@@ -376,7 +352,7 @@ MonoBehaviour:
     - attributeName: exRating
       attributeValue: 20
   - itemName: Poncho
-    itemID: 23
+    itemID: 21
     itemDesc: Keeps you cool and protected from the sun. -20 exposure.
     itemIcon: {fileID: 21300000, guid: 94feb6ac7e57fb34bb8d8f48f554ff82, type: 3}
     itemModel: {fileID: 8205654381306932480, guid: d749bf3fbe7258042aeb319345c77797,
@@ -390,8 +366,68 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: exRating
       attributeValue: -20
-  - itemName: New Item
+  - itemName: Small Kebob
+    itemID: 22
+    itemDesc: A kebob that has both pork and a radish that will replenish hunger.
+    itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 50
+  - itemName: Medium Kebob
+    itemID: 23
+    itemDesc: A kebob that contains both a ham and a radish to replenish hunger.
+    itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 50
+  - itemName: Large Kebob
     itemID: 24
+    itemDesc: A kebob that contains a rib and potato that replenishes health.
+    itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 50
+  - itemName: Grilled Fruit
+    itemID: 25
+    itemDesc: Fruit that is grilled that replenishes hunger, thirst, and fatigue.
+    itemIcon: {fileID: 21300000, guid: eaf524e2534a93842af7fa4e7f553f58, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 50
+    - attributeName: Thirst
+      attributeValue: 15
+    - attributeName: Fatigue
+      attributeValue: 15
+  - itemName: New Item
+    itemID: 26
     itemDesc: 
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}
@@ -402,8 +438,105 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
+  - itemName: Cattail
+    itemID: 27
+    itemDesc: Dried-flower that is used for crafting items.
+    itemIcon: {fileID: 21300000, guid: 97665ba2b5557e041be2d39db96b525e, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Bottle
+    itemID: 28
+    itemDesc: A bottle that is use for crating items.
+    itemIcon: {fileID: 21300000, guid: 40c0544742cafa147882381221ff228a, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Bow
+    itemID: 29
+    itemDesc: A man-made weapon that is used for hunting. It requires arrows to fire
+      it.
+    itemIcon: {fileID: 21300000, guid: ab273a9be22ac5e4dabaf557568c0ef0, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Arrow
+    itemID: 30
+    itemDesc: Ammunition for bow. It requires a bow for it to be shot.
+    itemIcon: {fileID: 21300000, guid: 0a0fa0e9f0d920b4b8038b47ea17f545, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Axe
+    itemID: 31
+    itemDesc: A weapon and tool that is used to cut down trees and or enemies.
+    itemIcon: {fileID: 21300000, guid: e71c97bcbd9c04d45b84ba60ef821eb1, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Knife
+    itemID: 32
+    itemDesc: A weapon and tool used for cutting foilage and to damage enemies.
+    itemIcon: {fileID: 21300000, guid: 7f044313c0f1c164f85c40185e3a8b9b, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Torch
+    itemID: 33
+    itemDesc: A light source to which it will light the surrounding area to see better.
+    itemIcon: {fileID: 21300000, guid: 2b9ac9a5f4db0f24eb713f481f23b355, type: 3}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Quiver
+    itemID: 34
+    itemDesc: 'A '
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
   - itemName: New Item
-    itemID: 25
+    itemID: 35
     itemDesc: 
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}

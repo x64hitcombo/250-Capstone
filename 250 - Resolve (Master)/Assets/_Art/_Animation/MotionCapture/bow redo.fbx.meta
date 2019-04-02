@@ -1,0 +1,423 @@
+fileFormatVersion: 2
+guid: ec1da05c6da00ba428a0f53a5ba1ba80
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Skeleton8_Head
+    100004: Skeleton8_Hips
+    100006: Skeleton8_LeftArm
+    100008: Skeleton8_LeftFoot
+    100010: Skeleton8_LeftForeArm
+    100012: Skeleton8_LeftHand
+    100014: Skeleton8_LeftLeg
+    100016: Skeleton8_LeftShoulder
+    100018: Skeleton8_LeftToeBase
+    100020: Skeleton8_LeftUpLeg
+    100022: Skeleton8_Neck
+    100024: Skeleton8_RightArm
+    100026: Skeleton8_RightFoot
+    100028: Skeleton8_RightForeArm
+    100030: Skeleton8_RightHand
+    100032: Skeleton8_RightLeg
+    100034: Skeleton8_RightShoulder
+    100036: Skeleton8_RightToeBase
+    100038: Skeleton8_RightUpLeg
+    100040: Skeleton8_Spine
+    100042: Skeleton8_Spine1
+    400000: //RootNode
+    400002: Skeleton8_Head
+    400004: Skeleton8_Hips
+    400006: Skeleton8_LeftArm
+    400008: Skeleton8_LeftFoot
+    400010: Skeleton8_LeftForeArm
+    400012: Skeleton8_LeftHand
+    400014: Skeleton8_LeftLeg
+    400016: Skeleton8_LeftShoulder
+    400018: Skeleton8_LeftToeBase
+    400020: Skeleton8_LeftUpLeg
+    400022: Skeleton8_Neck
+    400024: Skeleton8_RightArm
+    400026: Skeleton8_RightFoot
+    400028: Skeleton8_RightForeArm
+    400030: Skeleton8_RightHand
+    400032: Skeleton8_RightLeg
+    400034: Skeleton8_RightShoulder
+    400036: Skeleton8_RightToeBase
+    400038: Skeleton8_RightUpLeg
+    400040: Skeleton8_Spine
+    400042: Skeleton8_Spine1
+    7400000: bow redo
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'bow redo' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Skeleton8_Spine1' has translation animation
+      that will be discarded.\n\t'Skeleton8_Head' has translation animation that will
+      be discarded.\n\t'Skeleton8_LeftHand' has translation animation that will be
+      discarded.\n\t'Skeleton8_RightHand' has translation animation that will be discarded.\n\t'Skeleton8_LeftFoot'
+      has translation animation that will be discarded.\n\t'Skeleton8_RightFoot' has
+      translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Skeleton8_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Skeleton8_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: bow redo(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_Hips
+      parentName: bow redo(Clone)
+      position: {x: 0.004837021, y: 0.8696935, z: 0.005706107}
+      rotation: {x: 0.011748369, y: 0.047616787, z: 0.0017432619, w: 0.9987951}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_Spine
+      parentName: Skeleton8_Hips
+      position: {x: -0, y: 0.075290054, z: 0}
+      rotation: {x: -0.036806, y: -0.0017688277, z: -0.0063910563, w: 0.9993004}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_Spine1
+      parentName: Skeleton8_Spine
+      position: {x: -0.00000020954758, y: 0.21120183, z: -0.0000011734664}
+      rotation: {x: -0.0005592802, y: -0.00060177647, z: 0.0009679163, w: 0.9999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_Neck
+      parentName: Skeleton8_Spine1
+      position: {x: -0, y: 0.21124679, z: 0.019204253}
+      rotation: {x: 0.096709505, y: -0.028628418, z: 0.007150967, w: 0.99487513}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_Head
+      parentName: Skeleton8_Neck
+      position: {x: -0.0000006891787, y: 0.13181639, z: -0.018835396}
+      rotation: {x: -0.009815454, y: -0.026106285, z: 0.03757953, w: 0.9989044}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftShoulder
+      parentName: Skeleton8_Spine1
+      position: {x: -0.036053315, y: 0.18301105, z: -0.0027395522}
+      rotation: {x: 0.03674829, y: -0.03310204, z: -0.097621635, w: 0.9939939}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftArm
+      parentName: Skeleton8_LeftShoulder
+      position: {x: -0.14439559, y: 0, z: 0}
+      rotation: {x: -0.003625258, y: 0.02517869, z: 0.20801777, w: 0.97779423}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftForeArm
+      parentName: Skeleton8_LeftArm
+      position: {x: -0.26336333, y: 0, z: 0}
+      rotation: {x: -0.025872907, y: 0.0009415354, z: -0.012012593, w: 0.9995926}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftHand
+      parentName: Skeleton8_LeftForeArm
+      position: {x: -0.2419397, y: 0.000008225441, z: 0.0000010319054}
+      rotation: {x: -0.025873296, y: -0.010127968, z: 0.0012265517, w: 0.99961317}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightShoulder
+      parentName: Skeleton8_Spine1
+      position: {x: 0.037300214, y: 0.18301105, z: -0.0027395522}
+      rotation: {x: 0.018373642, y: -0.04540951, z: 0.11087605, w: 0.99262625}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightArm
+      parentName: Skeleton8_RightShoulder
+      position: {x: 0.14439559, y: 0, z: 0}
+      rotation: {x: -0.0047078137, y: 0.033876803, z: -0.21064395, w: 0.97696435}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightForeArm
+      parentName: Skeleton8_RightArm
+      position: {x: 0.26336333, y: 0, z: 0}
+      rotation: {x: -0.05541974, y: -0.030386247, z: 0.03462315, w: 0.9973999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightHand
+      parentName: Skeleton8_RightForeArm
+      position: {x: 0.24637926, y: -0.000014662743, z: -0.000005390495}
+      rotation: {x: -0.05544146, y: 0.0045949304, z: -0.035895217, w: 0.99780595}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftUpLeg
+      parentName: Skeleton8_Hips
+      position: {x: -0.09181714, y: 0, z: 0}
+      rotation: {x: -0.0401863, y: -0.0028746733, z: -0.07264299, w: 0.99654394}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftLeg
+      parentName: Skeleton8_LeftUpLeg
+      position: {x: -0, y: -0.3989076, z: 0}
+      rotation: {x: 0.15488045, y: -0.0060366653, z: 0.041043095, w: 0.98706186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftFoot
+      parentName: Skeleton8_LeftLeg
+      position: {x: -0.00031492114, y: -0.37513655, z: -0.00095347315}
+      rotation: {x: -0.12260404, y: -0.076936156, z: 0.044014674, w: 0.9884897}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_LeftToeBase
+      parentName: Skeleton8_LeftFoot
+      position: {x: -0, y: -0.059681136, z: 0.13772571}
+      rotation: {x: 0.00034165382, y: -0.0030060858, z: 0.00024890155, w: 0.9999954}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightUpLeg
+      parentName: Skeleton8_Hips
+      position: {x: 0.09181714, y: 0, z: 0}
+      rotation: {x: 0.028473694, y: -0.002892048, z: 0.040869247, w: 0.99875456}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightLeg
+      parentName: Skeleton8_RightUpLeg
+      position: {x: -0, y: -0.3989076, z: 0}
+      rotation: {x: 0.017831292, y: 0.0014810896, z: -0.041334353, w: 0.9989852}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightFoot
+      parentName: Skeleton8_RightLeg
+      position: {x: -0.0013852715, y: -0.3740878, z: -0.00010611117}
+      rotation: {x: -0.06139896, y: 0.054081034, z: -0.011120109, w: 0.9965851}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Skeleton8_RightToeBase
+      parentName: Skeleton8_RightFoot
+      position: {x: -0, y: -0.059681136, z: 0.13772571}
+      rotation: {x: 0.013171777, y: -0.0022714883, z: 0.0008084867, w: 0.99991035}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

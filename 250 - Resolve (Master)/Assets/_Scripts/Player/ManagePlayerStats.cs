@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ManagePlayerStats : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class ManagePlayerStats : MonoBehaviour
     [Header("Hunger")]
     public float hungerDrain = 0.3f; //use fractions (1 will be max)
     public Image hungerBar;
-    private bool hDebuff1 = false;
-    private bool hDebuff2 = false;
+    public bool hDebuff1 = false;
+    public bool hDebuff2 = false;
     [Header("Thirst")]
     public float thirstDrain = .4f;
     public Image thirstBar;
@@ -42,7 +43,10 @@ public class ManagePlayerStats : MonoBehaviour
     public TemperatureManager tempManager;
 
     public SleepMenuScript sleep;
-    public bool byBed = false;
+
+    public float proxFieldRadius = 5f;
+
+    public bool atfire = false;
 
 	// Use this for initialization
 	void Start ()
@@ -62,14 +66,15 @@ public class ManagePlayerStats : MonoBehaviour
         ManageDecreaseOverTime();
         ManageIncreaseOverTime();
         HandleBarDisplays();
-        currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
-        if (byBed == true && Input.GetKeyDown(KeyCode.Tab))
+        ProximityField();
+        if (atfire == false)
         {
-            sleep.SleepMenuOn();
+            currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
+
         }
-        if (byBed == false)
+        else
         {
-            sleep.SleepMenuOff();
+            currentExposure = 60;
         }
     }
 
@@ -83,13 +88,18 @@ public class ManagePlayerStats : MonoBehaviour
             currentHunger = 0;
         }
 
-        if (currentHunger <= (maxValue / 2) && currentHunger >= (maxValue / 4))
+        if (currentHunger <= (maxValue / 2))
         {
             hDebuff1 = true;
         }
-        else if (currentHunger <= (maxValue / 4))
+        else if (currentHunger <= (maxValue / 4) && currentHunger >= (maxValue / 2))
         {
             hDebuff2 = true;
+        }
+        else
+        {
+            hDebuff1 = false;
+            hDebuff2 = false;
         }
 
         currentThirst -= Time.deltaTime * thirstDrain;
@@ -106,6 +116,11 @@ public class ManagePlayerStats : MonoBehaviour
         {
             tDebuff2 = true;
         }
+        else
+        {
+            tDebuff1 = false;
+            tDebuff2 = false;
+        }
 
         currentFatigue -= Time.deltaTime * fatigueDrain;
 
@@ -116,6 +131,15 @@ public class ManagePlayerStats : MonoBehaviour
         else if (currentFatigue <= (maxValue / 4))
         {
             fDebuff2 = true;
+        }
+        else
+        {
+            fDebuff1 = false;
+            fDebuff2 = false;
+        }
+        if (currentFatigue <= 0)
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 
@@ -162,12 +186,9 @@ public class ManagePlayerStats : MonoBehaviour
 
     public void Sleep()
     {
-        if (byBed)
-        {
             currentFatigue = maxValue;
             currentHunger -= 15;
             currentThirst -= 20;
-        }
     }
 
     public void HandleDebuffs()
@@ -177,7 +198,7 @@ public class ManagePlayerStats : MonoBehaviour
 
         if (hDebuff1)
         {
-            fatigueDrain += drainValueOne; //this may be changed later
+            fatigueDrain = fatigueDrain + drainValueOne; //this may be changed later
         }
 
         if (hDebuff2)
@@ -248,5 +269,45 @@ public class ManagePlayerStats : MonoBehaviour
         //HP management has moved to the Health script
     }
 
-    
+    public void ProximityField()
+    {
+        List<Collider> overlaps = new List<Collider>();
+        overlaps.AddRange(Physics.OverlapSphere(transform.position, proxFieldRadius));
+
+        if (overlaps != null)
+        {
+            foreach (Collider collider in overlaps)
+            {
+                if (collider.GetComponent<proxTarget>())
+                {
+                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.Bed)
+                    {
+                        Debug.Log("bed here");
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            sleep.ToggleUI();
+                        }
+                    }
+                    else
+                    {
+                        sleep.gameObject.SetActive(false);
+                    }
+
+                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.Fire)
+                    {
+                        atfire = true;
+                    }
+                    else
+                    {
+                        atfire = false;
+                    }
+                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.water)
+                    {
+
+                    }
+
+                }
+            }
+        }
+    }   
 }
