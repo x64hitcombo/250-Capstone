@@ -53,8 +53,25 @@ public class Grid : MonoBehaviour
     {
         if (grid != null)
         {
-            float percentX = ((_worldPosition.x + gridWorldSize.x / 2) / gridWorldSize.x);
-            float percentY = ((_worldPosition.z + gridWorldSize.y / 2) / gridWorldSize.y);
+            float percentX = 0;
+            float percentY = 0;
+            if (_worldPosition.x < 0)
+            {
+                percentX = ((_worldPosition.x + gridWorldSize.x) + (gridWorldSize.x / 2)) / gridWorldSize.x;
+            }
+            else if (_worldPosition.x >= 0)
+            {
+                percentX = (((_worldPosition.x + gridWorldSize.x) / 2) / gridWorldSize.x);
+            }
+
+            if (_worldPosition.z < 0)
+            {
+                percentY = ((_worldPosition.z + (gridWorldSize.y / 2)) / gridWorldSize.y) * -1;
+            }
+            else if (_worldPosition.z >= 0)
+            {
+                percentY = ((_worldPosition.z + (gridWorldSize.y / 2)) / gridWorldSize.y);
+            }
 
             percentX = Mathf.Clamp01(percentX);
             percentY = Mathf.Clamp01(percentY);
@@ -71,17 +88,35 @@ public class Grid : MonoBehaviour
     {
         if (grid != null)
         {
-            //Assuming Start Position is at x:-30 y:1 z:0
-            float percentX = ((_gridPosition.x + (gridWorldSize.x - (_gridPosition.x)) / 2) / gridWorldSize.x); // ((-30 + (30 - -30)) / 2) / 30 = 0.5
-            float percentY = ((_gridPosition.z + (gridWorldSize.y - (_gridPosition.z)) / 2) / gridWorldSize.y); // ((0 + (30 - 0)) / 2) / 30 = 0.5
+            //Assuming Start Position is at x:-25 y:1 z:3
+            float percentX = 0;
+            float percentY = 0;
+            if (_gridPosition.x < 0)
+            {
+                percentX = ((_gridPosition.x + gridWorldSize.x) + (gridWorldSize.x / 2)) / gridWorldSize.x; // ((-25 + 30) + (30 / 2)) / 30 = 0.66
+            }
+            else if (_gridPosition.x >= 0)
+            {
+                percentX = (((_gridPosition.x + gridWorldSize.x) / 2) / gridWorldSize.x); // ((-25 + 30) / 2) / 30) = -0.33
+            }
+             
+            if (_gridPosition.z < 0 )
+            {
+                percentY = ((_gridPosition.z + gridWorldSize.y) + (gridWorldSize.y / 2)) / gridWorldSize.y; // ((-5 + 30) + (30 / 2)) / 30 = 1.33
+            }
+            else if (_gridPosition.z >= 0)
+            {
+                percentY = ((_gridPosition.z + (gridWorldSize.y / 2)) / gridWorldSize.y); // ((5 + (30 / 2)) / 30) = 0.66
+            }
+            
 
-            percentX = Mathf.Clamp01(percentX); // 0.5
-            percentY = Mathf.Clamp01(percentY); // 0.5
+            percentX = Mathf.Clamp01(percentX); // 0.33
+            percentY = Mathf.Clamp01(percentY); // 0.66
 
-            int x = Mathf.RoundToInt((gridSizeX - 1) * percentX); // (15 - 1) * 0 = 7
-            int y = Mathf.RoundToInt((gridSizeY - 1) * percentY); // (15 - 1) * 0.5 = 7
+            int x = Mathf.RoundToInt((gridSizeX - 1) * percentX); // (15 - 1) * 0.33 = 5
+            int y = Mathf.RoundToInt((gridSizeY - 1) * percentY); // (15 - 1) * 0.66 = 9
 
-            return grid[x, y]; // return grid[0, 7]
+            return grid[x, y]; // return grid[5, 9]
         }
         return null;
     }
