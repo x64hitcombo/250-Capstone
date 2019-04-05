@@ -25,7 +25,7 @@ public class PuzzleMaster : MonoBehaviour
 
         if (VictoryCheck())
         {
-            Debug.Log("Yeebers");
+            Debug.Log("Puzzle Complete");
             AllComplete();
         }
     }
