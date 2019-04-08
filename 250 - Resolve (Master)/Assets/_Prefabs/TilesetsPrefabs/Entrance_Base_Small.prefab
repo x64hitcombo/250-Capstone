@@ -2926,6 +2926,7 @@ GameObject:
   - component: {fileID: 6484087725710724564}
   - component: {fileID: 6484087725710724567}
   - component: {fileID: 6484087725710724566}
+  - component: {fileID: 2497520689410144220}
   m_Layer: 0
   m_Name: Entrance_Base_Small
   m_TagString: Untagged
@@ -3428,17 +3429,17 @@ MonoBehaviour:
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
-  - _indices: 3a00000039000000380000003a0000003b00000039000000
-    _distinctIndices: 3a00000039000000380000003b000000
+  - _indices: 390000003b0000003a00000038000000390000003a000000
+    _distinctIndices: 390000003b0000003a00000038000000
     _edges:
     - x: 57
-      y: 56
-    - x: 56
-      y: 58
-    - x: 58
       y: 59
     - x: 59
+      y: 58
+    - x: 56
       y: 57
+    - x: 58
+      y: 56
     _smoothingGroup: 0
     _uv:
       useWorldSpace: 0
@@ -3450,7 +3451,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -7, y: 7.75}
+      localPivot: {x: 7, y: 7.75}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
@@ -3515,17 +3516,17 @@ MonoBehaviour:
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
-  - _indices: 460000004500000044000000460000004700000045000000
-    _distinctIndices: 46000000450000004400000047000000
+  - _indices: 450000004700000046000000440000004500000046000000
+    _distinctIndices: 45000000470000004600000044000000
     _edges:
     - x: 69
-      y: 68
-    - x: 68
-      y: 70
-    - x: 70
       y: 71
     - x: 71
+      y: 70
+    - x: 68
       y: 69
+    - x: 70
+      y: 68
     _smoothingGroup: 0
     _uv:
       useWorldSpace: 0
@@ -3537,7 +3538,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -1, y: 7.75}
+      localPivot: {x: 1, y: 7.75}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
@@ -3660,6 +3661,35 @@ MonoBehaviour:
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
+  - _indices: 5a00000059000000580000005a0000005b00000059000000
+    _distinctIndices: 5a00000059000000580000005b000000
+    _edges:
+    - x: 89
+      y: 88
+    - x: 88
+      y: 90
+    - x: 90
+      y: 91
+    - x: 91
+      y: 89
+    _smoothingGroup: 0
+    _uv:
+      useWorldSpace: 0
+      flipU: 0
+      flipV: 0
+      swapUV: 0
+      fill: 1
+      scale: {x: 1, y: 1}
+      offset: {x: 0, y: 0}
+      rotation: 0
+      justify: 0
+      localPivot: {x: 4, y: 7.75}
+      localSize: {x: 0, y: 0}
+      anchor: 9
+    _mat: {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
+    manualUV: 0
+    elementGroup: -1
+    textureGroup: -1
   _sharedIndices:
   - array: 0000000021000000
   - array: 0100000020000000
@@ -3700,15 +3730,17 @@ MonoBehaviour:
   - array: 4200000050000000
   - array: 43000000
   - array: 4600000048000000
-  - array: 470000004900000054000000
+  - array: 47000000490000005400000058000000
   - array: 4a0000004c000000
   - array: 4b0000004d00000055000000
   - array: 4e000000
   - array: 4f000000
   - array: 52000000
   - array: 53000000
-  - array: 56000000
+  - array: 5600000059000000
   - array: 57000000
+  - array: 5a000000
+  - array: 5b000000
   _vertices:
   - {x: 0, y: 0, z: 8}
   - {x: 2, y: 0, z: 8}
@@ -3798,6 +3830,10 @@ MonoBehaviour:
   - {x: 2, y: 5.5, z: 7.5}
   - {x: 6, y: 6, z: 7.5}
   - {x: 6, y: 5.5, z: 7.5}
+  - {x: 2, y: 6, z: 7.5}
+  - {x: 6, y: 6, z: 7.5}
+  - {x: 2, y: 6, z: 8}
+  - {x: 6, y: 6, z: 8}
   _uv:
   - {x: 0, y: 0}
   - {x: 2, y: 0}
@@ -3855,10 +3891,10 @@ MonoBehaviour:
   - {x: -6, y: 7.5}
   - {x: -8, y: 8}
   - {x: -6, y: 8}
-  - {x: -6, y: 8}
-  - {x: -8, y: 8}
-  - {x: -6, y: 7.5}
-  - {x: -8, y: 7.5}
+  - {x: 6, y: 8}
+  - {x: 8, y: 8}
+  - {x: 6, y: 7.5}
+  - {x: 8, y: 7.5}
   - {x: 6, y: 6}
   - {x: 8, y: 6}
   - {x: 6, y: 5.5}
@@ -3868,9 +3904,9 @@ MonoBehaviour:
   - {x: -6, y: 8}
   - {x: -8, y: 8}
   - {x: 0, y: 8}
-  - {x: -2, y: 8}
+  - {x: 2, y: 8}
   - {x: 0, y: 7.5}
-  - {x: -2, y: 7.5}
+  - {x: 2, y: 7.5}
   - {x: 0, y: 6}
   - {x: 2, y: 6}
   - {x: 0, y: 5.5}
@@ -3887,11 +3923,19 @@ MonoBehaviour:
   - {x: 2, y: 5.5}
   - {x: 6, y: 6}
   - {x: 6, y: 5.5}
+  - {x: 2, y: 7.5}
+  - {x: 6, y: 7.5}
+  - {x: 2, y: 8}
+  - {x: 6, y: 8}
   _uv3: []
   _uv4: []
   _tangents: []
   _sharedIndicesUV: []
   _colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -4006,6 +4050,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!114 &2497520689410144220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484087725710724585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ab893dd0641844490305875105c488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inside: 0
+  floors: []
+  wallsToDisable: []
 --- !u!1 &6484087726033714920
 GameObject:
   m_ObjectHideFlags: 0
