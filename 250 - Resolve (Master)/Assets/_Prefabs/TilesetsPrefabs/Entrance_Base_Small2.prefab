@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3980238060510911201}
   - component: {fileID: 3980238060510911200}
   - component: {fileID: 3980238060510911203}
+  - component: {fileID: 7591940023650088504}
   m_Layer: 0
   m_Name: Entrance_Base_Small2
   m_TagString: Untagged
@@ -832,6 +833,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!114 &7591940023650088504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980238060510911202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ab893dd0641844490305875105c488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inside: 0
+  floors: []
+  wallsToDisable: []
 --- !u!1 &3980238060641486963
 GameObject:
   m_ObjectHideFlags: 0
