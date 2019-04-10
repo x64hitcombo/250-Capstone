@@ -1140,7 +1140,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
@@ -1156,15 +1156,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d7c27cd7fa0114ca029aaec4bfd2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalInputName: 
+  verticalInputName: 
+  walkSpeed: 0
+  runSpeed: 0
+  runBuildupSpeed: 0
+  runKey: 0
+  slopeforce: 0
+  slopeForceRayLength: 0
+  mainCamera: {fileID: 0}
+  climbing: 0
+  canSprint: 1
+  hackingGame: {fileID: 0}
   staminaLossRate: 15
   baseMovementSpeed: 5
-  climbingSpeed: 1
   movement: 1
-  aiControl: 0
-  climbing: 0
-  transferClimb: 0
-  allowFall: 1
-  wayPoint: {fileID: 0}
 --- !u!114 &2610033390289270926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,6 +1192,10 @@ MonoBehaviour:
   distanceBetweenCameraPlayer: 0
   fadeSpeed: 0.05
   fadeAmount: 0.2
+  controllingObject: 0
+  targetDefaultCameraPosition: {x: 0, y: 0, z: 0}
+  objectToControl: {fileID: 0}
+  linkedKineticObject: {fileID: 0}
 --- !u!114 &2610033390289270962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,6 +1234,8 @@ MonoBehaviour:
   hpRefill: 5
   hungerDrain: 0.3
   hungerBar: {fileID: 0}
+  hDebuff1: 0
+  hDebuff2: 0
   thirstDrain: 0.4
   thirstBar: {fileID: 0}
   fatigueDrain: 0.1
@@ -1239,7 +1251,8 @@ MonoBehaviour:
   currentStamina: 0
   tempManager: {fileID: 2610033390289270965}
   sleep: {fileID: 0}
-  byBed: 0
+  proxFieldRadius: 5
+  atfire: 0
 --- !u!114 &2610033390289270965
 MonoBehaviour:
   m_ObjectHideFlags: 0

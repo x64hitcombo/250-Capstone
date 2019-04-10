@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuzzleMaster : MonoBehaviour
 {
     public GameObject[] puzzleObjects;
-    //public bool allConfirm = true;
+    public bool complete = false;
 
     public GameObject reward;
     public Transform rewardDropSpot;
@@ -15,7 +15,7 @@ public class PuzzleMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.gameObject.tag = "PuzzleMaster";
     }
 
     // Update is called once per frame
@@ -58,6 +58,7 @@ public class PuzzleMaster : MonoBehaviour
 
 public void AllComplete()
     {
+        complete = true;
         if (outAnimate)
         {
             outAnimate.GetComponent<Animator>().SetBool("objEvent", true);

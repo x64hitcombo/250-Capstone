@@ -35,21 +35,22 @@ public class ManagePlayerStats : MonoBehaviour
     [Header("Stamina")]
     public float staminaRefill;
     public Image staminaBar;
-    
+
 
     //[HideInInspector]
     public float currentHunger, currentThirst, currentExposure, currentFatigue, currentStamina;
 
     public TemperatureManager tempManager;
 
-    public SleepMenuScript sleep;
+    public SleepMenuScript sleepUI;
+    public GameObject craftingUI;
 
     public float proxFieldRadius = 5f;
 
     public bool atfire = false;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         tempManager = this.gameObject.GetComponent<TemperatureManager>();
         currentHunger = maxValue;
@@ -61,12 +62,12 @@ public class ManagePlayerStats : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         ManageDecreaseOverTime();
         ManageIncreaseOverTime();
         HandleBarDisplays();
-        ProximityField();
+        //ProximityField();
         if (atfire == false)
         {
             currentExposure = tempManager.currentTemperature + exposureRating; //This will change when adding clothing
@@ -83,7 +84,7 @@ public class ManagePlayerStats : MonoBehaviour
         this.gameObject.GetComponent<Health>().curHealth += Time.deltaTime * hpRefill;
 
         currentHunger -= Time.deltaTime * hungerDrain;
-        if (currentHunger < 0 )
+        if (currentHunger < 0)
         {
             currentHunger = 0;
         }
@@ -186,9 +187,9 @@ public class ManagePlayerStats : MonoBehaviour
 
     public void Sleep()
     {
-            currentFatigue = maxValue;
-            currentHunger -= 15;
-            currentThirst -= 20;
+        currentFatigue = maxValue;
+        currentHunger -= 15;
+        currentThirst -= 20;
     }
 
     public void HandleDebuffs()
@@ -234,7 +235,7 @@ public class ManagePlayerStats : MonoBehaviour
         }
     }
 
-    public void HandleReplinishment (Item item)
+    public void HandleReplinishment(Item item)
     {
         for (int i = 0; i < item.itemAttributes.Count; i++)
         {
@@ -269,45 +270,50 @@ public class ManagePlayerStats : MonoBehaviour
         //HP management has moved to the Health script
     }
 
-    public void ProximityField()
+    public void OnTriggerExit(Collider other)
     {
-        List<Collider> overlaps = new List<Collider>();
-        overlaps.AddRange(Physics.OverlapSphere(transform.position, proxFieldRadius));
-
-        if (overlaps != null)
+        if (other.gameObject.GetComponent<proxTarget>())
         {
-            foreach (Collider collider in overlaps)
+            sleepUI.gameObject.SetActive(false);
+            atfire = false;
+            GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Remove(craftingUI);
+            craftingUI.gameObject.SetActive(false);
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<proxTarget>())
+        {
+            if (other.GetComponent<proxTarget>().Type == proxTarget.targetType.Fire)
             {
-                if (collider.GetComponent<proxTarget>())
+                atfire = true;
+                if (!GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Contains(craftingUI))
                 {
-                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.Bed)
-                    {
-                        Debug.Log("bed here");
-                        if (Input.GetKeyDown(KeyCode.E))
-                        {
-                            sleep.ToggleUI();
-                        }
-                    }
-                    else
-                    {
-                        sleep.gameObject.SetActive(false);
-                    }
-
-                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.Fire)
-                    {
-                        atfire = true;
-                    }
-                    else
-                    {
-                        atfire = false;
-                    }
-                    if (collider.GetComponent<proxTarget>().Type == proxTarget.targetType.water)
-                    {
-
-                    }
+                    GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Add(craftingUI);
 
                 }
             }
         }
-    }   
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.GetComponent<proxTarget>())
+        {
+            if (other.GetComponent<proxTarget>().Type == proxTarget.targetType.Bed)
+            {
+                Debug.Log("bed here");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    sleepUI.ToggleUI();
+                }
+            }
+
+            if (other.GetComponent<proxTarget>().Type == proxTarget.targetType.water)
+            {
+
+            }
+        }
+    }
 }

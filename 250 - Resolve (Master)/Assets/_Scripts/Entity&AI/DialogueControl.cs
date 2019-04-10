@@ -17,20 +17,23 @@ public class DialogueControl : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (!opened)
+        if (other.tag == playerTag)
         {
-            if (Input.GetKeyUp(KeyCode.E))
+            if (!opened)
             {
-                ActivateUI();
+                if (Input.GetKeyUp(KeyCode.E))
+                {
+                    ActivateUI();
+                }
             }
-        }
-        else
-        {
-            if (Input.GetKeyUp(KeyCode.E))
+            else
             {
-                diaCount += 1;
-                UpdateDialogue();
+                if (Input.GetKeyUp(KeyCode.E))
+                {
+                    diaCount += 1;
+                    UpdateDialogue();
 
+                }
             }
         }
     }

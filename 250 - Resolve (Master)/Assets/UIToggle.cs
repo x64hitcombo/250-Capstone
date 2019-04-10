@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIToggle : MonoBehaviour
 {
     public bool toggle = false;
-    public GameObject[] windows;
+    public List<GameObject> windows = new List<GameObject>();
     public GameObject[] singleWindows;
 
     private void Start()
@@ -24,10 +24,11 @@ public class UIToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ToggleUI();
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             toggle = !toggle;
-            ToggleUI();
         }
 
         if (!VictoryCheck())
