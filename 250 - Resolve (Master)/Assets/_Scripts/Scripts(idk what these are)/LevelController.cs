@@ -13,12 +13,16 @@ public class LevelController : MonoBehaviour
     public float playerFatigue;
     public float playerExposure;
 
+    public float currentTime;
+
     private ManagePlayerStats mps;
+    private MainTimeScript mainTimeScript;
 
     // Use this for initialization
     void Start ()
     {
         mps = player.GetComponent<ManagePlayerStats>();
+        mainTimeScript = GameObject.FindGameObjectWithTag("TimeController").GetComponent<MainTimeScript>();
 	}
 	
 	// Update is called once per frame
@@ -30,5 +34,7 @@ public class LevelController : MonoBehaviour
         playerThirst = mps.currentThirst;
         playerFatigue = mps.currentFatigue;
         playerExposure = mps.currentExposure;
+
+        currentTime = mainTimeScript._fCurrentTimeOfDay;
 	}
 }

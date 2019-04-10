@@ -68,8 +68,35 @@ public class LevelData : MonoBehaviour
         level.PlayerFatigue = levelController.playerFatigue;
         level.PlayerExposure = levelController.playerExposure;
 
+        //Puzzle Completion
+        foreach (GameObject puzzle in GameObject.FindGameObjectsWithTag("PuzzleManager"))
+        {
+            PuzzleManagerData puzzleManager = new PuzzleManagerData();
+            puzzleManager.currentObject = puzzle;
+            //puzzleManager.isCompleted = puzzle.GetComponent<PuzzleMaster>().complete;
+        }
+
+        //Current Time
+        MainTimeScript mainTimeScript = GameObject.FindGameObjectWithTag("TimeController").GetComponent<MainTimeScript>();
+        level.CurrentTime = levelController.currentTime;
+
+        //Inventory
+
+
         level.SaveToFile(level.levelName + ".lvl");
     }
+}
+
+[Serializable]
+public class PuzzleManagerData
+{
+    public GameObject currentObject;
+    public bool isCompleted;
+}
+
+public class InventoryData
+{
+    //Find the variables for the inventory slots data contained within
 }
 
 [Serializable]
@@ -83,6 +110,8 @@ public class DataHandler
     public float playerThirst;
     public float playerFatigue;
     public float playerExposure;
+
+    public float currentTime;
 
     public string GetLevelName()
     {
@@ -158,6 +187,18 @@ public class DataHandler
         set
         {
             playerExposure = value;
+        }
+    }
+
+    public float CurrentTime
+    {
+        get
+        {
+            return currentTime;
+        }
+        set
+        {
+            currentTime = value;
         }
     }
 
