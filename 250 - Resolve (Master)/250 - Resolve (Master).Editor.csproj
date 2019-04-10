@@ -323,19 +323,19 @@
       <HintPath>Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -409,7 +409,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Editor\RayTracingPlanTool.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\Editor\BezierCurveInspector.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\Editor\BezierSplineInspector.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\Editor\LineInspector.cs" />
     <Compile Include="Assets\com\heparo\terrain\toolkit\editor\TerrainToolkitEditor.cs" />
+    <Compile Include="Assets\Editor\ReplaceWithPrefab.cs" />
     <Compile Include="Assets\Fungus\Scripts\Editor\AssetModProcessor.cs" />
     <Compile Include="Assets\Fungus\Scripts\Editor\BlockEditor.cs" />
     <Compile Include="Assets\Fungus\Scripts\Editor\BlockInspector.cs" />
@@ -557,6 +562,7 @@
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ToggleContent.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\CartoonStylizedWater\Shader\CartoonWaterShader.shader" />
     <None Include="Assets\Fungus\Docs\LICENSE.txt" />
     <None Include="Assets\Fungus\Docs\README.txt" />
     <None Include="Assets\Fungus\Fonts\Amaranth\SIL Open Font License.txt" />

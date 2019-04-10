@@ -23,11 +23,11 @@ public class PlayerFacing : MonoBehaviour
 
     private void FaceDirection()
     {
-            float moveVertical = Input.GetAxis("Vertical");
-            float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
-            Vector3 newPosition = new Vector3(moveHorizontal, 0.0f, moveVertical);
-            transform.LookAt(newPosition + transform.position);
+        Vector3 newPosition = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        transform.LookAt(newPosition + transform.position);
     }
 
     private void FaceMouse()
@@ -40,6 +40,6 @@ public class PlayerFacing : MonoBehaviour
         mousePos.y = mousePos.y - objectPos.y;
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, -angle, 0));
+        transform.rotation = Quaternion.Euler(new Vector3(0, -angle +45, 0));
     }
 }
