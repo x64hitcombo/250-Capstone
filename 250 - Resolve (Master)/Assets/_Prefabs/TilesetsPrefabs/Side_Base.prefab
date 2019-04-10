@@ -1994,6 +1994,7 @@ GameObject:
   - component: {fileID: 1866498644870802554}
   - component: {fileID: 1866498644870802555}
   - component: {fileID: 1866498644870802556}
+  - component: {fileID: 4960411784051523533}
   m_Layer: 0
   m_Name: Side_Base
   m_TagString: Untagged
@@ -3704,6 +3705,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!114 &4960411784051523533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866498644870802557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ab893dd0641844490305875105c488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inside: 0
+  floors: []
+  wallsToDisable: []
 --- !u!1 &1866498645373476178
 GameObject:
   m_ObjectHideFlags: 0
