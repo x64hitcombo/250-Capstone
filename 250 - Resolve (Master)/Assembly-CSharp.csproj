@@ -130,6 +130,15 @@
      <Compile Include="Assets\_Scripts\World\Weather\TemperatureManager.cs" />
      <Compile Include="Assets\_Scripts\World\Weather\TemperatureSetter.cs" />
      <Compile Include="Assets\_Scripts\World\Weather\WeatherSetter.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\MidPointInfo.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\Bezier.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\BezierControlPointMode.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\BezierCurve.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\BezierSpline.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\Line.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\VertexInfo.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\VertHandler.cs" />
+     <Compile Include="Assets\CartoonStylizedWater\Scripts\WaterScroll.cs" />
      <Compile Include="Assets\com\heparo\terrain\toolkit\scripts\TerrainToolkit.cs" />
      <Compile Include="Assets\Connecter.cs" />
      <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
@@ -742,6 +751,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\UIController.cs" />
      <Compile Include="Assets\UIToggle.cs" />
      <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
      <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
@@ -756,6 +766,7 @@
      <None Include="Assets\_Art\!ToBeSorted\HQ Old Books\readme.txt" />
      <None Include="Assets\Fungus\Docs\README.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+     <None Include="Assets\CartoonStylizedWater\Shader\CartoonWaterShader.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
      <None Include="Assets\Fungus\Fonts\Exo2\OFL.txt" />
      <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
@@ -805,19 +816,19 @@
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
      <None Include="Assets\_Art\HolyShift\Shaders\FXWaterLowpoly.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>B:/Program Files/Unity Engine(s)/Unity2018/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -1021,28 +1032,28 @@
  <HintPath>B:/Program Files/Unity Engine(s)/Unity2018/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KdTreeLib">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
  </Reference>
  <Reference Include="pb_Stl">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
  </Reference>
  <Reference Include="Poly2Tri">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/CadetPenguin/Desktop/Capstone Project/250 Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>B:/Program Files/Unity Engine(s)/Unity2018/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
