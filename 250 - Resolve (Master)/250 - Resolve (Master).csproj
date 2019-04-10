@@ -266,6 +266,7 @@
       <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
+<<<<<<< HEAD
       <HintPath>C:/Users/Jeffrey/Documents/Development/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
@@ -273,6 +274,24 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/Users/Jeffrey/Documents/Development/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+=======
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>C:/Users/nroviros/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+>>>>>>> 1ead6c1887e44ea513082d515cee0b3822945c66
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll</HintPath>
@@ -406,6 +425,15 @@
     <Compile Include="Assets\_Scripts\World\Weather\TemperatureManager.cs" />
     <Compile Include="Assets\_Scripts\World\Weather\TemperatureSetter.cs" />
     <Compile Include="Assets\_Scripts\World\Weather\WeatherSetter.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\MidPointInfo.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\Bezier.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\BezierControlPointMode.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\BezierCurve.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\BezierSpline.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\Splines\Line.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\VertexInfo.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\VertHandler.cs" />
+    <Compile Include="Assets\CartoonStylizedWater\Scripts\WaterScroll.cs" />
     <Compile Include="Assets\com\heparo\terrain\toolkit\scripts\TerrainToolkit.cs" />
     <Compile Include="Assets\Connecter.cs" />
     <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
@@ -1022,6 +1050,7 @@
     <Compile Include="Assets\UIToggle.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\CartoonStylizedWater\Shader\CartoonWaterShader.shader" />
     <None Include="Assets\Fungus\Docs\LICENSE.txt" />
     <None Include="Assets\Fungus\Docs\README.txt" />
     <None Include="Assets\Fungus\Fonts\Amaranth\SIL Open Font License.txt" />
