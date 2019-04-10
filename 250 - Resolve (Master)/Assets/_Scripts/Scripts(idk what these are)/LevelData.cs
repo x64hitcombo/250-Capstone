@@ -44,13 +44,29 @@ public class LevelData : MonoBehaviour
         DataHandler level = DataHandler.LoadFromFile(levelName + ".lvl");
         levelController.levelName = level.levelName;
         player.transform.position = level.PlayerPosition;
+
+        ManagePlayerStats mps = player.GetComponent<ManagePlayerStats>();
+        mps.currentHunger = level.PlayerHunger;
+        mps.currentThirst = level.PlayerThirst;
+        mps.currentExposure = level.PlayerExposure;
+        mps.currentFatigue = level.PlayerFatigue;
+        mps.currentStamina = level.PlayerStamina;
     }
 
-    public void SaveLevel()
+    public void SaveLevel(string levelName)
     {
         DataHandler level = new DataHandler();
+        
+        //Translation from game object data into level data
         level.levelName = levelController.levelName;
+
+        //Player Data
         level.PlayerPosition = levelController.playerPosition;
+        level.PlayerHunger = levelController.playerHunger;
+        level.PlayerThirst = levelController.playerThirst;
+        level.PlayerStamina = levelController.playerStamina;
+        level.PlayerFatigue = levelController.playerFatigue;
+        level.PlayerExposure = levelController.playerExposure;
 
         level.SaveToFile(level.levelName + ".lvl");
     }
@@ -62,6 +78,11 @@ public class DataHandler
     public string levelName;
 
     public Vector3 playerPosition;
+    public float playerStamina;
+    public float playerHunger;
+    public float playerThirst;
+    public float playerFatigue;
+    public float playerExposure;
 
     public string GetLevelName()
     {
@@ -77,6 +98,66 @@ public class DataHandler
         set
         {
             playerPosition = value;
+        }
+    }
+
+    public float PlayerStamina
+    {
+        get
+        {
+            return playerStamina;
+        }
+        set
+        {
+            playerStamina = value;
+        }
+    }
+
+    public float PlayerHunger
+    {
+        get
+        {
+            return playerHunger;
+        }
+        set
+        {
+            playerHunger = value;
+        }
+    }
+
+    public float PlayerThirst
+    {
+        get
+        {
+            return playerThirst;
+        }
+        set
+        {
+            playerThirst = value;
+        }
+    }
+
+    public float PlayerFatigue
+    {
+        get
+        {
+            return playerFatigue;
+        }
+        set
+        {
+            playerFatigue = value;
+        }
+    }
+
+    public float PlayerExposure
+    {
+        get
+        {
+            return playerExposure;
+        }
+        set
+        {
+            playerExposure = value;
         }
     }
 
