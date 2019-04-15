@@ -69,11 +69,12 @@ public class LevelData : MonoBehaviour
         level.PlayerExposure = levelController.playerExposure;
 
         //Puzzle Completion
-        foreach (GameObject puzzle in GameObject.FindGameObjectsWithTag("PuzzleManager"))
+        foreach (GameObject puzzle in GameObject.FindGameObjectsWithTag("PuzzleMaster"))
         {
-            PuzzleManagerData puzzleManager = new PuzzleManagerData();
-            puzzleManager.currentObject = puzzle;
-            //puzzleManager.isCompleted = puzzle.GetComponent<PuzzleMaster>().complete;
+            PuzzleManagerData newPuzzle = new PuzzleManagerData();
+            newPuzzle.currentObject = puzzle;
+            newPuzzle.isCompleted = puzzle.GetComponent<PuzzleMaster>().complete;
+            level.puzzles.Add(newPuzzle);
         }
 
         //Current Time
@@ -81,7 +82,17 @@ public class LevelData : MonoBehaviour
         level.CurrentTime = levelController.currentTime;
 
         //Inventory
-
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Slot"))
+        {
+            print("Found an item to save");
+            InventoryManagerData newItem = new InventoryManagerData();
+            newItem.slotNum = item.name;
+            if (item.transform.GetChild(0) != null)
+            {
+                newItem.slotItem = item.transform.GetChild(0).gameObject;
+            }
+            level.inventoryData.Add(newItem);
+        }
 
         level.SaveToFile(level.levelName + ".lvl");
     }
@@ -94,9 +105,11 @@ public class PuzzleManagerData
     public bool isCompleted;
 }
 
-public class InventoryData
+public class InventoryManagerData
 {
     //Find the variables for the inventory slots data contained within
+    public string slotNum;
+    public GameObject slotItem;
 }
 
 [Serializable]
@@ -112,6 +125,9 @@ public class DataHandler
     public float playerExposure;
 
     public float currentTime;
+
+    public List<PuzzleManagerData> puzzles = new List<PuzzleManagerData>();
+    public List<InventoryManagerData> inventoryData = new List<InventoryManagerData>();
 
     public string GetLevelName()
     {
@@ -206,6 +222,7 @@ public class DataHandler
     {
         System.IO.File.WriteAllText(fileName, JsonUtility.ToJson(this, true));
         MonoBehaviour.print(System.IO.Directory.GetCurrentDirectory());
+        MonoBehaviour.print("Save Complete!");
     }
 
     public static DataHandler LoadFromFile(string fileName)

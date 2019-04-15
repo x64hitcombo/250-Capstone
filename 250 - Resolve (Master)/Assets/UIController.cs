@@ -26,12 +26,10 @@ public class UIController : MonoBehaviour
     {
         levelController.levelName = levelName;
         levelData.SaveLevel(levelName);
-        print("The game has been saved");
     }
 
     public void LoadLevelButton()
     {
         levelData.LoadLevel(levelName);
-        print("The game has been loaded");
     }
 }
