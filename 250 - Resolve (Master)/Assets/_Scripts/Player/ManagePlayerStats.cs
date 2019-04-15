@@ -44,10 +44,11 @@ public class ManagePlayerStats : MonoBehaviour
 
     public SleepMenuScript sleepUI;
     public GameObject craftingUI;
-
-    public float proxFieldRadius = 5f;
+    public Inventory playerInv;
 
     public bool atfire = false;
+    public int targetID = 35;
+    public int replacementID = 19;
 
     // Use this for initialization
     void Start()
@@ -58,7 +59,7 @@ public class ManagePlayerStats : MonoBehaviour
         //currentHealth = maxValue;
         currentFatigue = maxValue;
         currentStamina = maxValue;
-
+        playerInv = GameObject.FindObjectOfType<Canvas>().GetComponentInChildren<Inventory>(true);
     }
 
     // Update is called once per frame
@@ -312,7 +313,40 @@ public class ManagePlayerStats : MonoBehaviour
 
             if (other.GetComponent<proxTarget>().Type == proxTarget.targetType.water)
             {
+                Debug.Log("Water here");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    playerInv.updateItemList();
 
+                    foreach (Item item in playerInv.ItemsInInventory)
+                    {
+                        Debug.Log("searching");
+                        if (item.itemID == targetID)
+                        {
+                            Debug.Log("Found");
+                            item.itemValue--;
+                            if (item.itemValue <= 0)
+                            {
+                                playerInv.deleteItemFromInventoryWithGameObject(item);
+                            }
+                            //playerInv.addItemToInventory(replacementID, 1);
+                            //playerInv.updateItemList();
+                            //playerInv.stackableSettings();
+
+                            bool check = playerInv.checkIfItemAllreadyExist(replacementID, 1);
+                            if (check)
+                            {
+                                playerInv.updateItemList();
+                            }
+                            else if (playerInv.ItemsInInventory.Count < (playerInv.width * playerInv.height))
+                            {
+                                playerInv.addItemToInventory(replacementID, 1);
+                                playerInv.updateItemList();
+                                playerInv.stackableSettings();
+                            }
+                        }
+                    }
+                }
             }
         }
     }

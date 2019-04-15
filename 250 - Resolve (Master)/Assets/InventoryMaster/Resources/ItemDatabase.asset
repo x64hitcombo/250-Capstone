@@ -426,20 +426,8 @@ MonoBehaviour:
       attributeValue: 15
     - attributeName: Fatigue
       attributeValue: 15
-  - itemName: New Item
-    itemID: 26
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
   - itemName: Cattail
-    itemID: 27
+    itemID: 26
     itemDesc: Dried-flower that is used for crafting items.
     itemIcon: {fileID: 21300000, guid: 97665ba2b5557e041be2d39db96b525e, type: 3}
     itemModel: {fileID: 0}
@@ -535,9 +523,21 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
+  - itemName: Key
+    itemID: 34
+    itemDesc: This key can open any door
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 3
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Empty Bottle
     itemID: 35
-    itemDesc: 
+    itemDesc: Can be filled with water.
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}
     itemValue: 1
