@@ -451,7 +451,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Bow
-    itemID: 29
+    itemID: 28
     itemDesc: A man-made weapon that is used for hunting. It requires arrows to fire
       it.
     itemIcon: {fileID: 21300000, guid: ab273a9be22ac5e4dabaf557568c0ef0, type: 3}
@@ -464,7 +464,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Arrow
-    itemID: 30
+    itemID: 29
     itemDesc: Ammunition for bow. It requires a bow for it to be shot.
     itemIcon: {fileID: 21300000, guid: 0a0fa0e9f0d920b4b8038b47ea17f545, type: 3}
     itemModel: {fileID: 0}
@@ -476,7 +476,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Axe
-    itemID: 31
+    itemID: 30
     itemDesc: A weapon and tool that is used to cut down trees and or enemies.
     itemIcon: {fileID: 21300000, guid: e71c97bcbd9c04d45b84ba60ef821eb1, type: 3}
     itemModel: {fileID: 0}
@@ -488,26 +488,28 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Knife
-    itemID: 32
+    itemID: 31
     itemDesc: A weapon and tool used for cutting foilage and to damage enemies.
     itemIcon: {fileID: 21300000, guid: 7f044313c0f1c164f85c40185e3a8b9b, type: 3}
-    itemModel: {fileID: 0}
+    itemModel: {fileID: 5448073845823005486, guid: 81136a2c79fa1a1419a064859b880d71,
+      type: 3}
     itemValue: 1
-    itemType: 0
+    itemType: 18
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
   - itemName: Torch
-    itemID: 33
-    itemDesc: A light source to which it will light the surrounding area to see better.
+    itemID: 32
+    itemDesc: Provides light. Press E while equipped to place on the ground.
     itemIcon: {fileID: 21300000, guid: 2b9ac9a5f4db0f24eb713f481f23b355, type: 3}
-    itemModel: {fileID: 0}
+    itemModel: {fileID: 8339529332509045571, guid: 58cf57c376ed7234a8bc9ac672a231eb,
+      type: 3}
     itemValue: 1
-    itemType: 0
+    itemType: 18
     itemWeight: 0
-    maxStack: 1
+    maxStack: 9
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
