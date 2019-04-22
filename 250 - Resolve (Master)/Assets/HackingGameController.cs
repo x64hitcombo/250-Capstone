@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class HackingGameController : MonoBehaviour, IPointerClickHandler
 {
+    public List<GameObject> connectors;
 
     // Start is called before the first frame update
     void Start()
