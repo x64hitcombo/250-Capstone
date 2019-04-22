@@ -34,24 +34,34 @@ public class PlayerController : MonoBehaviour
     public float baseMovementSpeed;
     public bool movement = true;
 
+    AnimatorController anim;
+
     private void Awake()
     {
         charCont = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<AnimatorController>();
     }
 
 
     void Update()
     {
-        Movement();
+        if(movement == true)
+        {
+            AnimateMovement();
+            Movement();
+        }
+        
+
         if (Input.GetKey(KeyCode.LeftShift) && canSprint)
         {
             ConsumeStamina();
         }
     }
 
-    #region Movement and Slope
+    #region Movement, Slope, and Animation
     private void Movement()
     {
+
         float horizInput = Input.GetAxis(horizontalInputName);
         float vertInput = Input.GetAxis(verticalInputName);
 
@@ -83,6 +93,25 @@ public class PlayerController : MonoBehaviour
             if (hit.normal != Vector3.up) return true;
         }
         return false;
+    }
+
+    void AnimateMovement()
+    {
+        float vertAxis = Input.GetAxis("Vertical");
+        float horiAxis = Input.GetAxis("Horizontal");
+
+        if (vertAxis > 0 || vertAxis < 0 || horiAxis > 0 || horiAxis < 0)
+        {
+            anim.isMoving = true;
+            if (Input.GetButton("Sprint")) anim.MoveSpeed(2);
+            else anim.MoveSpeed(1);
+
+        }
+        else
+        {
+            anim.MoveSpeed(0);
+            //anim.isMoving = false;
+        }
     }
     #endregion
 

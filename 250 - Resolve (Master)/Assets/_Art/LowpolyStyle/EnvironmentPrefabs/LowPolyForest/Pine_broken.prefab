@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4151262465616008}
   - component: {fileID: 33466747490100480}
   - component: {fileID: 23156709443121918}
+  - component: {fileID: 5997894494116687301}
   m_Layer: 0
   m_Name: Pine_broken
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &5997894494116687301
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623283494057584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.91
+  m_Center: {x: -0.28223228, y: 3.1006722, z: -2.4568157}

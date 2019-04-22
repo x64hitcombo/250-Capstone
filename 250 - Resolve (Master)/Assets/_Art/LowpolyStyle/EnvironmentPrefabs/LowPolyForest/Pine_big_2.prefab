@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4528643183352868}
   - component: {fileID: 33965854647952916}
   - component: {fileID: 23094699383350098}
+  - component: {fileID: 109500672140752774}
   m_Layer: 0
   m_Name: Pine_big_2
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &109500672140752774
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145915058064764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.64
+  m_Height: 11.902668
+  m_Direction: 1
+  m_Center: {x: -0.28223228, y: 5.951334, z: 0.03}
