@@ -8,6 +8,10 @@ public class PlayerInventory : MonoBehaviour
     public GameObject inventory;
     public GameObject characterSystem;
     public GameObject craftSystem;
+
+    public GameObject handR;
+    public GameObject handL;
+
     private Inventory craftSystemInventory;
     private CraftSystem cS;
     private Inventory mainInventory;
@@ -46,17 +50,47 @@ public class PlayerInventory : MonoBehaviour
 
     void EquipWeapon(Item item)
     {
-        if (item.itemType == ItemType.Weapon)
+        if (item.itemType == ItemType.HandR)
         {
-            //add the weapon if you unequip the weapon
+
+            if (item.itemType == ItemType.HandR && handR.transform.childCount < 4)
+            {
+                Instantiate(item.itemModel, handR.transform);
+            }
+        }
+        if (item.itemType == ItemType.HandL && handL.transform.childCount < 4)
+        {
+            if (item.itemType == ItemType.HandL)
+            {
+                Instantiate(item.itemModel, handL.transform);
+            }
         }
     }
 
     void UnEquipWeapon(Item item)
     {
-        if (item.itemType == ItemType.Weapon)
+        //if (item.itemType == ItemType.Weapon)
+        //{
+        //    if (characterSystem.GetComponent<Inventory>().SlotContainer.transform.GetChild(1) != null)
+        //    {
+        //        Destroy(handR.transform.GetChild(4));
+        //    }
+        //}
+
+        for (int i = 0; i < characterSystem.GetComponent<EquipmentSystem>().slotsInTotal; i++)
         {
-            //delete the weapon if you unequip the weapon
+            if (characterSystem.GetComponent<EquipmentSystem>().itemTypeOfSlots[i].Equals(item.itemType))
+            {
+                if (item.itemType == ItemType.HandR && handR.transform.GetChild(3) != null)
+                {
+                    Destroy(handR.transform.GetChild(3).gameObject);
+
+                }
+                if (item.itemType == ItemType.HandL && handL.transform.GetChild(3) != null)
+                {
+                    Destroy(handL.transform.GetChild(3).gameObject);
+                }
+            }
         }
     }
 
