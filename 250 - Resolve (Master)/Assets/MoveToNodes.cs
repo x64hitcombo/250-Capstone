@@ -22,7 +22,7 @@ public class MoveToNodes : MonoBehaviour
         if (Input.GetKey(KeyCode.K))
         {
             //transform.position += Vector3.left * movementSpeed * Time.deltaTime;
-            moveDirection += -transform.right;
+            moveDirection += -transform.up;
         }
         if (Input.GetKey(KeyCode.L))
         {
@@ -32,23 +32,23 @@ public class MoveToNodes : MonoBehaviour
         if (Input.GetKey(KeyCode.I))
         {
             //transform.position += Vector3.forward * movementSpeed * Time.deltaTime;
-            moveDirection += transform.forward;
+            moveDirection += transform.up;
         }
         if (Input.GetKey(KeyCode.J))
         {
             //transform.position += Vector3.back * movementSpeed * Time.deltaTime;
-            moveDirection += -transform.forward;
+            moveDirection += -transform.right;
         }
 
         transform.position += moveDirection * Time.deltaTime * movementSpeed;
 
         if (nodeReached == null)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == "RotateNode" || other.gameObject.name == "SpawnerNode" || other.gameObject.name == "GoalNode")
         {

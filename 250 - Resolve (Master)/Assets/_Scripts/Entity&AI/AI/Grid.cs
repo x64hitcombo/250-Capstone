@@ -108,7 +108,6 @@ public class Grid : MonoBehaviour
             {
                 percentY = ((_gridPosition.z + (gridWorldSize.y / 2)) / gridWorldSize.y); // ((5 + (30 / 2)) / 30) = 0.66
             }
-            
 
             percentX = Mathf.Clamp01(percentX); // 0.33
             percentY = Mathf.Clamp01(percentY); // 0.66
