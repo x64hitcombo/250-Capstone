@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4331942299962906}
   - component: {fileID: 33876873568032778}
   - component: {fileID: 23173104054982470}
+  - component: {fileID: 108712484892892678}
   m_Layer: 0
   m_Name: Tree_big_Y_005
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &108712484892892678
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731579192515052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.13
+  m_Height: 12.020357
+  m_Direction: 1
+  m_Center: {x: 0.35, y: 6.0101786, z: -0.44}
