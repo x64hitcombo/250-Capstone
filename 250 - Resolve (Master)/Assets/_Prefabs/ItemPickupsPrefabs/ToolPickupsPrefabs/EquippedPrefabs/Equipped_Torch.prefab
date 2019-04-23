@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1353118400888217092}
   - component: {fileID: 2001440193253466000}
+  - component: {fileID: 5921860551058144046}
   m_Layer: 0
   m_Name: Equipped_Torch
   m_TagString: Untagged
@@ -45,6 +46,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &5921860551058144046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8339529332509045571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5f32442effe214b903c8a2b5618992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
 --- !u!1001 &7475209058836321882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,11 +66,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353118400888217092}
     m_Modifications:
-    - target: {fileID: 2095955957668054820, guid: 8d5dd0def8258d14c93cdde6c1db69be,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch
-      objectReference: {fileID: 0}
     - target: {fileID: 7586257632897090776, guid: 8d5dd0def8258d14c93cdde6c1db69be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -121,6 +130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.6999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095955957668054820, guid: 8d5dd0def8258d14c93cdde6c1db69be,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d5dd0def8258d14c93cdde6c1db69be, type: 3}

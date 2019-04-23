@@ -10,7 +10,9 @@ public class PlayerInventory : MonoBehaviour
     public GameObject craftSystem;
 
     public GameObject handR;
+    public bool handREquip;
     public GameObject handL;
+    public bool handLEquip;
 
     private Inventory craftSystemInventory;
     private CraftSystem cS;
@@ -52,46 +54,61 @@ public class PlayerInventory : MonoBehaviour
     {
         if (item.itemType == ItemType.HandR)
         {
-
-            if (item.itemType == ItemType.HandR && handR.transform.childCount < 4)
+            if (handREquip == true)
             {
-                Instantiate(item.itemModel, handR.transform);
+                ToolDestroyer(handR, handREquip);
+                ToolCreator(item, handR.transform, handREquip);
+            }
+            else
+            {
+                ToolCreator(item, handR.transform, handREquip);
             }
         }
-        if (item.itemType == ItemType.HandL && handL.transform.childCount < 4)
+        if (item.itemType == ItemType.HandL)
         {
-            if (item.itemType == ItemType.HandL)
+            if (handLEquip == true)
             {
-                Instantiate(item.itemModel, handL.transform);
+                ToolDestroyer(handL, handLEquip);
+                ToolCreator(item, handL.transform, handLEquip);
+            }
+            else
+            {
+                ToolCreator(item, handL.transform, handLEquip);
             }
         }
     }
 
     void UnEquipWeapon(Item item)
     {
-        //if (item.itemType == ItemType.Weapon)
-        //{
-        //    if (characterSystem.GetComponent<Inventory>().SlotContainer.transform.GetChild(1) != null)
-        //    {
-        //        Destroy(handR.transform.GetChild(4));
-        //    }
-        //}
-
         for (int i = 0; i < characterSystem.GetComponent<EquipmentSystem>().slotsInTotal; i++)
         {
             if (characterSystem.GetComponent<EquipmentSystem>().itemTypeOfSlots[i].Equals(item.itemType))
             {
-                if (item.itemType == ItemType.HandR && handR.transform.GetChild(3) != null)
+                if (item.itemType == ItemType.HandR)
                 {
-                    Destroy(handR.transform.GetChild(3).gameObject);
-
+                    ToolDestroyer(handR, handREquip);
                 }
-                if (item.itemType == ItemType.HandL && handL.transform.GetChild(3) != null)
+                if (item.itemType == ItemType.HandL)
                 {
-                    Destroy(handL.transform.GetChild(3).gameObject);
+                    ToolDestroyer(handL, handLEquip);
                 }
             }
         }
+    }
+
+    public void ToolDestroyer(GameObject hand, bool isEquip)
+    {
+        if (hand.transform.GetChild(0) != null)
+        {
+            Destroy(hand.transform.GetChild(0).gameObject);
+            isEquip = false;
+        }
+    }
+
+    public void ToolCreator(Item item, Transform hand, bool isEquip)
+    {
+        Instantiate(item.itemModel, hand.transform);
+        isEquip = true;
     }
 
     void OnBackpack(Item item)
