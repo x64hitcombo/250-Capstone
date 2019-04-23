@@ -10,7 +10,9 @@ public class LevelData : MonoBehaviour
     public GameObject player;
 
     DataHandler dataHandler;
-    LevelController levelController;
+    public LevelController levelController;
+
+    public DetermineLoad determineLoad;
 
 	// Use this for initialization
 	void Start ()
@@ -25,7 +27,12 @@ public class LevelData : MonoBehaviour
         print(sb.ToString());
 
         levelController = GameObject.FindGameObjectWithTag("LevelController").GetComponent<LevelController>();
-	}
+
+        if (determineLoad.load == 1)
+        {
+            LoadLevel(levelController.levelName);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -35,13 +42,13 @@ public class LevelData : MonoBehaviour
 
     public void LoadScene()
     {
-        //SceneManager.LoadScene("SampleScene");
+        determineLoad.load = 1;
+        SceneManager.LoadScene("aiTestScene");
     }
 
     public void LoadLevel(string levelName)
     {
-        //SceneManager.LoadScene("SampleScene");
-        DataHandler level = DataHandler.LoadFromFile(levelName + ".lvl");
+        DataHandler level = DataHandler.LoadFromFile(levelController.levelName + ".lvl");
         levelController.levelName = level.levelName;
         player.transform.position = level.PlayerPosition;
 
@@ -51,6 +58,32 @@ public class LevelData : MonoBehaviour
         mps.currentExposure = level.PlayerExposure;
         mps.currentFatigue = level.PlayerFatigue;
         mps.currentStamina = level.PlayerStamina;
+
+        MainTimeScript mainTimeScript = GameObject.FindGameObjectWithTag("TimeController").GetComponent<MainTimeScript>();
+        if (mainTimeScript != null)
+        {
+            levelController.currentTime = level.CurrentTime;
+        }
+
+        foreach (GameObject puzzle in GameObject.FindGameObjectsWithTag("PuzzleMaster"))
+        {
+            foreach (PuzzleManagerData pmd in level.puzzles)
+            {
+                if (puzzle == pmd.currentObject)
+                {
+                    if (pmd.isCompleted)
+                    {
+                        puzzle.GetComponent<PuzzleMaster>().complete = true;
+                    }
+                    else if (!pmd.isCompleted)
+                    {
+                        puzzle.GetComponent<PuzzleMaster>().complete = false;
+                    }
+                }
+            }
+        }
+
+        determineLoad.load = 0;
     }
 
     public void SaveLevel(string levelName)
@@ -79,18 +112,18 @@ public class LevelData : MonoBehaviour
 
         //Current Time
         MainTimeScript mainTimeScript = GameObject.FindGameObjectWithTag("TimeController").GetComponent<MainTimeScript>();
-        level.CurrentTime = levelController.currentTime;
+        if (mainTimeScript != null)
+        {
+            level.CurrentTime = levelController.currentTime;
+        }
 
         //Inventory
-        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Slot"))
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Item"))
         {
             print("Found an item to save");
             InventoryManagerData newItem = new InventoryManagerData();
-            newItem.slotNum = item.name;
-            if (item.transform.GetChild(0) != null)
-            {
-                newItem.slotItem = item.transform.GetChild(0).gameObject;
-            }
+            newItem.slotNum = item.transform.parent.name;
+            newItem.slotItem = item;
             level.inventoryData.Add(newItem);
         }
 

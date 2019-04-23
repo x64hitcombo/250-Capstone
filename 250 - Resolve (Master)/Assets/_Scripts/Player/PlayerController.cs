@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public bool canSprint = true;
 
     public GameObject hackingGame;
+    public GameObject saveLoadUI;
     public float staminaLossRate;
 
     public float baseMovementSpeed;
@@ -159,6 +160,10 @@ public class PlayerController : MonoBehaviour
         {
             hackingGame.SetActive(false);
         }
+        if (other.tag == "campfire")
+        {
+            saveLoadUI.SetActive(false);
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -172,6 +177,17 @@ public class PlayerController : MonoBehaviour
             else if (hackingGame.activeSelf && Input.GetKey(KeyCode.Escape))
             {
                 hackingGame.SetActive(false);
+            }
+        }
+        if (other.tag == "campfire")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                saveLoadUI.SetActive(true);
+            }
+            else if (saveLoadUI.activeSelf && Input.GetKey(KeyCode.Escape))
+            {
+                saveLoadUI.SetActive(false);
             }
         }
     }
