@@ -349,21 +349,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3904913250915663745, guid: 598847a70fde8414cbb5f3b254328d9a,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 1963218411}
-    - target: {fileID: 3904913250915663745, guid: 598847a70fde8414cbb5f3b254328d9a,
-        type: 3}
-      propertyPath: rotateSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3904913250915663745, guid: 598847a70fde8414cbb5f3b254328d9a,
-        type: 3}
-      propertyPath: isMoving
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: isMoving
       value: 1
@@ -372,6 +357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: '!PlayerManager'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394544029602915085, guid: 598847a70fde8414cbb5f3b254328d9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8394544029602915086, guid: 598847a70fde8414cbb5f3b254328d9a,
         type: 3}
@@ -453,9 +443,3 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 2f28a7090bbf50d43a1a0e162ffa00f5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 598847a70fde8414cbb5f3b254328d9a, type: 3}
---- !u!20 &1963218411 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8394544030424742251, guid: 598847a70fde8414cbb5f3b254328d9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1838281308}
-  m_PrefabAsset: {fileID: 0}
