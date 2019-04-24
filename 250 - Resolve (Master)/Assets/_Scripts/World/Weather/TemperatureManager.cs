@@ -8,7 +8,7 @@ public class TemperatureManager : MonoBehaviour
     public int currentTemperature;
     public Transform temperatureManager;
 
-    public GameObject[] temperatureGauges;
+    public List<GameObject> temperatureGauges = new List<GameObject>();
 
     private int baseTemperature;
     private Transform oldTemperatureManager;
@@ -16,6 +16,7 @@ public class TemperatureManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        FillList();
         SetBaseTemperature();
 	}
 	
@@ -26,6 +27,11 @@ public class TemperatureManager : MonoBehaviour
         SetTemperature();
         CheckClosestGauge();
 	}
+
+    public void FillList()
+    {
+        temperatureGauges.AddRange(GameObject.FindGameObjectsWithTag("TempGauge"));
+    }
 
     public void SetTemperature()
     {
@@ -41,7 +47,11 @@ public class TemperatureManager : MonoBehaviour
 
     public void SetBaseTemperature()
     {
-        baseTemperature = temperatureManager.GetComponent<TemperatureSetter>().baseTemperature;
+        if (temperatureManager)
+        {
+            baseTemperature = temperatureManager.GetComponent<TemperatureSetter>().baseTemperature;
+
+        }
     }
 
     public void CheckClosestGauge()

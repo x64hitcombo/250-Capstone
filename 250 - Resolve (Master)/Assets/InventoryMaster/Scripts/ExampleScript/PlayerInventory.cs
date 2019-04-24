@@ -50,30 +50,32 @@ public class PlayerInventory : MonoBehaviour
         Inventory.ItemEquip -= EquipWeapon;
     }
 
+
     void EquipWeapon(Item item)
     {
         if (item.itemType == ItemType.HandR)
         {
             if (handREquip == true)
             {
-                ToolDestroyer(handR, handREquip);
-                ToolCreator(item, handR.transform, handREquip);
+                ToolDestroyer(handR);
+                ToolCreator(item, handR.transform);
             }
             else
             {
-                ToolCreator(item, handR.transform, handREquip);
+                ToolCreator(item, handR.transform);
             }
         }
         if (item.itemType == ItemType.HandL)
         {
             if (handLEquip == true)
             {
-                ToolDestroyer(handL, handLEquip);
-                ToolCreator(item, handL.transform, handLEquip);
+                ToolDestroyer(handL);
+                ToolCreator(item, handL.transform);
+
             }
             else
             {
-                ToolCreator(item, handL.transform, handLEquip);
+                ToolCreator(item, handL.transform);
             }
         }
     }
@@ -86,29 +88,28 @@ public class PlayerInventory : MonoBehaviour
             {
                 if (item.itemType == ItemType.HandR)
                 {
-                    ToolDestroyer(handR, handREquip);
+                    ToolDestroyer(handR);
+
                 }
                 if (item.itemType == ItemType.HandL)
                 {
-                    ToolDestroyer(handL, handLEquip);
+                    ToolDestroyer(handL);
                 }
             }
         }
     }
 
-    public void ToolDestroyer(GameObject hand, bool isEquip)
+    public void ToolDestroyer(GameObject hand)
     {
         if (hand.transform.GetChild(0) != null)
         {
             Destroy(hand.transform.GetChild(0).gameObject);
-            isEquip = false;
         }
     }
 
-    public void ToolCreator(Item item, Transform hand, bool isEquip)
+    public void ToolCreator(Item item, Transform hand)
     {
         Instantiate(item.itemModel, hand.transform);
-        isEquip = true;
     }
 
     void OnBackpack(Item item)
@@ -279,7 +280,15 @@ public class PlayerInventory : MonoBehaviour
                 craftSystemInventory.closeInventory();
             }
         }
+        if (handR.transform.childCount == 0)
+            handREquip = false;
+        else
+            handREquip = true;
 
+        if (handL.transform.childCount == 0)
+            handLEquip = false;
+        else
+            handLEquip = true;
     }
 
 }

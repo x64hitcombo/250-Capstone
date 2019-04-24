@@ -44,6 +44,7 @@ public class ManagePlayerStats : MonoBehaviour
 
     public SleepMenuScript sleepUI;
     public GameObject craftingUI;
+    public GameObject savingUI;
     public Inventory playerInv;
 
     public bool atfire = false;
@@ -279,6 +280,8 @@ public class ManagePlayerStats : MonoBehaviour
             atfire = false;
             GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Remove(craftingUI);
             craftingUI.gameObject.SetActive(false);
+            GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Remove(savingUI);
+            savingUI.gameObject.SetActive(false);
         }
     }
 
@@ -289,11 +292,9 @@ public class ManagePlayerStats : MonoBehaviour
             if (other.GetComponent<proxTarget>().Type == proxTarget.targetType.Fire)
             {
                 atfire = true;
-                if (!GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Contains(craftingUI))
-                {
                     GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Add(craftingUI);
+                    GameObject.FindWithTag("Canvas").GetComponent<UIToggle>().windows.Add(savingUI);
 
-                }
             }
         }
     }

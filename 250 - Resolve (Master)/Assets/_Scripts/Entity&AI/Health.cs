@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
 
     public Text healthTxt;
 
-    public string hurtboxTag = "hurtbox";
+    public string hurtboxTag = "Hurtbox";
     public string bodyTag = "Player";
 
     ParticleSystem deathParticle;
@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
 
     public void Update()
     {
-        if (healthTxt != null)
+        if (healthTxt)
         {
             healthTxt.text = curHealth.ToString();
         }

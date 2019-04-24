@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5921860551058144046}
   m_Layer: 0
   m_Name: Equipped_Torch
-  m_TagString: Untagged
+  m_TagString: HurtBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,6 +66,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353118400888217092}
     m_Modifications:
+    - target: {fileID: 2095955957668054820, guid: 8d5dd0def8258d14c93cdde6c1db69be,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch
+      objectReference: {fileID: 0}
     - target: {fileID: 7586257632897090776, guid: 8d5dd0def8258d14c93cdde6c1db69be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -130,11 +135,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.6999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2095955957668054820, guid: 8d5dd0def8258d14c93cdde6c1db69be,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d5dd0def8258d14c93cdde6c1db69be, type: 3}

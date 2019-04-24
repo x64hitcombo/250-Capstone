@@ -182,7 +182,7 @@ MonoBehaviour:
   - itemName: Cooked Ham
     itemID: 10
     itemDesc: A slab of grilled meat. Restores hunger by 30, fatigue by 10.
-    itemIcon: {fileID: 21300000, guid: b29cbbd10ecf3fd40991d4734d556c17, type: 3}
+    itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
     itemModel: {fileID: 7303801348928241969, guid: 52ec26de7567f2844a20c6291bd75f71,
       type: 3}
     itemValue: 1
@@ -233,7 +233,7 @@ MonoBehaviour:
       attributeValue: 15
   - itemName: Fruit Medley
     itemID: 13
-    itemDesc: 
+    itemDesc: A group of fruit
     itemIcon: {fileID: 21300000, guid: 771d8f22d4d4a7d45a9edfb147db2464, type: 3}
     itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
       type: 3}
@@ -266,8 +266,8 @@ MonoBehaviour:
   - itemName: Raw Ham
     itemID: 15
     itemDesc: Raw ham that is not edible.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 1843928275848456822, guid: 96c355139449d034a8a6fc30d8b3b98d,
+    itemIcon: {fileID: 21300000, guid: b29cbbd10ecf3fd40991d4734d556c17, type: 3}
+    itemModel: {fileID: 8217973946327196024, guid: 4d53b714b629d1c4a8c3862ce951a5be,
       type: 3}
     itemValue: 1
     itemType: 0
@@ -438,20 +438,8 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Bottle
-    itemID: 28
-    itemDesc: A bottle that is use for crating items.
-    itemIcon: {fileID: 21300000, guid: 40c0544742cafa147882381221ff228a, type: 3}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
   - itemName: Bow
-    itemID: 28
+    itemID: 27
     itemDesc: A man-made weapon that is used for hunting. It requires arrows to fire
       it.
     itemIcon: {fileID: 21300000, guid: ab273a9be22ac5e4dabaf557568c0ef0, type: 3}
@@ -488,7 +476,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Knife
-    itemID: 31
+    itemID: 30
     itemDesc: A weapon and tool used for cutting foilage and to damage enemies.
     itemIcon: {fileID: 21300000, guid: 7f044313c0f1c164f85c40185e3a8b9b, type: 3}
     itemModel: {fileID: 5448073845823005486, guid: 81136a2c79fa1a1419a064859b880d71,
@@ -501,7 +489,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Torch
-    itemID: 32
+    itemID: 31
     itemDesc: Provides light. Press E while equipped to place on the ground.
     itemIcon: {fileID: 21300000, guid: 2b9ac9a5f4db0f24eb713f481f23b355, type: 3}
     itemModel: {fileID: 8339529332509045571, guid: 58cf57c376ed7234a8bc9ac672a231eb,
@@ -514,7 +502,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Quiver
-    itemID: 34
+    itemID: 32
     itemDesc: 'A '
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}
@@ -526,10 +514,11 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   - itemName: Key
-    itemID: 34
+    itemID: 33
     itemDesc: This key can open any door
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
+    itemIcon: {fileID: 21300000, guid: 148b38693227a684b972635212df2697, type: 3}
+    itemModel: {fileID: 7422088106219932473, guid: 611393b00d9a6424e82af716fd248399,
+      type: 3}
     itemValue: 1
     itemType: 3
     itemWeight: 0
@@ -537,15 +526,16 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Empty Bottle
-    itemID: 35
-    itemDesc: Can be filled with water.
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
+  - itemName: Bottle
+    itemID: 34
+    itemDesc: This is an empty bottle, it can be filled with water
+    itemIcon: {fileID: 21300000, guid: 51432f90078b5a4409905baba7b6fff6, type: 3}
+    itemModel: {fileID: 5386975860335617725, guid: d8588574be3bc4e4eaa93ecc0643ca70,
+      type: 3}
     itemValue: 1
     itemType: 0
     itemWeight: 0
-    maxStack: 1
+    maxStack: 9
     indexItemInList: 999
     rarity: 0
     itemAttributes: []

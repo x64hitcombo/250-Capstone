@@ -61,7 +61,7 @@ public void AllComplete()
         complete = true;
         if (outAnimate)
         {
-            outAnimate.GetComponent<Animator>().SetBool("objEvent", true);
+            outAnimate.transform.GetChild(0).GetComponent<Animator>().SetBool("objEvent", true);
             Debug.Log("Yeah hahaa"); 
         }
 

@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour
     private Transform climbLookPosition;
     public bool canSprint = true;
 
-    public GameObject hackingGame;
-    public GameObject saveLoadUI;
+    //public GameObject hackingGame;
+    //public GameObject saveLoadUI;
     public float staminaLossRate;
 
     public float baseMovementSpeed;
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
     private void SetMovementSpeed()
     {
-        if (Input.GetKey(runKey)) moveSpeed = Mathf.Lerp(moveSpeed, runSpeed, Time.deltaTime * runBuildupSpeed);
+        if (Input.GetKey(runKey) && canSprint) moveSpeed = Mathf.Lerp(moveSpeed, runSpeed, Time.deltaTime * runBuildupSpeed);
         else moveSpeed = Mathf.Lerp(moveSpeed, walkSpeed, Time.deltaTime * runBuildupSpeed);
     }
 
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
         if (vertAxis > 0 || vertAxis < 0 || horiAxis > 0 || horiAxis < 0)
         {
             anim.isMoving = true;
-            if (Input.GetButton("Sprint")) anim.MoveSpeed(2);
+            if (Input.GetButton("Sprint") && canSprint) anim.MoveSpeed(2);
             else anim.MoveSpeed(1);
 
         }
@@ -155,40 +155,6 @@ public class PlayerController : MonoBehaviour
             canClimb = false;
             climbing = false;
             climbLookPosition = null;
-        }
-        if (other.tag == "HackingGame")
-        {
-            hackingGame.SetActive(false);
-        }
-        if (other.tag == "campfire")
-        {
-            saveLoadUI.SetActive(false);
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "HackingGame")
-        {
-            if (Input.GetKey(KeyCode.E))
-            {
-                hackingGame.SetActive(true);
-            }
-            else if (hackingGame.activeSelf && Input.GetKey(KeyCode.Escape))
-            {
-                hackingGame.SetActive(false);
-            }
-        }
-        if (other.tag == "campfire")
-        {
-            if (Input.GetKey(KeyCode.E))
-            {
-                saveLoadUI.SetActive(true);
-            }
-            else if (saveLoadUI.activeSelf && Input.GetKey(KeyCode.Escape))
-            {
-                saveLoadUI.SetActive(false);
-            }
         }
     }
 }

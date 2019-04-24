@@ -76,7 +76,7 @@ public class TooltipManager : MonoBehaviour {
                 tip.sprite.SetActive(false);
                 tip.tipTitle.text = target.newTipTitle;
                 tip.tipDesc.text = target.newTipDesc;
-                tip.tipTitle.color = target.titleColor;
+                //tip.tipTitle.color = target.titleColor;
                 tip.tipValue.color = target.valueColor;
             }
 

@@ -6,8 +6,8 @@ public class HandleCamera : MonoBehaviour
 {
     public Camera playerCamera;
     public Transform cameraLookPosition;
-    public Transform minimumHeightPoint;
-    public Transform maximumHeightPoint;
+    //public Transform minimumHeightPoint;
+    //public Transform maximumHeightPoint;
 
     public Vector3 defaultCameraPosition;
     public Quaternion defaultCameraRotation;

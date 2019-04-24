@@ -296,6 +296,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4451691897093494160, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451691897093494160, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000034197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451691897093494160, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.05889
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451691897093494160, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.05889
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451691897093494160, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5127
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451691897093494160, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00000014251
+      objectReference: {fileID: 0}
     - target: {fileID: 2610033390289270922, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
       propertyPath: horizontalInputName
@@ -309,12 +339,12 @@ PrefabInstance:
     - target: {fileID: 2610033390289270922, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
       propertyPath: walkSpeed
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2610033390289270922, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
       propertyPath: runSpeed
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2610033390289270922, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
@@ -344,7 +374,7 @@ PrefabInstance:
     - target: {fileID: 2610033390289270922, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
       propertyPath: staminaLossRate
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2610033390289270922, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
@@ -371,6 +401,26 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2610033390289270963, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: staminaRefill
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610033390289270963, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: targetID
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610033390289270961, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: handR
+      value: 
+      objectReference: {fileID: 5784832884222360193}
+    - target: {fileID: 2610033390289270961, guid: e6ae89e456b934740a09fa632f1ac3d2,
+        type: 3}
+      propertyPath: handL
+      value: 
+      objectReference: {fileID: 5784832883838594651}
     - target: {fileID: 2610033390289270965, guid: e6ae89e456b934740a09fa632f1ac3d2,
         type: 3}
       propertyPath: temperatureGauges.Array.size
@@ -386,16 +436,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: UI_noSwap
       objectReference: {fileID: 0}
-    - target: {fileID: 2610033390289270961, guid: e6ae89e456b934740a09fa632f1ac3d2,
-        type: 3}
-      propertyPath: handR
-      value: 
-      objectReference: {fileID: 5784832884222360193}
-    - target: {fileID: 2610033390289270961, guid: e6ae89e456b934740a09fa632f1ac3d2,
-        type: 3}
-      propertyPath: handL
-      value: 
-      objectReference: {fileID: 5784832883838594651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6ae89e456b934740a09fa632f1ac3d2, type: 3}
 --- !u!1 &5784832884661934345 stripped
