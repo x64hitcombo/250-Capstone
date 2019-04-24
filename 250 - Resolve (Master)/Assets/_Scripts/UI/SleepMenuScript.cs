@@ -20,6 +20,7 @@ public class SleepMenuScript : MonoBehaviour
     public PlayerController player;
     public bool toggle = true;
 
+
     void Start()
     {
         TimeMain = FindObjectOfType<MainTimeScript>();
@@ -57,10 +58,9 @@ public class SleepMenuScript : MonoBehaviour
     //Increases game speed to fast forward to the designated hour
     public void FastForward()
     {
-
         Debug.Log("Clicked");
         SleepTime = true;
-
+        
         if (TimeMain._fCurrentHour != Slider.value)
         {
             TimeMain.GetSet_fTimeMultiplier = 100f;
@@ -72,6 +72,7 @@ public class SleepMenuScript : MonoBehaviour
             TimeMain.GetSet_fTimeMultiplier = 1f;
             player.movement = true;
             ToggleUI();
+            //insert getup here, maybe activate movement at end of frame
         }
     }
 

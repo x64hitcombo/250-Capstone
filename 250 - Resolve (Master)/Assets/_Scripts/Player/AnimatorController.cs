@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AnimatorController : MonoBehaviour
 {
+    PlayerController playerController;
+
     #region  Facing Variables
     [SerializeField] public float rotateSpeed;
     [SerializeField] public bool isMoving;
@@ -17,6 +19,7 @@ public class AnimatorController : MonoBehaviour
 
     void Start()
     {
+        playerController = transform.parent.GetComponent<PlayerController>();
         anim = gameObject.GetComponent<Animator>();
     }
 
@@ -58,6 +61,33 @@ public class AnimatorController : MonoBehaviour
     public void LookAtMouse()
     {
         isMoving = false;
+    }
+
+    public void Pickup()
+    {
+        anim.SetBool("action", true);
+        anim.SetTrigger("pickup");
+        playerController.movement = false;
+        anim.SetInteger("moveSpeed", 0);
+    }
+
+    public void DisableAction()
+    {
+        anim.SetBool("action", false);
+        playerController.movement = true;
+    }
+
+    public void GoToBed()
+    {
+        anim.SetBool("action", true);
+        anim.SetBool("sleep", true);
+    }
+
+    public void Consume()
+    {
+        anim.SetBool("action", true);
+        anim.SetTrigger("consuming");
+        playerController.movement = false;
     }
 
 }

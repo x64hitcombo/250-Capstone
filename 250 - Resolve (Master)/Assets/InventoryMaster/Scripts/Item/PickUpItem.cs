@@ -23,6 +23,7 @@ public class PickUpItem : MonoBehaviour
 
             if (distance <= 3)
             {
+                _player.GetComponentInChildren<AnimatorController>().Pickup();
                 bool check = _inventory.checkIfItemAllreadyExist(item.itemID, item.itemValue);
                 if (check)
                     Destroy(this.gameObject);

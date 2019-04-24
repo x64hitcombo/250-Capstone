@@ -12,6 +12,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
     public static EquipmentSystem eS;
     public GameObject duplication;
     public static GameObject mainInventory;
+    public AnimatorController anim;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
 
         if (GameObject.FindGameObjectWithTag("MainInventory") != null)
             mainInventory = GameObject.FindGameObjectWithTag("MainInventory");
+        anim = GameObject.Find("/!PlayerManager/PlayerController/CharacterMesh").GetComponent<AnimatorController>();
     }
 
     public void OnPointerDown(PointerEventData data)
@@ -144,7 +146,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
                     Item itemFromDup = null;
                     if (duplication != null)
                         itemFromDup = duplication.GetComponent<ItemOnObject>().item;
-
+                    anim.Consume();
                     inventory.ConsumeItem(item);
 
                     item.itemValue--;
