@@ -13,10 +13,13 @@ public class LevelData : MonoBehaviour
     public LevelController levelController;
 
     public DetermineLoad determineLoad;
+    public GameObject inventory;
 
 	// Use this for initialization
 	void Start ()
     {
+        //PlayerPrefs.SetInt("load", 0);
+        //determineLoad.load = 0;
         string[] fileNames = System.IO.Directory.GetFiles(".", "*.lvl");
 
         StringBuilder sb = new StringBuilder();
@@ -40,14 +43,20 @@ public class LevelData : MonoBehaviour
 		
 	}
 
-    public void LoadScene()
+    public void HandleLoadScene()
     {
-        determineLoad.load = 1;
-        SceneManager.LoadScene("aiTestScene");
+        print("load set to 1");
+        PlayerPrefs.SetInt("load", 1);
+        determineLoad.load = PlayerPrefs.GetInt("load", 0);
+        SceneManager.LoadScene("World Main");
     }
 
     public void LoadLevel(string levelName)
     {
+        print("set load to 0");
+        PlayerPrefs.SetInt("load", 0);
+        determineLoad.load = PlayerPrefs.GetInt("load", 0);
+
         DataHandler level = DataHandler.LoadFromFile(levelController.levelName + ".lvl");
         levelController.levelName = level.levelName;
         player.transform.position = level.PlayerPosition;
@@ -62,7 +71,7 @@ public class LevelData : MonoBehaviour
         MainTimeScript mainTimeScript = GameObject.FindGameObjectWithTag("TimeController").GetComponent<MainTimeScript>();
         if (mainTimeScript != null)
         {
-            levelController.currentTime = level.CurrentTime;
+            mainTimeScript._fCurrentTimeOfDay = level.CurrentTime;
         }
 
         foreach (GameObject puzzle in GameObject.FindGameObjectsWithTag("PuzzleMaster"))
@@ -83,7 +92,20 @@ public class LevelData : MonoBehaviour
             }
         }
 
-        determineLoad.load = 0;
+        inventory.SetActive(true);
+        foreach (GameObject slot in GameObject.FindGameObjectsWithTag("Slot"))
+        {
+            foreach (InventoryManagerData imd in level.inventoryData)
+            {
+                if (imd.slotNum == slot.name)
+                {
+                    GameObject item = Instantiate(imd.slotItem);
+                    item.transform.parent = slot.transform;
+                    item.transform.localScale = new Vector3(1, 1, 1);
+                }
+            }
+        }
+        inventory.SetActive(false);
     }
 
     public void SaveLevel(string levelName)
@@ -118,9 +140,9 @@ public class LevelData : MonoBehaviour
         }
 
         //Inventory
+        inventory.SetActive(true);
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Item"))
         {
-            print("Found an item to save");
             InventoryManagerData newItem = new InventoryManagerData();
             newItem.slotNum = item.transform.parent.name;
             newItem.slotItem = item;
@@ -128,6 +150,7 @@ public class LevelData : MonoBehaviour
         }
 
         level.SaveToFile(level.levelName + ".lvl");
+        inventory.SetActive(false);
     }
 }
 
@@ -138,6 +161,7 @@ public class PuzzleManagerData
     public bool isCompleted;
 }
 
+[Serializable]
 public class InventoryManagerData
 {
     //Find the variables for the inventory slots data contained within
