@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class AIController : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class AIController : MonoBehaviour
     public float wanderRange = 10f;
 
     public float eatingTimer = 5f;
+    public float waitTimer = 5f;
+    public float attackTimer = 5f;
 
     public bool attackPlayer = false;
     public bool hunting = false;
@@ -41,7 +44,12 @@ public class AIController : MonoBehaviour
     private NavMeshHit navHit;
     private Vector3 wanderTarget;
 
-    private float waitToEat = 5f;
+    private float waitToEat;
+    private float waitToWander;
+    private float waitToAttack;
+
+    private Animation anim;
+    private Vector3 lastPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +59,13 @@ public class AIController : MonoBehaviour
         currentHunger = hunger;
         currentThirst = thirst;
         waitToEat = eatingTimer;
+        waitToWander = waitTimer;
+        waitToAttack = attackTimer;
+        if (GetComponent<Animation>() != null)
+        {
+            anim = GetComponent<Animation>();
+        }
+        lastPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -65,6 +80,10 @@ public class AIController : MonoBehaviour
         else if (target != null && Vector3.Distance(homeSpawner.position, target.position) <= maxDistanceFromHome)
         {
             agent.SetDestination(target.position);
+            if (anim != null)
+            {
+                anim.Play();
+            }
         }
         else if (!hunting && Vector3.Distance(gameObject.transform.position, player.transform.position) > distanceFromPlayerHunt)
         {
@@ -102,6 +121,17 @@ public class AIController : MonoBehaviour
                 }
             }
         }
+
+        Vector3 position = gameObject.transform.position;
+        if (position == lastPosition)
+        {
+            if (anim != null)
+            {
+                anim.Stop();
+            }
+        }
+        lastPosition = position;
+
     }
 
     private void HungerThirstTimer()
@@ -193,7 +223,24 @@ public class AIController : MonoBehaviour
         Vector3 randomPoint = transform.position + Random.insideUnitSphere * wanderRange;
         if (NavMesh.SamplePosition(randomPoint, out navHit, 1.0f, NavMesh.AllAreas))
         {
-            agent.SetDestination(randomPoint);
+            if (waitToWander <= 0)
+            {
+                agent.SetDestination(randomPoint);
+                waitToWander = waitTimer;
+                if (anim != null)
+                {
+                    anim.Play();
+                }
+            }
+        }
+
+        if (waitToWander > 0)
+        {
+            waitToWander -= Time.deltaTime;
+            if (waitToWander < 0)
+            {
+                waitToWander = 0;
+            }
         }
     }
 }
