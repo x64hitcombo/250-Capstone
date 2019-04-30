@@ -28,9 +28,9 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Radish
+  - itemName: Turnip
     itemID: 1
-    itemDesc: A small root vegetable. Restores hunger by 5.
+    itemDesc: A small root vegetable. Restores hunger, fatigue by 5.
     itemIcon: {fileID: 21300000, guid: f5e3cda33bf476b4087cba80fc4154f4, type: 3}
     itemModel: {fileID: 8321072320344476045, guid: fda649a7bcdece243b6757426cf2d365,
       type: 3}
@@ -43,11 +43,13 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: Hunger
       attributeValue: 5
+    - attributeName: Fatigue
+      attributeValue: 5
   - itemName: Berries
     itemID: 2
-    itemDesc: A handful of berries. Restores hunger, thirst, and fatigue by 5.
+    itemDesc: A handful of berries. Restores hunger, and fatigue by 5.
     itemIcon: {fileID: 21300000, guid: 0797e5aba30f572468ab084b24a2b359, type: 3}
-    itemModel: {fileID: 4633561256848782069, guid: f773887a8ebe79343b32f26a90b6fc47,
+    itemModel: {fileID: 7883973888258700174, guid: f773887a8ebe79343b32f26a90b6fc47,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -58,13 +60,11 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: Hunger
       attributeValue: 5
-    - attributeName: Thirst
-      attributeValue: 5
     - attributeName: Fatigue
       attributeValue: 5
   - itemName: Apple
     itemID: 3
-    itemDesc: An apple. Restores hunger and thirst by 10, fatigue by 5.
+    itemDesc: A fat red apple. Restores hunger, and fatigue by 5.
     itemIcon: {fileID: 21300000, guid: a4d3f378d1a88f346af15ee906321f2a, type: 3}
     itemModel: {fileID: 7903250261116931768, guid: 660873801aa70c04daf88c32c7757848,
       type: 3}
@@ -77,15 +77,13 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: Hunger
       attributeValue: 10
-    - attributeName: Thirst
-      attributeValue: 10
     - attributeName: Fatigue
       attributeValue: 5
   - itemName: Potato
     itemID: 4
-    itemDesc: The humble Potato. Restores hunger by 10.
+    itemDesc: The humble Potato. Restores hunger by 15.
     itemIcon: {fileID: 21300000, guid: 0288dbaa9a46b7a4fa8f0b0b773b6024, type: 3}
-    itemModel: {fileID: 429246607076405423, guid: dab4a99304e3c9c49868701960ae0b27,
+    itemModel: {fileID: 773878955630463732, guid: 3a83ff0425d9da04295e92f9a6b04935,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -95,7 +93,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 10
+      attributeValue: 15
   - itemName: Water
     itemID: 5
     itemDesc: Refreshing! Restores thirst by 50.
@@ -111,11 +109,11 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: Thirst
       attributeValue: 50
-  - itemName: Radish Salad
+  - itemName: Side Salad
     itemID: 6
-    itemDesc: A mix of greens. Restores Hunger by 15.
+    itemDesc: A mix of greens. Restores Hunger by 25.
     itemIcon: {fileID: 21300000, guid: bca15cf925033604bac21b8b127e36b6, type: 3}
-    itemModel: {fileID: 6579704764720841871, guid: 79e7e1932490ce04cb76288437e16423,
+    itemModel: {fileID: 6493056228588038882, guid: 0cc0ff015efa2f04880df6f7c30afb94,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -125,12 +123,12 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 15
-  - itemName: Better Potato
+      attributeValue: 25
+  - itemName: Dinner Salad
     itemID: 7
     itemDesc: A large mix of veggies. Restore hunger by 20, thirst by 10.
     itemIcon: {fileID: 21300000, guid: 0288dbaa9a46b7a4fa8f0b0b773b6024, type: 3}
-    itemModel: {fileID: 429246607076405423, guid: dab4a99304e3c9c49868701960ae0b27,
+    itemModel: {fileID: 7232758340042208833, guid: f3712d95fc40b05439d3b8eae37cb1e0,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -140,12 +138,12 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 20
-    - attributeName: Fatigue
-      attributeValue: 10
-  - itemName: Berry Pouch
+      attributeValue: 40
+    - attributeName: Thirst
+      attributeValue: 25
+  - itemName: Forest Medley
     itemID: 8
-    itemDesc: A bushel of various fruit. Stores hunger, thirst, fatigue by 15.
+    itemDesc: A bushel of various fruit. Stores hunger by 20, fatigue by 15.
     itemIcon: {fileID: 21300000, guid: 397e3859cc04495449e3361ac9c5c48f, type: 3}
     itemModel: {fileID: 4633163937392219736, guid: 187dd7d72967e6f40b827af02e2c0fa0,
       type: 3}
@@ -157,14 +155,12 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 15
-    - attributeName: Thirst
-      attributeValue: 15
+      attributeValue: 20
     - attributeName: Fatigue
       attributeValue: 15
-  - itemName: Cooked Pork
+  - itemName: Cooked Game
     itemID: 9
-    itemDesc: A little bit of cooked meat. Restores hunger by 20, fatigue by 5.
+    itemDesc: A little bit of cooked meat. Restores hunger by 50.
     itemIcon: {fileID: 21300000, guid: 5dac1d635cb0baf4292608e0ca519144, type: 3}
     itemModel: {fileID: 7190555284723781730, guid: bfc4fedfe05e195468936bd3e2b60964,
       type: 3}
@@ -176,14 +172,12 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 20
-    - attributeName: Fatigue
-      attributeValue: 5
-  - itemName: Cooked Ham
+      attributeValue: 50
+  - itemName: Cooked Haunch
     itemID: 10
-    itemDesc: A slab of grilled meat. Restores hunger by 30, fatigue by 10.
+    itemDesc: A slab of grilled meat. Restores hunger by 65.
     itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
-    itemModel: {fileID: 7303801348928241969, guid: 52ec26de7567f2844a20c6291bd75f71,
+    itemModel: {fileID: 7190555284723781730, guid: bfc4fedfe05e195468936bd3e2b60964,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -193,12 +187,10 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 30
-    - attributeName: Fatigue
-      attributeValue: 10
+      attributeValue: 65
   - itemName: Cooked Ribs
     itemID: 11
-    itemDesc: The BBQd carcass of a beast. Restores hunger by 40, fatigue by 15.
+    itemDesc: The BBQd carcass of a beast. Restores hunger by 80.
     itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
     itemModel: {fileID: 291559982787766595, guid: fa08795edbf81214aac00f1f9c38c549,
       type: 3}
@@ -210,32 +202,12 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 40
-    - attributeName: Fatigue
-      attributeValue: 15
-  - itemName: Grilled Fruit
+      attributeValue: 80
+  - itemName: Grilled Apple
     itemID: 12
-    itemDesc: BBQd apples. Restore hunger by 30, thirst, fatigue by 15.
+    itemDesc: BBQd apples. Restore hunger by 30, fatigue by 15.
     itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 2
-    itemWeight: 0
-    maxStack: 9
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes:
-    - attributeName: Hunger
-      attributeValue: 30
-    - attributeName: Thirst
-      attributeValue: 15
-    - attributeName: Fatigue
-      attributeValue: 15
-  - itemName: Fruit Medley
-    itemID: 13
-    itemDesc: A group of fruit
-    itemIcon: {fileID: 21300000, guid: 771d8f22d4d4a7d45a9edfb147db2464, type: 3}
-    itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
+    itemModel: {fileID: 7903250261116931768, guid: 00661ad0cb6177a47b178340d7e52437,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -247,9 +219,24 @@ MonoBehaviour:
     - attributeName: Hunger
       attributeValue: 30
     - attributeName: Thirst
+      attributeValue: 40
+  - itemName: Desert Medley
+    itemID: 13
+    itemDesc: A fruit snack! Restores hunger by 20, thirst by 40.
+    itemIcon: {fileID: 21300000, guid: 771d8f22d4d4a7d45a9edfb147db2464, type: 3}
+    itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
+      type: 3}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
       attributeValue: 20
-    - attributeName: Fatigue
-      attributeValue: 20
+    - attributeName: Thirst
+      attributeValue: 40
   - itemName: Raw Pork
     itemID: 14
     itemDesc: Raw pork that is not edible
@@ -539,3 +526,19 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
+  - itemName: Fig
+    itemID: 35
+    itemDesc: A desert fig. Restores hunger by 10, thirst by 15.
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 20
+    - attributeName: Thirst
+      attributeValue: 40
