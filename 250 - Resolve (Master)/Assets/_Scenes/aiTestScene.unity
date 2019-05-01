@@ -320,6 +320,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103622637}
   m_CullTransparentMesh: 0
+--- !u!1 &161269163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1679885932101604, guid: 0f348d45d9bad234e8eeed1c81dbf476,
+    type: 3}
+  m_PrefabInstance: {fileID: 1633209034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &161269164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161269163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 161269166}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!65 &161269165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161269163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.54363, y: 1.0084312, z: 1.6865301}
+  m_Center: {x: 0.01249375, y: 0.53589153, z: -0.0018671354}
+--- !u!195 &161269166
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161269163}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &164424462
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +476,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164424462}
   m_CullTransparentMesh: 0
+--- !u!1 &173672589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1711258489387164, guid: 7e40f6f0425f97e4990a88a0089ef9c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1936902697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &173672590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173672589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.68870294, y: 1.8496053, z: 2.2541814}
+  m_Center: {x: -0.021004995, y: 0.917473, z: 0.38436013}
+--- !u!114 &173672591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173672589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 173672592}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!195 &173672592
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173672589}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &213778258
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +937,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 111702435402423728, guid: 666f3fd0d27b0f74388a07790acb04ba,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 666f3fd0d27b0f74388a07790acb04ba, type: 3}
 --- !u!1 &424760867
@@ -887,7 +1046,7 @@ GameObject:
   - component: {fileID: 546893141}
   - component: {fileID: 546893142}
   m_Layer: 0
-  m_Name: AITestSpawner
+  m_Name: AISpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -980,8 +1139,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 111864498138079526, guid: 51c0d1f803a2fcb4486027e84ca196eb,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51c0d1f803a2fcb4486027e84ca196eb, type: 3}
+--- !u!1 &574427341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1022132353411678, guid: f7170d8e39abbd84f82e9abdbd25eb3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 836208443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &574427342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574427341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.69779843, y: 1.6511444, z: 2.0452166}
+  m_Center: {x: 0.0049978895, y: 0.7989418, z: 0.38941988}
+--- !u!114 &574427343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574427341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 574427344}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!195 &574427344
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574427341}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &583232906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2151,7 +2392,7 @@ PrefabInstance:
     - target: {fileID: 3352009954795818714, guid: 95ddca5a080e97b4b833228851f0ea14,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000108625136
+      value: 0.00009180864
       objectReference: {fileID: 0}
     - target: {fileID: 3352009954795818714, guid: 95ddca5a080e97b4b833228851f0ea14,
         type: 3}
@@ -2195,6 +2436,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ddca5a080e97b4b833228851f0ea14, type: 3}
+--- !u!1 &630609101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1635273142699810, guid: 0541a402df969f442be9ec10a161693f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1886765803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &630609102
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630609101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26921463, y: 0.6943846, z: 0.9863987}
+  m_Center: {x: -0.0019518535, y: 0.39967984, z: 0.14452586}
+--- !u!114 &630609103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630609101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 630609104}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!195 &630609104
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630609101}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &650358323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,7 +2812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4729087293126696, guid: f7170d8e39abbd84f82e9abdbd25eb3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8052578e-17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4729087293126696, guid: f7170d8e39abbd84f82e9abdbd25eb3e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2530,6 +2848,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4729087293126696, guid: f7170d8e39abbd84f82e9abdbd25eb3e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111484334836343456, guid: f7170d8e39abbd84f82e9abdbd25eb3e,
+        type: 3}
+      propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3302,6 +3625,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164538558}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1241423019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1251384547369638, guid: b9350ca20ec3ac448abe0887ccf41595,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421564183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1241423020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241423019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1241423022}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!65 &1241423021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241423019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.309505, y: 1.223747, z: 1.820899}
+  m_Center: {x: 0.053504072, y: 0.60999316, z: 0.31643313}
+--- !u!195 &1241423022
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241423019}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1246453387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3355,6 +3755,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4309290571700296, guid: cc95c6d2cc753f24c8f9b0a31ca8cc4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111794968604163562, guid: cc95c6d2cc753f24c8f9b0a31ca8cc4c,
+        type: 3}
+      propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3512,25 +3917,6 @@ MonoBehaviour:
     indexItemInList: -1
     rarity: 0
     itemAttributes: []
---- !u!1 &1292040778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1525676354884992, guid: 0f848e738a34ef34591b2ee4348b507a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1549317551}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1292040782
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292040778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.0135877, y: 12.143979, z: 8.187599}
-  m_Center: {x: -0.0015902229, y: -0.4384761, z: 3.5938168}
 --- !u!1001 &1298211133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3672,6 +4058,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329692234}
   m_CullTransparentMesh: 0
+--- !u!1 &1363321235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1923101477069022, guid: a1c8fbfa98ba54e4b8b503678d09a1b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1959923344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1363321236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363321235}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9515626, y: 1.3151238, z: 2.3224144}
+  m_Center: {x: -0.0069924993, y: 0.660867, z: 0.3388545}
+--- !u!114 &1363321237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363321235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1363321238}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!195 &1363321238
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363321235}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &1370707566 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7023734955534030212, guid: 06fe75b202e0ba4468ba18b5f16d8f43,
@@ -3775,6 +4238,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1400047158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1038411616448374, guid: 666f3fd0d27b0f74388a07790acb04ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 297721871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1400047159
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400047158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.6675386, z: 2.168514}
+  m_Center: {x: 0, y: 0.85358036, z: 0.35198545}
+--- !u!114 &1400047160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400047158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1400047161}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!195 &1400047161
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400047158}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1416217434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3909,6 +4449,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 111150787894604642, guid: b9350ca20ec3ac448abe0887ccf41595,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9350ca20ec3ac448abe0887ccf41595, type: 3}
 --- !u!1 &1467774935
@@ -3961,7 +4506,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6528d205bf5986b4d8801272d8445316, type: 2}
+  - {fileID: 2100000, guid: 692bf4d2b3f72834ab2073ac0b363108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4841,6 +5386,83 @@ MonoBehaviour:
     indexItemInList: 0
     rarity: 0
     itemAttributes: []
+--- !u!1 &1579759794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1038072212367056, guid: 51c0d1f803a2fcb4486027e84ca196eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 559460510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1579759795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579759794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27291375, y: 0.45814103, z: 1}
+  m_Center: {x: 0.0027701557, y: 0.27092952, z: 0}
+--- !u!114 &1579759796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579759794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 1579759797}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!195 &1579759797
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579759794}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!224 &1590016724 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1544577070678436109, guid: 95ddca5a080e97b4b833228851f0ea14,
@@ -5060,6 +5682,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 111871131155439894, guid: 0f348d45d9bad234e8eeed1c81dbf476,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f348d45d9bad234e8eeed1c81dbf476, type: 3}
 --- !u!1 &1775167359
@@ -5256,22 +5883,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1549317551}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1885794939
-Rigidbody:
+--- !u!65 &1885794939
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885794936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 0.46032462, y: 0.89905137, z: 1.2438445}
+  m_Center: {x: 0.022282919, y: 0.45143685, z: 0.12193942}
 --- !u!195 &1885794940
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5383,6 +6007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4224794579921330, guid: 0541a402df969f442be9ec10a161693f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111942788058597142, guid: 0541a402df969f442be9ec10a161693f,
+        type: 3}
+      propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5517,6 +6146,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 111873174206540306, guid: 7e40f6f0425f97e4990a88a0089ef9c4,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e40f6f0425f97e4990a88a0089ef9c4, type: 3}
 --- !u!1001 &1959923344
@@ -5572,6 +6206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4888045419233748, guid: a1c8fbfa98ba54e4b8b503678d09a1b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111179909344374228, guid: a1c8fbfa98ba54e4b8b503678d09a1b5,
+        type: 3}
+      propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5733,6 +6372,83 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2103432108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1436401097619752, guid: cc95c6d2cc753f24c8f9b0a31ca8cc4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1246453387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2103432109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103432108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 2103432111}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 546893141}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!65 &2103432110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103432108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21009128, y: 0.22446132, z: 0.37575483}
+  m_Center: {x: -0.0051527023, y: 0.13326506, z: 0.030664366}
+--- !u!195 &2103432111
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103432108}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &4596285072981879583
 PrefabInstance:
   m_ObjectHideFlags: 0
