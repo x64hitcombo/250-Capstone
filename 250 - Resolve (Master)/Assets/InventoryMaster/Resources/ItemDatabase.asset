@@ -160,9 +160,9 @@ MonoBehaviour:
       attributeValue: 15
   - itemName: Cooked Game
     itemID: 9
-    itemDesc: A little bit of cooked meat. Restores hunger by 50.
+    itemDesc: A little bit of cooked meat. Restores hunger by 40.
     itemIcon: {fileID: 21300000, guid: 5dac1d635cb0baf4292608e0ca519144, type: 3}
-    itemModel: {fileID: 7190555284723781730, guid: bfc4fedfe05e195468936bd3e2b60964,
+    itemModel: {fileID: 7303801348928241969, guid: 52ec26de7567f2844a20c6291bd75f71,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -172,10 +172,10 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 50
+      attributeValue: 40
   - itemName: Cooked Haunch
     itemID: 10
-    itemDesc: A slab of grilled meat. Restores hunger by 65.
+    itemDesc: A slab of grilled meat. Restores hunger by 55.
     itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
     itemModel: {fileID: 7190555284723781730, guid: bfc4fedfe05e195468936bd3e2b60964,
       type: 3}
@@ -187,10 +187,10 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 65
+      attributeValue: 55
   - itemName: Cooked Ribs
     itemID: 11
-    itemDesc: The BBQd carcass of a beast. Restores hunger by 80.
+    itemDesc: A slab of grilled meat. Restores hunger by 70.
     itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
     itemModel: {fileID: 291559982787766595, guid: fa08795edbf81214aac00f1f9c38c549,
       type: 3}
@@ -202,7 +202,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 80
+      attributeValue: 70
   - itemName: Grilled Apple
     itemID: 12
     itemDesc: BBQd apples. Restore hunger by 30, fatigue by 15.
@@ -224,7 +224,7 @@ MonoBehaviour:
     itemID: 13
     itemDesc: A fruit snack! Restores hunger by 20, thirst by 40.
     itemIcon: {fileID: 21300000, guid: 771d8f22d4d4a7d45a9edfb147db2464, type: 3}
-    itemModel: {fileID: 2607204491815286236, guid: 1d8e486e05d6dc94680c4a8fb353de68,
+    itemModel: {fileID: 425406059505847659, guid: ee31dd7086ca22549a02b115a33c7662,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -237,11 +237,11 @@ MonoBehaviour:
       attributeValue: 20
     - attributeName: Thirst
       attributeValue: 40
-  - itemName: Raw Pork
+  - itemName: Raw Game
     itemID: 14
-    itemDesc: Raw pork that is not edible
+    itemDesc: Raw meat from a wild animal. Not edible.
     itemIcon: {fileID: 0}
-    itemModel: {fileID: 999602110197768072, guid: fd300ff4e2454934ca4531a441e03a72,
+    itemModel: {fileID: 8217973946327196024, guid: 4d53b714b629d1c4a8c3862ce951a5be,
       type: 3}
     itemValue: 1
     itemType: 0
@@ -250,11 +250,11 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Raw Ham
+  - itemName: Raw Haunch
     itemID: 15
-    itemDesc: Raw ham that is not edible.
+    itemDesc: The hauches of a sizable animal. Not edible.
     itemIcon: {fileID: 21300000, guid: b29cbbd10ecf3fd40991d4734d556c17, type: 3}
-    itemModel: {fileID: 8217973946327196024, guid: 4d53b714b629d1c4a8c3862ce951a5be,
+    itemModel: {fileID: 1901159574802398854, guid: 9a0e828b3ddb0d0479d5d4b4103de38c,
       type: 3}
     itemValue: 1
     itemType: 0
@@ -265,9 +265,9 @@ MonoBehaviour:
     itemAttributes: []
   - itemName: Raw Ribs
     itemID: 16
-    itemDesc: Raw ribs that are not edible.
+    itemDesc: 'The ribrack of a dead animal. Not edible. '
     itemIcon: {fileID: 0}
-    itemModel: {fileID: 7614149123880271891, guid: 2f0fb2d95533dd74eba2681edcc04a25,
+    itemModel: {fileID: 2905837648469163861, guid: f2e77a868597b554187c22fd610b000c,
       type: 3}
     itemValue: 1
     itemType: 0
@@ -278,9 +278,9 @@ MonoBehaviour:
     itemAttributes: []
   - itemName: Fish
     itemID: 17
-    itemDesc: A fish that is raw, but is edible.
+    itemDesc: Raw fish, probably better cooked. Restores hunger by 30.
     itemIcon: {fileID: 0}
-    itemModel: {fileID: 5623692047886632407, guid: 032fb16583f6d7e4c81dedc1dfd3de43,
+    itemModel: {fileID: 4646476490789385155, guid: 2f126d4d332a82743a2c4da65c186f1e,
       type: 3}
     itemValue: 1
     itemType: 2
@@ -293,7 +293,7 @@ MonoBehaviour:
       attributeValue: 30
   - itemName: Cooked Fish
     itemID: 18
-    itemDesc: Cooked fish that restores hunger and fatigue.
+    itemDesc: Much tastier than raw fish. Restores hunger by 50, fatigue by 10.
     itemIcon: {fileID: 21300000, guid: 13ff6d9115912c34b9fd03472bb03734, type: 3}
     itemModel: {fileID: 2966607694823346875, guid: b0a17f470e3e2364f9a11080aeec09be,
       type: 3}
@@ -305,12 +305,12 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 30
+      attributeValue: 50
     - attributeName: Fatigue
       attributeValue: 10
   - itemName: Dirty Water
     itemID: 19
-    itemDesc: Water that is murky and dirty though drinkable. Restores thirst.
+    itemDesc: I wouldn't try to live off of this. Restores thirst by 25.
     itemIcon: {fileID: 21300000, guid: e914d9bc0cfcd4f47a1c7150fc7b2ff8, type: 3}
     itemModel: {fileID: 3614020799163088551, guid: 4718bb5b3926c9c4e94b4780d5ef3e4c,
       type: 3}
@@ -322,7 +322,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Thirst
-      attributeValue: 30
+      attributeValue: 25
   - itemName: Winter Coat
     itemID: 20
     itemDesc: A thick fur coat. +20 Exposure
@@ -353,49 +353,56 @@ MonoBehaviour:
     itemAttributes:
     - attributeName: exRating
       attributeValue: -20
-  - itemName: Small Kebob
+  - itemName: Meat Salad
     itemID: 22
-    itemDesc: A kebob that has both pork and a radish that will replenish hunger.
+    itemDesc: A leafy salad with bits of meat. Restores hunger by 50, thirst by 20.
     itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
-    itemModel: {fileID: 0}
+    itemModel: {fileID: 2417636266104425599, guid: 2d8bbde6c33c51746b63b88e41d8fbf8,
+      type: 3}
     itemValue: 1
     itemType: 2
     itemWeight: 0
-    maxStack: 1
+    maxStack: 9
     indexItemInList: 999
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
       attributeValue: 50
-  - itemName: Medium Kebob
+    - attributeName: Thirst
+      attributeValue: 20
+  - itemName: Pan Fry
     itemID: 23
-    itemDesc: A kebob that contains both a ham and a radish to replenish hunger.
+    itemDesc: Tastes gamey, with turnip. Restores hunger by 50, fatigue by 10.
     itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
-    itemModel: {fileID: 0}
+    itemModel: {fileID: 7555515832684572179, guid: e984e28778990ce4a97810ee8b2b80a9,
+      type: 3}
     itemValue: 1
     itemType: 2
     itemWeight: 0
-    maxStack: 1
+    maxStack: 9
     indexItemInList: 999
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
       attributeValue: 50
-  - itemName: Large Kebob
+    - attributeName: Thirst
+      attributeValue: 20
+  - itemName: Mash
     itemID: 24
-    itemDesc: A kebob that contains a rib and potato that replenishes health.
+    itemDesc: Mashed Potatoes and meaty bits. Restores hunger by 75.
     itemIcon: {fileID: 21300000, guid: a79c4bc0f3ccad141b7e68bffd4d65ad, type: 3}
-    itemModel: {fileID: 0}
+    itemModel: {fileID: 6564229677601448458, guid: a4161d93b784b6947b85125705c87010,
+      type: 3}
     itemValue: 1
     itemType: 2
     itemWeight: 0
-    maxStack: 1
+    maxStack: 9
     indexItemInList: 999
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 50
-  - itemName: Grilled Fruit
+      attributeValue: 75
+  - itemName: '####'
     itemID: 25
     itemDesc: Fruit that is grilled that replenishes hunger, thirst, and fatigue.
     itemIcon: {fileID: 21300000, guid: eaf524e2534a93842af7fa4e7f553f58, type: 3}
@@ -488,7 +495,7 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Quiver
+  - itemName: '####'
     itemID: 32
     itemDesc: 'A '
     itemIcon: {fileID: 0}
@@ -513,9 +520,9 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Bottle
+  - itemName: Bottles
     itemID: 34
-    itemDesc: This is an empty bottle, it can be filled with water
+    itemDesc: Two empty bottles that can be filled at any water source.
     itemIcon: {fileID: 21300000, guid: 51432f90078b5a4409905baba7b6fff6, type: 3}
     itemModel: {fileID: 5386975860335617725, guid: d8588574be3bc4e4eaa93ecc0643ca70,
       type: 3}
@@ -530,7 +537,8 @@ MonoBehaviour:
     itemID: 35
     itemDesc: A desert fig. Restores hunger by 10, thirst by 15.
     itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
+    itemModel: {fileID: 1808437641689508273, guid: 2f17c68a9b2999248b070893eea4d045,
+      type: 3}
     itemValue: 1
     itemType: 0
     itemWeight: 0
@@ -539,6 +547,91 @@ MonoBehaviour:
     rarity: 0
     itemAttributes:
     - attributeName: Hunger
-      attributeValue: 20
+      attributeValue: 10
     - attributeName: Thirst
-      attributeValue: 40
+      attributeValue: 15
+  - itemName: Lettuce
+    itemID: 36
+    itemDesc: Leafy greens. Restores hunger by 5, thirst by 5.
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 8592363908555987837, guid: e096d7ced3a068c41b156bf6928756fc,
+      type: 3}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 5
+    - attributeName: Thirst
+      attributeValue: 5
+  - itemName: Kebob
+    itemID: 37
+    itemDesc: Meat and turnip on a skewer. Restores hugner by 70, fatigue by 15.
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 7800994658871434034, guid: 6f6110774b65c7149a575534df21b23e,
+      type: 3}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 70
+    - attributeName: Fatigue
+      attributeValue: 15
+  - itemName: Lunch
+    itemID: 38
+    itemDesc: 'A hearty mid-day meal. Restores hunger by 80
+
+      , fatigue 15.'
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 1923800680623744076, guid: 16bdc6d9b2c99ca438ce2de01b13272d,
+      type: 3}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 80
+    - attributeName: Fatigue
+      attributeValue: 15
+  - itemName: Dinner
+    itemID: 39
+    itemDesc: Wait 1 hour before sleeping. Restores hunger by 100.
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 440573330729331541, guid: 51abd9aa03e3c7349a06161763c015b2,
+      type: 3}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 100
+  - itemName: Energy Salad
+    itemID: 40
+    itemDesc: Bursting with energy. Restores hunger 15, fatigue by 30.
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 4706499779305633122, guid: 1dd29ea577e6a80488598897f991d251,
+      type: 3}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Hunger
+      attributeValue: 15
+    - attributeName: 
+      attributeValue: 30
