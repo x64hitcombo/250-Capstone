@@ -26,6 +26,7 @@ public class AIController : MonoBehaviour
     public float minThirstSearch = 50;
 
     public float distanceFromPlayerHunt = 10f;
+    public float distanceFromBait = 10f;
 
     public float maxDistanceFromHome = 50f;
 
@@ -37,6 +38,8 @@ public class AIController : MonoBehaviour
 
     public bool attackPlayer = false;
     public bool hunting = false;
+
+    public float damageDealt = 5f;
 
     [SerializeField]
     private float currentTimer, currentHunger, currentThirst;
@@ -68,10 +71,14 @@ public class AIController : MonoBehaviour
         lastPosition = transform.position;
     }
 
+    public void FixedUpdate()
+    {
+        HandleTimers();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        HungerThirstTimer();
         FindTarget();
         if (target == null)
         {
@@ -94,7 +101,18 @@ public class AIController : MonoBehaviour
         {
             if (target != null)
             {
-                if (target.tag == "AnimalFood")
+                if (target.tag == "Bait")
+                {
+                    waitToEat -= Time.deltaTime;
+                    if (waitToEat <= 0)
+                    {
+                        waitToEat = eatingTimer;
+                        Destroy(target.gameObject);
+                        target = null;
+                        hunting = false;
+                    }
+                }
+                else if (target.tag == "AnimalFood")
                 {
                     waitToEat -= Time.deltaTime;
                     if (waitToEat <= 0)
@@ -117,7 +135,17 @@ public class AIController : MonoBehaviour
                 }
                 else if (target.tag == "Player")
                 {
-                    //attack player
+                    if(waitToAttack <= 0)
+                    {
+                        //Play attack animation
+                        agent.SetDestination(transform.position); //Set to wait at position
+                        if (target.GetComponent<Health>() != null)
+                        {
+                            target.GetComponent<Health>().curHealth -= damageDealt;
+                        }
+                        waitToAttack = attackTimer;
+                        //after attack animation ends move again and play the movement animation
+                    }
                 }
             }
         }
@@ -131,10 +159,9 @@ public class AIController : MonoBehaviour
             }
         }
         lastPosition = position;
-
     }
 
-    private void HungerThirstTimer()
+    private void HandleTimers()
     {
         if (currentTimer <= 0)
         {
@@ -150,7 +177,7 @@ public class AIController : MonoBehaviour
 
             if (currentHunger > 0)
             {
-                currentHunger -= decreaseHungerBy;
+                currentHunger -=  decreaseHungerBy;
             }
             else if (currentHunger <= 0)
             {
@@ -160,7 +187,7 @@ public class AIController : MonoBehaviour
         }
         else if (currentTimer > 0)
         {
-            currentTimer -= Time.deltaTime;
+            currentTimer -= Time.deltaTime * secondsTillDecrease;
         }
 
         if (currentThirst > 100)
@@ -171,11 +198,47 @@ public class AIController : MonoBehaviour
         {
             currentHunger = hunger;
         }
+
+        if (waitToAttack > 0)
+        {
+            waitToAttack -= Time.deltaTime * secondsTillDecrease;
+        }
+        else if (waitToAttack <= 0)
+        {
+            waitToAttack = 0;
+        }
     }
 
     private void FindTarget()
     {
-        if (attackPlayer && Vector3.Distance(gameObject.transform.position, player.transform.position) <= distanceFromPlayerHunt)
+        List<GameObject> bait = new List<GameObject>();
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Bait"))
+        {
+            if (!bait.Contains(obj))
+            {
+                bait.Add(obj);
+            }
+        }
+
+        GameObject closestBait = null;
+        if (bait.Count > 0)
+        {
+            closestBait = bait[0];
+            foreach (GameObject obj in bait)
+            {
+                if (Vector3.Distance(transform.position, obj.transform.position) < Vector3.Distance(transform.position, closestBait.transform.position))
+                {
+                    closestBait = obj;
+                }
+            }
+        }
+
+        if (bait.Count > 0 && Vector3.Distance(closestBait.transform.position, transform.position) <= distanceFromBait && !closestBait.GetComponent<AnimalsTargetingBait>().isAnimalEating)
+        {
+            target = closestBait.transform;
+            hunting = true;
+        }
+        else if (attackPlayer && Vector3.Distance(gameObject.transform.position, player.transform.position) <= distanceFromPlayerHunt)
         {
             target = player;
             hunting = false;
