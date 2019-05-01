@@ -43,6 +43,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4729087293126696}
   - component: {fileID: 111484334836343456}
+  - component: {fileID: 574427342}
+  - component: {fileID: 574427343}
+  - component: {fileID: 574427344}
   m_Layer: 0
   m_Name: Low_Stag_v01
   m_TagString: Untagged
@@ -99,9 +102,80 @@ Animation:
   - {fileID: 7400038, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
   - {fileID: 7400040, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!65 &574427342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022132353411678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.69779843, y: 1.6511444, z: 2.0452166}
+  m_Center: {x: 0.0049978895, y: 0.7989418, z: 0.38941988}
+--- !u!114 &574427343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022132353411678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da50f376f3ae21340b9c904a63404d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 574427344}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  homeSpawner: {fileID: 0}
+  hunger: 100
+  thirst: 100
+  decreaseHungerBy: 1
+  decreaseThirstBy: 0.5
+  increaseHungerBy: 50
+  increaseThirstBy: 50
+  secondsTillDecrease: 1
+  minHungerSearch: 50
+  minThirstSearch: 50
+  distanceFromPlayerHunt: 10
+  maxDistanceFromHome: 50
+  wanderRange: 10
+  eatingTimer: 5
+  waitTimer: 5
+  attackTimer: 5
+  attackPlayer: 0
+  hunting: 0
+  currentTimer: 0
+  currentHunger: 0
+  currentThirst: 0
+--- !u!195 &574427344
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022132353411678}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 3
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1034835454555896
 GameObject:
   m_ObjectHideFlags: 0
