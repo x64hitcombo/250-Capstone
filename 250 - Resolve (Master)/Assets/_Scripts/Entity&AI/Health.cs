@@ -24,7 +24,6 @@ public class Health : MonoBehaviour
     public Text healthTxt;
 
     public string hurtboxTag = "Hurtbox";
-    public string bodyTag = "Player";
 
     ParticleSystem deathParticle;
     public GameObject drop; //drops an object on death
