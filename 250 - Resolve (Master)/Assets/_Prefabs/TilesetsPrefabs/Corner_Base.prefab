@@ -2984,9 +2984,17 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedFaces: 00000000
+  m_SelectedEdges:
+  - x: 1
+    y: 0
+  - x: 0
+    y: 2
+  - x: 2
+    y: 3
+  - x: 3
+    y: 1
+  m_selectedTriangles: 020000000100000000000000020000000300000001000000
 --- !u!64 &1312176597
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3547,7 +3555,6 @@ GameObject:
   - component: {fileID: 217335673878944510}
   - component: {fileID: 217335673878944509}
   - component: {fileID: 217335673878944508}
-  - component: {fileID: 92191894}
   m_Layer: 0
   m_Name: Corner_Base
   m_TagString: Untagged
@@ -5437,21 +5444,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
---- !u!114 &92191894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217335673878944387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32ab893dd0641844490305875105c488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inside: 0
-  floors: []
-  wallsToDisable: []
 --- !u!1 &217335674144139830
 GameObject:
   m_ObjectHideFlags: 0

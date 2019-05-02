@@ -2974,7 +2974,6 @@ GameObject:
   - component: {fileID: 2779407745525074746}
   - component: {fileID: 2779407745525074745}
   - component: {fileID: 2779407745525074744}
-  - component: {fileID: 3695602831713531781}
   m_Layer: 0
   m_Name: Entrance_Base
   m_TagString: Untagged
@@ -3361,17 +3360,17 @@ MonoBehaviour:
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
-  - _indices: 2a00000029000000280000002a0000002b00000029000000
-    _distinctIndices: 2a00000029000000280000002b000000
+  - _indices: 290000002b0000002a00000028000000290000002a000000
+    _distinctIndices: 290000002b0000002a00000028000000
     _edges:
     - x: 41
-      y: 40
-    - x: 40
-      y: 42
-    - x: 42
       y: 43
     - x: 43
+      y: 42
+    - x: 40
       y: 41
+    - x: 42
+      y: 40
     _smoothingGroup: 0
     _uv:
       useWorldSpace: 0
@@ -3383,7 +3382,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -1, y: 9.75}
+      localPivot: {x: 1, y: 9.75}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
@@ -3448,17 +3447,17 @@ MonoBehaviour:
     manualUV: 0
     elementGroup: -1
     textureGroup: -1
-  - _indices: 360000003500000034000000360000003700000035000000
-    _distinctIndices: 36000000350000003400000037000000
+  - _indices: 350000003700000036000000340000003500000036000000
+    _distinctIndices: 35000000370000003600000034000000
     _edges:
     - x: 53
-      y: 52
-    - x: 52
-      y: 54
-    - x: 54
       y: 55
     - x: 55
+      y: 54
+    - x: 52
       y: 53
+    - x: 54
+      y: 52
     _smoothingGroup: 0
     _uv:
       useWorldSpace: 0
@@ -3470,7 +3469,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -9, y: 9.75}
+      localPivot: {x: 9, y: 9.75}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
@@ -3679,9 +3678,9 @@ MonoBehaviour:
   - {x: 10, y: 10}
   - {x: 8, y: 10}
   - {x: 0, y: 10}
-  - {x: -2, y: 10}
+  - {x: 2, y: 10}
   - {x: 0, y: 9.5}
-  - {x: -2, y: 9.5}
+  - {x: 2, y: 9.5}
   - {x: 0, y: 6}
   - {x: 2, y: 6}
   - {x: 0, y: 5.5}
@@ -3690,10 +3689,10 @@ MonoBehaviour:
   - {x: -2, y: 9.5}
   - {x: 0, y: 10}
   - {x: -2, y: 10}
-  - {x: -8, y: 10}
-  - {x: -10, y: 10}
-  - {x: -8, y: 9.5}
-  - {x: -10, y: 9.5}
+  - {x: 8, y: 10}
+  - {x: 10, y: 10}
+  - {x: 8, y: 9.5}
+  - {x: 10, y: 9.5}
   - {x: 8, y: 6}
   - {x: 10, y: 6}
   - {x: 8, y: 5.5}
@@ -3780,9 +3779,25 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedFaces: 0a0000000d000000
+  m_SelectedEdges:
+  - x: 41
+    y: 43
+  - x: 43
+    y: 42
+  - x: 40
+    y: 41
+  - x: 42
+    y: 40
+  - x: 53
+    y: 55
+  - x: 55
+    y: 54
+  - x: 52
+    y: 53
+  - x: 54
+    y: 52
+  m_selectedTriangles: 290000002b0000002a00000028000000290000002a000000350000003700000036000000340000003500000036000000
 --- !u!64 &2779407745525074744
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3797,21 +3812,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
---- !u!114 &3695602831713531781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2779407745525074751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32ab893dd0641844490305875105c488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inside: 0
-  floors: []
-  wallsToDisable: []
 --- !u!1 &2779407745791975736
 GameObject:
   m_ObjectHideFlags: 0
