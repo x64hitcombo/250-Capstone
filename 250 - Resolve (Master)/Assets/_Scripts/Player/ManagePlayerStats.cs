@@ -306,7 +306,7 @@ public class ManagePlayerStats : MonoBehaviour
             if (other.GetComponent<proxTarget>().Type == proxTarget.targetType.Bed)
             {
                 Debug.Log("bed here");
-                if (Input.GetButtonDown("Interact"))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     sleepUI.ToggleUI();
                 }
@@ -315,7 +315,7 @@ public class ManagePlayerStats : MonoBehaviour
             if (other.GetComponent<proxTarget>().Type == proxTarget.targetType.water)
             {
                 Debug.Log("Water here");
-                if (Input.GetButtonDown("Interact"))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     playerInv.updateItemList();
 
