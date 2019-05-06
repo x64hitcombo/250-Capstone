@@ -25,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5386975860335617725}
-  m_LocalRotation: {x: -0.5, y: 0.50000006, z: 0.50000006, w: 0.5}
-  m_LocalPosition: {x: -19.69, y: 0.526, z: -1.22}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5386975860623375080}
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 1474063560430496240}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &5386975860335617720
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5386975860623375083}
-  m_LocalRotation: {x: 0.65328133, y: -0.27059862, z: -0.27059868, w: 0.6532812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
@@ -4778,37 +4778,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5386975860335617721}
     m_Modifications:
-    - target: {fileID: 159330, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
-      propertyPath: m_Name
-      value: BottleOfBeer1_2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.035
+      value: -0.048
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.081
+      value: -0.019
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000059604638
+      value: 0.4999997
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000059604638
+      value: 0.49999985
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071066
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.707107
+      value: -0.5000005
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_RootOrder
@@ -4816,7 +4812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -4824,7 +4820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalScale.x
@@ -4837,6 +4833,10 @@ PrefabInstance:
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 159330, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
+      propertyPath: m_Name
+      value: BottleOfBeer1_2 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5474714, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
@@ -4856,37 +4856,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5386975860335617721}
     m_Modifications:
-    - target: {fileID: 159330, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
-      propertyPath: m_Name
-      value: BottleOfBeer1_2
-      objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.191
+      value: 0.17799996
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.069
+      value: -0.018999875
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0.07500011
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000059604645
+      value: 0.4999997
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000059604645
+      value: 0.49999985
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071066
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.707107
+      value: -0.5000005
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_RootOrder
@@ -4894,7 +4890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -4902,7 +4898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalScale.x
@@ -4915,6 +4911,10 @@ PrefabInstance:
     - target: {fileID: 475828, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 159330, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}
+      propertyPath: m_Name
+      value: BottleOfBeer1_2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5474714, guid: 18c7f6b8eb5793f49a8f6d81d2e01b43, type: 3}

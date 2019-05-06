@@ -14,6 +14,11 @@ public class PlayerInventory : MonoBehaviour
     public GameObject handL;
     public bool handLEquip;
 
+    public bool eqTorch;
+    public bool eqRifle;
+    public bool eqPistol;
+    public bool eqBow;
+
     private Inventory craftSystemInventory;
     private CraftSystem cS;
     private Inventory mainInventory;
@@ -289,6 +294,15 @@ public class PlayerInventory : MonoBehaviour
             handLEquip = false;
         else
             handLEquip = true;
+
+        for (int i = 0; i < characterSystemInventory.SlotContainer.transform.childCount; i++)
+        {
+            Transform trans = SlotContainer.transform.GetChild(i);
+            if (trans.childCount != 0)
+            {
+                ItemsInInventory.Add(trans.GetChild(0).GetComponent<ItemOnObject>().item);
+            }
+        }
     }
 
 }
