@@ -42,10 +42,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4729087293126696}
-  - component: {fileID: 111484334836343456}
   - component: {fileID: 574427342}
   - component: {fileID: 574427343}
   - component: {fileID: 574427344}
+  - component: {fileID: 5539725460702611526}
   m_Layer: 0
   m_Name: Low_Stag_v01
   m_TagString: Untagged
@@ -69,42 +69,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &111484334836343456
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022132353411678}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400002, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400004, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400006, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400008, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400010, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400012, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400014, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400016, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400018, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400020, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400022, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400024, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400026, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400028, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400030, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400032, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400034, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400036, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400038, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  - {fileID: 7400040, guid: 7e91eaad878c46447ab3267129052ed1, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!65 &574427342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,6 +108,7 @@ MonoBehaviour:
   minHungerSearch: 50
   minThirstSearch: 50
   distanceFromPlayerHunt: 10
+  distanceFromBait: 10
   maxDistanceFromHome: 50
   wanderRange: 10
   eatingTimer: 5
@@ -151,6 +116,7 @@ MonoBehaviour:
   attackTimer: 5
   attackPlayer: 0
   hunting: 0
+  damageDealt: 5
   currentTimer: 0
   currentHunger: 0
   currentThirst: 0
@@ -176,6 +142,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &5539725460702611526
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022132353411678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41386e1b51fc228469f3fd342335f46e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1034835454555896
 GameObject:
   m_ObjectHideFlags: 0
