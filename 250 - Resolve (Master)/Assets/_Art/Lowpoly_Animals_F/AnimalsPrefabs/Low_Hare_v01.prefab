@@ -642,10 +642,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4309290571700296}
-  - component: {fileID: 111794968604163562}
   - component: {fileID: 2103432110}
   - component: {fileID: 2103432109}
   - component: {fileID: 2103432111}
+  - component: {fileID: 2051599323199292189}
   m_Layer: 0
   m_Name: Low_Hare_v01
   m_TagString: Untagged
@@ -669,37 +669,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &111794968604163562
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436401097619752}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400030, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400002, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400004, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400006, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400008, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400010, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400012, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400014, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400016, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400018, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400020, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400022, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400024, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400026, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400028, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  - {fileID: 7400030, guid: f1cea6e0f24ea5e43ad1a4d32e9c92da, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!65 &2103432110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -739,6 +708,7 @@ MonoBehaviour:
   minHungerSearch: 50
   minThirstSearch: 50
   distanceFromPlayerHunt: 10
+  distanceFromBait: 10
   maxDistanceFromHome: 50
   wanderRange: 10
   eatingTimer: 5
@@ -746,6 +716,7 @@ MonoBehaviour:
   attackTimer: 5
   attackPlayer: 0
   hunting: 0
+  damageDealt: 5
   currentTimer: 0
   currentHunger: 0
   currentThirst: 0
@@ -771,6 +742,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &2051599323199292189
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436401097619752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d991bdad740772d4688609357c0846da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1437018854624866
 GameObject:
   m_ObjectHideFlags: 0

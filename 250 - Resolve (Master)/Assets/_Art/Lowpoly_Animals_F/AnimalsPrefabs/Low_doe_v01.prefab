@@ -445,10 +445,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4898217620411080}
-  - component: {fileID: 111150787894604642}
   - component: {fileID: 1241423021}
   - component: {fileID: 1241423020}
   - component: {fileID: 1241423022}
+  - component: {fileID: 37688665172081963}
   m_Layer: 0
   m_Name: Low_doe_v01
   m_TagString: Untagged
@@ -472,42 +472,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &111150787894604642
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251384547369638}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400002, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400004, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400006, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400008, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400010, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400012, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400014, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400016, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400018, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400020, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400022, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400024, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400026, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400028, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400030, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400032, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400034, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400036, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400038, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  - {fileID: 7400040, guid: 99376602f2eb1bc4bb5a0f8c26390ea5, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!65 &1241423021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -547,6 +511,7 @@ MonoBehaviour:
   minHungerSearch: 50
   minThirstSearch: 50
   distanceFromPlayerHunt: 10
+  distanceFromBait: 10
   maxDistanceFromHome: 50
   wanderRange: 10
   eatingTimer: 5
@@ -554,6 +519,7 @@ MonoBehaviour:
   attackTimer: 5
   attackPlayer: 0
   hunting: 0
+  damageDealt: 5
   currentTimer: 0
   currentHunger: 0
   currentThirst: 0
@@ -579,6 +545,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &37688665172081963
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251384547369638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28f88c5315f71d14a92bf64683988793, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1284182297050036
 GameObject:
   m_ObjectHideFlags: 0

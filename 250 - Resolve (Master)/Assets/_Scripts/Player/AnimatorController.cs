@@ -10,6 +10,8 @@ public class AnimatorController : MonoBehaviour
     [SerializeField] public float rotateSpeed;
     [SerializeField] public bool isMoving;
     public Camera mainCamera;
+
+    int yRot = 0;
     #endregion
 
     #region Animator Variables
@@ -26,6 +28,7 @@ public class AnimatorController : MonoBehaviour
 
     void Update()
     {
+        FindDirection();
         if (isMoving) FaceDirection();
         else FaceMouse();
     }
@@ -37,12 +40,8 @@ public class AnimatorController : MonoBehaviour
     }
 
     private void FaceDirection()
-    {
-        float moveVertical = Input.GetAxis("Vertical");
-        float moveHorizontal = Input.GetAxis("Horizontal");
-
-        Vector3 newPosition = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        transform.LookAt(newPosition + transform.position);
+    {    
+        transform.eulerAngles = new Vector3(0, yRot, 0);
     }
 
     private void FaceMouse()
@@ -56,6 +55,26 @@ public class AnimatorController : MonoBehaviour
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, -angle + 45, 0));
+    }
+
+    private void FindDirection()
+    {
+        Debug.Log("Hori is " + (Input.GetAxis("Horizontal")));
+        Debug.Log("Vert is " + (Input.GetAxis("Vertical")));
+
+        float vert = (Input.GetAxis("Vertical"));
+        float hori = (Input.GetAxis("Horizontal"));
+
+
+
+        if (vert > 0 && hori == 0) yRot = -45;
+        else if (vert < -0 && hori == 0) yRot = 125;
+        else if (vert == 0 && hori > 0) yRot = 45;
+        else if (vert == 0 && hori < -0) yRot = -125;
+        else if (vert > 0 && hori < 0) yRot = -70;
+        else if (vert > 0 && hori > 0) yRot = 0;
+        else if (vert < 0 && hori < 0) yRot = 180;
+        else if (vert < 0 && hori > 0) yRot = 67;
     }
 
     public void LookAtMouse()

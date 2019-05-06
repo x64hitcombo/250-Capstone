@@ -1582,10 +1582,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4542711982094802}
-  - component: {fileID: 111969914958999256}
   - component: {fileID: 1885794939}
   - component: {fileID: 1885794940}
   - component: {fileID: 1885794941}
+  - component: {fileID: 2170476500565877560}
   m_Layer: 0
   m_Name: Low_Wolf_v01
   m_TagString: Untagged
@@ -1610,40 +1610,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &111969914958999256
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738168248210958}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400036, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400002, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400004, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400006, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400008, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400010, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400012, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400014, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400016, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400018, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400020, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400022, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400024, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400026, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400028, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400030, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400032, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400034, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  - {fileID: 7400036, guid: 0faec1d65d1a862429fd6c3fdef4bfcb, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!65 &1885794939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1705,6 +1671,7 @@ MonoBehaviour:
   minHungerSearch: 50
   minThirstSearch: 50
   distanceFromPlayerHunt: 10
+  distanceFromBait: 10
   maxDistanceFromHome: 50
   wanderRange: 10
   eatingTimer: 5
@@ -1712,9 +1679,29 @@ MonoBehaviour:
   attackTimer: 5
   attackPlayer: 0
   hunting: 0
+  damageDealt: 5
   currentTimer: 0
   currentHunger: 0
   currentThirst: 0
+--- !u!95 &2170476500565877560
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738168248210958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f2d05a9d02fd2c4fb7d37fe31c02dad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1749378381023574
 GameObject:
   m_ObjectHideFlags: 0
