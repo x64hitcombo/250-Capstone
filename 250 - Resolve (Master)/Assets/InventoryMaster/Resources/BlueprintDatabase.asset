@@ -30,48 +30,6 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 0
     timeToCraft: 0
-  - ingredients: 0100000024000000
-    amount: 0100000001000000
-    finalItem:
-      itemName: Side Salad
-      itemID: 6
-      itemDesc: A mix of greens. Restores Hunger by 25.
-      itemIcon: {fileID: 21300000, guid: bca15cf925033604bac21b8b127e36b6, type: 3}
-      itemModel: {fileID: 6493056228588038882, guid: 0cc0ff015efa2f04880df6f7c30afb94,
-        type: 3}
-      itemValue: 1
-      itemType: 2
-      itemWeight: 0
-      maxStack: 9
-      indexItemInList: 999
-      rarity: 0
-      itemAttributes:
-      - attributeName: Hunger
-        attributeValue: 25
-    amountOfFinalItem: 1
-    timeToCraft: 0
-  - ingredients: 0400000024000000
-    amount: 0100000001000000
-    finalItem:
-      itemName: Dinner Salad
-      itemID: 7
-      itemDesc: A large mix of veggies. Restore hunger by 20, thirst by 10.
-      itemIcon: {fileID: 21300000, guid: 0288dbaa9a46b7a4fa8f0b0b773b6024, type: 3}
-      itemModel: {fileID: 7232758340042208833, guid: f3712d95fc40b05439d3b8eae37cb1e0,
-        type: 3}
-      itemValue: 1
-      itemType: 2
-      itemWeight: 0
-      maxStack: 9
-      indexItemInList: 999
-      rarity: 0
-      itemAttributes:
-      - attributeName: Hunger
-        attributeValue: 40
-      - attributeName: Thirst
-        attributeValue: 25
-    amountOfFinalItem: 1
-    timeToCraft: 0
   - ingredients: 0200000024000000
     amount: 0100000001000000
     finalItem:
@@ -291,28 +249,6 @@ MonoBehaviour:
         attributeValue: 100
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 03000000
-    amount: 01000000
-    finalItem:
-      itemName: Grilled Apple
-      itemID: 12
-      itemDesc: BBQd apples. Restore hunger by 30, fatigue by 15.
-      itemIcon: {fileID: 0}
-      itemModel: {fileID: 7903250261116931768, guid: 00661ad0cb6177a47b178340d7e52437,
-        type: 3}
-      itemValue: 1
-      itemType: 2
-      itemWeight: 0
-      maxStack: 9
-      indexItemInList: 999
-      rarity: 0
-      itemAttributes:
-      - attributeName: Hunger
-        attributeValue: 30
-      - attributeName: Thirst
-        attributeValue: 40
-    amountOfFinalItem: 1
-    timeToCraft: 0
   - ingredients: 0e000000
     amount: 01000000
     finalItem:
@@ -393,5 +329,421 @@ MonoBehaviour:
         attributeValue: 50
       - attributeName: Fatigue
         attributeValue: 10
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 3000000034000000
+    amount: 0200000002000000
+    finalItem:
+      itemName: Winter Coat
+      itemID: 20
+      itemDesc: A thick fur coat. +20 Exposure
+      itemIcon: {fileID: 21300102, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 1663193694643349568, guid: 5e3eae0c54a05ff4da4298615fb01e11,
+        type: 3}
+      itemValue: 1
+      itemType: 6
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: 20
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 31000000
+    amount: 03000000
+    finalItem:
+      itemName: Poncho
+      itemID: 21
+      itemDesc: Keeps you cool and protected from the sun. -20 exposure protection.
+      itemIcon: {fileID: 21300104, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 6448813556316946873, guid: 8f5602a2daad39e4da16632dd673f8ae,
+        type: 3}
+      itemValue: 1
+      itemType: 6
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: -20
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 3400000030000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Toupe
+      itemID: 53
+      itemDesc: A warm hat. Provides 10 exposure protection.
+      itemIcon: {fileID: 21300092, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 4
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: 0
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 3000000033000000
+    amount: 0200000001000000
+    finalItem:
+      itemName: Snow Boots
+      itemID: 54
+      itemDesc: Boots designed for cold weather. Provides 10 exposure protection.
+      itemIcon: {fileID: 21300112, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: 0
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2f00000034000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Ranger's Hat
+      itemID: 55
+      itemDesc: There aren't many rangers anymore. Cools you down by 5.
+      itemIcon: {fileID: 21300090, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 4
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: -5
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2f00000041000000
+    amount: 0200000002000000
+    finalItem:
+      itemName: Leather Jacket
+      itemID: 56
+      itemDesc: A sturdy leather coat. Provides 5 exposure protection.
+      itemIcon: {fileID: 21300100, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 6
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: -5
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2f00000034000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Leather Boots
+      itemID: 57
+      itemDesc: 'Worn leather boots. Provides 5 exposure proteciton. '
+      itemIcon: {fileID: 21300110, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 5
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: 5
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 31000000
+    amount: 01000000
+    finalItem:
+      itemName: Sunhat
+      itemID: 58
+      itemDesc: A shady hat, cools you down by 10.
+      itemIcon: {fileID: 21300094, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 4
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: -10
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2f00000031000000
+    amount: 0100000002000000
+    finalItem:
+      itemName: Chukka Boots
+      itemID: 59
+      itemDesc: Designed for walking in sand. Cools you down by 5.
+      itemIcon: {fileID: 21300114, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 5
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: exRating
+        attributeValue: -5
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2a00000032000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Axe
+      itemID: 29
+      itemDesc: A high damage weapon.
+      itemIcon: {fileID: 21300118, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 4559979153214560959, guid: 5296081a845ba4243b88d6e73824789e,
+        type: 3}
+      itemValue: 1
+      itemType: 18
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 32000000
+    amount: 01000000
+    finalItem:
+      itemName: Knife
+      itemID: 30
+      itemDesc: A weapon and tool used for cutting foilage and to damage enemies.
+      itemIcon: {fileID: 21300108, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 5448073845823005486, guid: 81136a2c79fa1a1419a064859b880d71,
+        type: 3}
+      itemValue: 1
+      itemType: 18
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2a000000
+    amount: 01000000
+    finalItem:
+      itemName: Torch
+      itemID: 31
+      itemDesc: Provides light. Press E while equipped to place on the ground.
+      itemIcon: {fileID: 21300098, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 8339529332509045571, guid: 58cf57c376ed7234a8bc9ac672a231eb,
+        type: 3}
+      itemValue: 1
+      itemType: 18
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 4100000033000000
+    amount: 0200000001000000
+    finalItem:
+      itemName: Bow
+      itemID: 27
+      itemDesc: Allows you to fire arrows.
+      itemIcon: {fileID: 21300000, guid: ab273a9be22ac5e4dabaf557568c0ef0, type: 3}
+      itemModel: {fileID: 5377761939297050554, guid: 6366b56c46e8d9b429e5acce483464b4,
+        type: 3}
+      itemValue: 1
+      itemType: 19
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 34000000
+    amount: 01000000
+    finalItem:
+      itemName: Leather
+      itemID: 47
+      itemDesc: Tanned hide from an animal. Used to craft equipment.
+      itemIcon: {fileID: 21300036, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 9086865496078417092, guid: 1a4bb92891ae51a4eae70c56bacea6b6,
+        type: 3}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 41000000
+    amount: 02000000
+    finalItem:
+      itemName: Pole
+      itemID: 42
+      itemDesc: This pole can be used to make a tool.
+      itemIcon: {fileID: 21300050, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 3850149350684460510, guid: 4a50a478e3e384547bfe125bbf8229af,
+        type: 3}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 1a000000
+    amount: 02000000
+    finalItem:
+      itemName: Rope
+      itemID: 51
+      itemDesc: Ropes can be used to craft Bows.
+      itemIcon: {fileID: 21300052, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 0}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 340000001a000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Insulation
+      itemID: 48
+      itemDesc: Fuzzy fabric used for crafting cold weather equipment.
+      itemIcon: {fileID: 21300038, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 5064067964767436609, guid: a8a4cb0406d8bb245928f04f632ba4be,
+        type: 3}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 1a000000
+    amount: 04000000
+    finalItem:
+      itemName: Cotton Sheet
+      itemID: 49
+      itemDesc: A light, breathable fabric used for crafting warm weather equipment.
+      itemIcon: {fileID: 21300054, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 4711080064168729891, guid: 807074952ad3f384fb614e582f111d87,
+        type: 3}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2c00000041000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Arrow
+      itemID: 28
+      itemDesc: Ammunition for bow. It requires a bow for it to be shot.
+      itemIcon: {fileID: 21300068, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 4132437407447127183, guid: c7c715f3202e0854e9cf9ddc752b8271,
+        type: 3}
+      itemValue: 2
+      itemType: 14
+      itemWeight: 0
+      maxStack: 1
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 2
+    timeToCraft: 0
+  - ingredients: 03000000
+    amount: 01000000
+    finalItem:
+      itemName: Grilled Apple
+      itemID: 12
+      itemDesc: BBQd apples. Restore hunger by 30, fatigue by 15.
+      itemIcon: {fileID: 21300080, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 7903250261116931768, guid: 00661ad0cb6177a47b178340d7e52437,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 30
+      - attributeName: Thirst
+        attributeValue: 40
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0100000024000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Side Salad
+      itemID: 6
+      itemDesc: A mix of greens. Restores Hunger by 25.
+      itemIcon: {fileID: 21300040, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 6493056228588038882, guid: 0cc0ff015efa2f04880df6f7c30afb94,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 25
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0400000024000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Dinner Salad
+      itemID: 7
+      itemDesc: A large mix of veggies. Restore hunger by 20, thirst by 10.
+      itemIcon: {fileID: 21300058, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 7232758340042208833, guid: f3712d95fc40b05439d3b8eae37cb1e0,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 40
+      - attributeName: Thirst
+        attributeValue: 25
     amountOfFinalItem: 1
     timeToCraft: 0

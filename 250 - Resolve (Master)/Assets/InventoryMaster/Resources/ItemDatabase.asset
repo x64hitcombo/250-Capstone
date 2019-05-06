@@ -340,7 +340,7 @@ MonoBehaviour:
       attributeValue: 20
   - itemName: Poncho
     itemID: 21
-    itemDesc: Keeps you cool and protected from the sun. -20 exposure.
+    itemDesc: Keeps you cool and protected from the sun. -20 exposure protection.
     itemIcon: {fileID: 21300104, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
     itemModel: {fileID: 6448813556316946873, guid: 8f5602a2daad39e4da16632dd673f8ae,
       type: 3}
@@ -785,6 +785,242 @@ MonoBehaviour:
     itemDesc: Ropes can be used to craft Bows.
     itemIcon: {fileID: 21300052, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
     itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Pelt
+    itemID: 52
+    itemDesc: Animal skin, used to craft equipment.
+    itemIcon: {fileID: 21300016, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 2154543162052191863, guid: 0fd867644c7341a4d8f93bc76bf876af,
+      type: 3}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Toupe
+    itemID: 53
+    itemDesc: A warm hat. Provides 10 exposure protection.
+    itemIcon: {fileID: 21300092, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 5620073365506463299, guid: a8693809b1a061e42bc1f69f25bd6332,
+      type: 3}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: 0
+  - itemName: Snow Boots
+    itemID: 54
+    itemDesc: Boots designed for cold weather. Provides 10 exposure protection.
+    itemIcon: {fileID: 21300112, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 2604294431139668187, guid: e253689578da19e4ca4eed560cee5393,
+      type: 3}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: 0
+  - itemName: Ranger's Hat
+    itemID: 55
+    itemDesc: There aren't many rangers anymore. Cools you down by 5.
+    itemIcon: {fileID: 21300090, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 4132324382597021700, guid: 4a0884f7a0b9dcb4bbc9d222828da79f,
+      type: 3}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: -5
+  - itemName: Leather Jacket
+    itemID: 56
+    itemDesc: A sturdy leather coat. Provides 5 exposure protection.
+    itemIcon: {fileID: 21300100, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 1351927660435303906, guid: f86e14bcfcbcb3f42af706e1f8f90d3f,
+      type: 3}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: -5
+  - itemName: Leather Boots
+    itemID: 57
+    itemDesc: 'Worn leather boots. Provides 5 exposure proteciton. '
+    itemIcon: {fileID: 21300110, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 2281205598606176288, guid: 8032fe9e014a2064e803c45b0c4c455c,
+      type: 3}
+    itemValue: 1
+    itemType: 5
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: 5
+  - itemName: Sunhat
+    itemID: 58
+    itemDesc: A shady hat, cools you down by 10.
+    itemIcon: {fileID: 21300094, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 6207490893190139815, guid: 9f5fcc6ba8632dc4bbd3d62d19878e2a,
+      type: 3}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: -10
+  - itemName: Chukka Boots
+    itemID: 59
+    itemDesc: Designed for walking in sand. Cools you down by 5.
+    itemIcon: {fileID: 21300114, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 3407846374728024046, guid: bd648c0933eb29544859d1b0dca670c7,
+      type: 3}
+    itemValue: 1
+    itemType: 5
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: exRating
+      attributeValue: -5
+  - itemName: Mind Nullifier
+    itemID: 60
+    itemDesc: A mysterious device that protects your sanity.
+    itemIcon: {fileID: 21300096, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 7740460491267380444, guid: 010882c5309669b458ba7d34f477c1ed,
+      type: 3}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: FEN Suit
+    itemID: 61
+    itemDesc: A mysterious, high-tech suit that protects from supernatural forces.
+    itemIcon: {fileID: 21300106, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 774011985914067153, guid: 3a7c3740489f4f547acf0326a1eb4cbb,
+      type: 3}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: FEN Boots
+    itemID: 62
+    itemDesc: High-tech material protects from supernatural forces.
+    itemIcon: {fileID: 21300116, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 3706216254616546778, guid: 3bcc06955d0ae8a438ca7a819b2328cc,
+      type: 3}
+    itemValue: 1
+    itemType: 5
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Gravity Tool
+    itemID: 63
+    itemDesc: 'Allows you to move objects from a distance. Click on the object to
+      grab it. '
+    itemIcon: {fileID: 21300124, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 8339529332509045571, guid: 2160bb3b2b2442f44bfad38b0c7a05ce,
+      type: 3}
+    itemValue: 1
+    itemType: 19
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Electric Torch
+    itemID: 64
+    itemDesc: 'Changes the temperature of a targetted object. '
+    itemIcon: {fileID: 21300126, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 8339529332509045571, guid: 32ce036b7bf1b7941a4ef564bbbb65ef,
+      type: 3}
+    itemValue: 1
+    itemType: 19
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Sapling
+    itemID: 65
+    itemDesc: 'A strong, meallable baby tree. Used in crafting. '
+    itemIcon: {fileID: 21300010, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+    itemModel: {fileID: 5030073196266002912, guid: b9b5cc1ddb1d82d4ab79bdddf48b29cc,
+      type: 3}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Small Bait
+    itemID: 66
+    itemDesc: Drop this to attract small animals
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 6681016573388497117, guid: d4026c56454792343951e3b031ecfcf3,
+      type: 3}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Medium Bait
+    itemID: 67
+    itemDesc: Drop this to attract medium sized animals.
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 6766732695461752156, guid: a92e7ad1929a7e640827a1dd97d9bf57,
+      type: 3}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 9
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Large Bait
+    itemID: 68
+    itemDesc: 'Drop this to attract big chonkers. '
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 3628668381980197697, guid: 6512615f4f6e72942b3ce50c36755be9,
+      type: 3}
     itemValue: 1
     itemType: 0
     itemWeight: 0
