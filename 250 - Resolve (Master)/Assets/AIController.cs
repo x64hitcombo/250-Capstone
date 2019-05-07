@@ -87,10 +87,7 @@ public class AIController : MonoBehaviour
         else if (target != null && Vector3.Distance(homeSpawner.position, target.position) <= maxDistanceFromHome)
         {
             agent.SetDestination(target.position);
-            if (anim != null)
-            {
-                anim.Play();
-            }
+            //Play Walking Animation
         }
         else if (!hunting && Vector3.Distance(gameObject.transform.position, player.transform.position) > distanceFromPlayerHunt)
         {
@@ -153,10 +150,7 @@ public class AIController : MonoBehaviour
         Vector3 position = gameObject.transform.position;
         if (position == lastPosition)
         {
-            if (anim != null)
-            {
-                anim.Stop();
-            }
+            //Idle animation or no animation
         }
         lastPosition = position;
     }
@@ -290,10 +284,7 @@ public class AIController : MonoBehaviour
             {
                 agent.SetDestination(randomPoint);
                 waitToWander = waitTimer;
-                if (anim != null)
-                {
-                    anim.Play();
-                }
+                //walk animation
             }
         }
 
