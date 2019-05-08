@@ -51,7 +51,7 @@ public class AIController : MonoBehaviour
     private float waitToWander;
     private float waitToAttack;
 
-    private Animator anim;
+    private Animation anim;
     private Vector3 lastPosition;
 
     // Start is called before the first frame update
@@ -64,9 +64,11 @@ public class AIController : MonoBehaviour
         waitToEat = eatingTimer;
         waitToWander = waitTimer;
         waitToAttack = attackTimer;
-
-        anim = GetComponent<Animator>();
-
+        if (GetComponent<Animation>() != null)
+        {
+            anim = GetComponent<Animation>();
+        }
+        lastPosition = transform.position;
     }
 
     public void FixedUpdate()
@@ -86,8 +88,6 @@ public class AIController : MonoBehaviour
         {
             agent.SetDestination(target.position);
             //Play Walking Animation
-            anim.SetBool("Movement", true);
-            anim.SetBool("Running", true);
         }
         else if (!hunting && Vector3.Distance(gameObject.transform.position, player.transform.position) > distanceFromPlayerHunt)
         {
@@ -135,8 +135,6 @@ public class AIController : MonoBehaviour
                     if(waitToAttack <= 0)
                     {
                         //Play attack animation
-                        anim.SetTrigger("Action");
-                        anim.SetTrigger("Attack");
                         agent.SetDestination(transform.position); //Set to wait at position
                         if (target.GetComponent<Health>() != null)
                         {
@@ -149,6 +147,12 @@ public class AIController : MonoBehaviour
             }
         }
 
+        Vector3 position = gameObject.transform.position;
+        if (position == lastPosition)
+        {
+            //Idle animation or no animation
+        }
+        lastPosition = position;
     }
 
     private void HandleTimers()
@@ -281,15 +285,7 @@ public class AIController : MonoBehaviour
                 agent.SetDestination(randomPoint);
                 waitToWander = waitTimer;
                 //walk animation
-                anim.SetBool("Movement", true);
-                anim.SetBool("Running", true);
             }
-        }
-
-        if (gameObject.transform.position == randomPoint)
-        {
-            anim.SetBool("Running", false);
-            anim.SetBool("Movement", false);
         }
 
         if (waitToWander > 0)
