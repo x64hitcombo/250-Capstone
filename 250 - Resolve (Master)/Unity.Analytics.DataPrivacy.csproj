@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{39BB8A60-453F-EEAD-9859-5F71DB02F6D6}</ProjectGuid>
+    <ProjectGuid>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>NavMeshComponents</AssemblyName>
+    <AssemblyName>Unity.Analytics.DataPrivacy</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -363,10 +363,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Packages\com.unity.analytics\DataPrivacy\AssemblyInfo.cs" />
+    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacy.cs" />
+    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacyButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\InventoryMaster\readme.txt" />
