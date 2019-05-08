@@ -6,9 +6,12 @@ public class AnimatorController : MonoBehaviour
 {
     PlayerController playerController;
 
+    public Transform playerPos;
+
     #region  Facing Variables
     [SerializeField] public float rotateSpeed;
     [SerializeField] public bool isMoving;
+    [SerializeField] private bool action = false;
     public Camera mainCamera;
 
     int yRot = 0;
@@ -30,7 +33,9 @@ public class AnimatorController : MonoBehaviour
     {
         FindDirection();
         if (isMoving) FaceDirection();
-        else FaceMouse();
+        else if (action == false) FaceMouse();
+        ResetPos();
+
     }
 
 
@@ -59,8 +64,6 @@ public class AnimatorController : MonoBehaviour
 
     private void FindDirection()
     {
-        Debug.Log("Hori is " + (Input.GetAxis("Horizontal")));
-        Debug.Log("Vert is " + (Input.GetAxis("Vertical")));
 
         float vert = (Input.GetAxis("Vertical"));
         float hori = (Input.GetAxis("Horizontal"));
@@ -88,12 +91,15 @@ public class AnimatorController : MonoBehaviour
         anim.SetTrigger("pickup");
         playerController.movement = false;
         anim.SetInteger("moveSpeed", 0);
+        action = true;
     }
 
     public void DisableAction()
     {
         anim.SetBool("action", false);
         playerController.movement = true;
+        action = false;
+
     }
 
     public void GoToBed()
@@ -108,5 +114,12 @@ public class AnimatorController : MonoBehaviour
         anim.SetTrigger("consuming");
         playerController.movement = false;
     }
+
+    public void ResetPos()
+    {
+        gameObject.transform.position = playerPos.transform.position;
+    }
+
+
 
 }
