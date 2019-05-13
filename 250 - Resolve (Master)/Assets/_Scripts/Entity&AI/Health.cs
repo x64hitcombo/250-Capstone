@@ -30,7 +30,7 @@ public class Health : MonoBehaviour
 
     public int flashTime;
     public Material flashMat;
-    MeshRenderer flashMesh;
+    public MeshRenderer flashMesh;
 
     public void Start()
     {

@@ -165,8 +165,8 @@ MonoBehaviour:
         attributeValue: 5
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 31000000
-    amount: 01000000
+  - ingredients: 3100000041000000
+    amount: 0100000001000000
     finalItem:
       itemName: Sunhat
       itemID: 58
@@ -184,7 +184,7 @@ MonoBehaviour:
         attributeValue: -10
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 2f00000031000000
+  - ingredients: 3300000031000000
     amount: 0100000001000000
     finalItem:
       itemName: Chukka Boots
@@ -239,8 +239,8 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 2a000000
-    amount: 01000000
+  - ingredients: 2a0000001a000000
+    amount: 0100000001000000
     finalItem:
       itemName: Torch
       itemID: 31
@@ -257,7 +257,7 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 4100000033000000
+  - ingredients: 2a00000033000000
     amount: 0100000001000000
     finalItem:
       itemName: Bow
@@ -275,8 +275,8 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 34000000
-    amount: 01000000
+  - ingredients: 3400000029000000
+    amount: 0100000001000000
     finalItem:
       itemName: Leather
       itemID: 47
@@ -293,8 +293,8 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 41000000
-    amount: 01000000
+  - ingredients: 4100000029000000
+    amount: 01000000000000000000000000000000
     finalItem:
       itemName: Pole
       itemID: 42
@@ -311,8 +311,8 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 
-    amount: 02000000
+  - ingredients: 1a00000041000000
+    amount: 01000000010000000000000000000000
     finalItem:
       itemName: Rope
       itemID: 51
@@ -346,8 +346,8 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 1
     timeToCraft: 0
-  - ingredients: 
-    amount: 04000000
+  - ingredients: 1a00000029000000
+    amount: 010000000100000000000000
     finalItem:
       itemName: Cotton Sheet
       itemID: 49
@@ -382,14 +382,14 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 2
     timeToCraft: 0
-  - ingredients: 03000000
-    amount: 01000000
+  - ingredients: 0100000024000000
+    amount: 0100000001000000
     finalItem:
-      itemName: Grilled Apple
-      itemID: 12
-      itemDesc: BBQd apples. Restore hunger by 30, fatigue by 15.
-      itemIcon: {fileID: 21300080, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
-      itemModel: {fileID: 7903250261116931768, guid: 00661ad0cb6177a47b178340d7e52437,
+      itemName: Side Salad
+      itemID: 6
+      itemDesc: A mix of greens. Restores Hunger by 25.
+      itemIcon: {fileID: 21300040, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 6493056228588038882, guid: 0cc0ff015efa2f04880df6f7c30afb94,
         type: 3}
       itemValue: 1
       itemType: 2
@@ -399,9 +399,69 @@ MonoBehaviour:
       rarity: 0
       itemAttributes:
       - attributeName: Hunger
-        attributeValue: 30
-      - attributeName: Thirst
+        attributeValue: 25
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0400000024000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Dinner Salad
+      itemID: 7
+      itemDesc: A large mix of veggies. Restore hunger by 20, thirst by 10.
+      itemIcon: {fileID: 21300058, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 7232758340042208833, guid: f3712d95fc40b05439d3b8eae37cb1e0,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
         attributeValue: 40
+      - attributeName: Thirst
+        attributeValue: 25
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 3100000005000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Medical Gauze
+      itemID: 46
+      itemDesc: (Probably) sterile bandage wrappings. Restores health by 25.
+      itemIcon: {fileID: 21300034, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 462965351960314966, guid: 195e67970564b6b41b828d732039532f,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Health
+        attributeValue: 25
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 13000000
+    amount: 01000000
+    finalItem:
+      itemName: Water
+      itemID: 5
+      itemDesc: Refreshing! Restores thirst by 50.
+      itemIcon: {fileID: 21300086, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 8876792427102076144, guid: 5bc1386995b4216488f32009d63b2133,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Thirst
+        attributeValue: 50
     amountOfFinalItem: 1
     timeToCraft: 0
   - ingredients: 0100000024000000
@@ -444,5 +504,316 @@ MonoBehaviour:
         attributeValue: 40
       - attributeName: Thirst
         attributeValue: 25
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0300000002000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Forest Medley
+      itemID: 8
+      itemDesc: A bushel of various fruit. Stores hunger by 20, fatigue by 15.
+      itemIcon: {fileID: 21300062, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 4633163937392219736, guid: 187dd7d72967e6f40b827af02e2c0fa0,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 20
+      - attributeName: Fatigue
+        attributeValue: 15
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0e000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Game
+      itemID: 9
+      itemDesc: A little bit of cooked meat. Restores hunger by 40.
+      itemIcon: {fileID: 21300042, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 7303801348928241969, guid: 52ec26de7567f2844a20c6291bd75f71,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 40
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0f000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Haunch
+      itemID: 10
+      itemDesc: A slab of grilled meat. Restores hunger by 55.
+      itemIcon: {fileID: 21300044, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 7190555284723781730, guid: bfc4fedfe05e195468936bd3e2b60964,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 55
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 10000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Ribs
+      itemID: 11
+      itemDesc: A slab of grilled meat. Restores hunger by 70.
+      itemIcon: {fileID: 21300046, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 291559982787766595, guid: fa08795edbf81214aac00f1f9c38c549,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 70
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 11000000
+    amount: 01000000
+    finalItem:
+      itemName: Cooked Fish
+      itemID: 18
+      itemDesc: Much tastier than raw fish. Restores hunger by 50, fatigue by 10.
+      itemIcon: {fileID: 21300048, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 2966607694823346875, guid: b0a17f470e3e2364f9a11080aeec09be,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 50
+      - attributeName: Fatigue
+        attributeValue: 10
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0200000023000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Desert Medley
+      itemID: 13
+      itemDesc: A fruit snack! Restores hunger by 20, thirst by 40.
+      itemIcon: {fileID: 21300064, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 425406059505847659, guid: ee31dd7086ca22549a02b115a33c7662,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 20
+      - attributeName: Thirst
+        attributeValue: 40
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 2400000009000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Meat Salad
+      itemID: 22
+      itemDesc: A leafy salad with bits of meat. Restores hunger by 50, thirst by
+        20.
+      itemIcon: {fileID: 21300066, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 2417636266104425599, guid: 2d8bbde6c33c51746b63b88e41d8fbf8,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 50
+      - attributeName: Thirst
+        attributeValue: 20
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0100000009000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Pan Fry
+      itemID: 23
+      itemDesc: Tastes gamey, with turnip. Restores hunger by 50, fatigue by 10.
+      itemIcon: {fileID: 21300078, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 7555515832684572179, guid: e984e28778990ce4a97810ee8b2b80a9,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 50
+      - attributeName: Thirst
+        attributeValue: 20
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 040000000a000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Mash
+      itemID: 24
+      itemDesc: Mashed Potatoes and meaty bits. Restores hunger by 75.
+      itemIcon: {fileID: 21300076, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 6564229677601448458, guid: a4161d93b784b6947b85125705c87010,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 75
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 010000000a000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Kebob
+      itemID: 37
+      itemDesc: Meat and turnip on a skewer. Restores hugner by 70, fatigue by 15.
+      itemIcon: {fileID: 21300074, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 7800994658871434034, guid: 6f6110774b65c7149a575534df21b23e,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 70
+      - attributeName: Fatigue
+        attributeValue: 15
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 030000000b000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Lunch
+      itemID: 38
+      itemDesc: 'A hearty mid-day meal. Restores hunger by 80
+
+        , fatigue 15.'
+      itemIcon: {fileID: 21300072, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 1923800680623744076, guid: 16bdc6d9b2c99ca438ce2de01b13272d,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 80
+      - attributeName: Fatigue
+        attributeValue: 15
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 040000000b000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Dinner
+      itemID: 39
+      itemDesc: Wait 1 hour before sleeping. Restores hunger by 100.
+      itemIcon: {fileID: 21300070, guid: 42b22bdbbd5c76c428e14cce231b73ca, type: 3}
+      itemModel: {fileID: 440573330729331541, guid: 51abd9aa03e3c7349a06161763c015b2,
+        type: 3}
+      itemValue: 1
+      itemType: 2
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes:
+      - attributeName: Hunger
+        attributeValue: 100
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0300000024000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Small Bait
+      itemID: 66
+      itemDesc: Drop this to attract small animals
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 6681016573388497117, guid: d4026c56454792343951e3b031ecfcf3,
+        type: 3}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 0300000009000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Medium Bait
+      itemID: 67
+      itemDesc: Drop this to attract medium sized animals.
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 6766732695461752156, guid: a92e7ad1929a7e640827a1dd97d9bf57,
+        type: 3}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
+    amountOfFinalItem: 1
+    timeToCraft: 0
+  - ingredients: 120000000a000000
+    amount: 0100000001000000
+    finalItem:
+      itemName: Large Bait
+      itemID: 68
+      itemDesc: 'Drop this to attract big chonkers. '
+      itemIcon: {fileID: 0}
+      itemModel: {fileID: 3628668381980197697, guid: 6512615f4f6e72942b3ce50c36755be9,
+        type: 3}
+      itemValue: 1
+      itemType: 0
+      itemWeight: 0
+      maxStack: 9
+      indexItemInList: 999
+      rarity: 0
+      itemAttributes: []
     amountOfFinalItem: 1
     timeToCraft: 0
