@@ -38,7 +38,7 @@ public class ManagePlayerStats : MonoBehaviour
 
 
     //[HideInInspector]
-    public float currentHunger, currentThirst, currentExposure, currentFatigue, currentStamina;
+    public float currentHunger, currentHealth, currentThirst, currentExposure, currentFatigue, currentStamina;
 
     public TemperatureManager tempManager;
 
@@ -57,7 +57,6 @@ public class ManagePlayerStats : MonoBehaviour
         tempManager = this.gameObject.GetComponent<TemperatureManager>();
         currentHunger = maxValue;
         currentThirst = maxValue;
-        //currentHealth = maxValue;
         currentFatigue = maxValue;
         currentStamina = maxValue;
         playerInv = GameObject.FindObjectOfType<Canvas>().GetComponentInChildren<Inventory>(true);
@@ -255,6 +254,14 @@ public class ManagePlayerStats : MonoBehaviour
                     currentThirst = maxValue;
                 else
                     currentThirst += item.itemAttributes[i].attributeValue;
+            }
+
+            if (item.itemAttributes[i].attributeName == "Health")
+            {
+                if ((this.gameObject.GetComponent<Health>().curHealth + item.itemAttributes[i].attributeValue) > maxValue)
+                    this.gameObject.GetComponent<Health>().curHealth = maxValue;
+                else
+                    this.gameObject.GetComponent<Health>().curHealth += item.itemAttributes[i].attributeValue;
             }
         }
     }
