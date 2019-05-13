@@ -292,6 +292,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="EasyRoads3Dv3Editor">
+      <HintPath>Assets/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyRoads3Dv3">
+      <HintPath>Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
+    </Reference>
     <Reference Include="ProBuilderCore-Unity5">
       <HintPath>Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
@@ -311,19 +317,19 @@
       <HintPath>Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/akelly37/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/svc-student/Documents/GitHub/250-Capstone/250 - Resolve (Master)/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -368,6 +374,17 @@
     <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacyButton.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\EasyRoads3D\Resources\custom prefabs\_custom prefabs.txt" />
+    <None Include="Assets\EasyRoads3D\Resources\dynamic prefabs\dynamic prefabs.txt" />
+    <None Include="Assets\EasyRoads3D\_Release Notes.txt" />
+    <None Include="Assets\EasyRoads3D\_readme .txt" />
+    <None Include="Assets\EasyRoads3D\prefab meshes\_custom prefabs.txt" />
+    <None Include="Assets\EasyRoads3D\prefab sources\_custom prefabs.txt" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D - Unity Standard 2018.shader" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
     <None Include="Assets\InventoryMaster\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
