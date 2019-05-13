@@ -175,7 +175,8 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
             
 
         }
-    }    
+
+    }
 
     public void consumeIt()
     {
@@ -300,7 +301,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
                 Destroy(this.gameObject); 
             }
 
-        }        
+        }
     }
 
     public void createDuplication(GameObject Item)

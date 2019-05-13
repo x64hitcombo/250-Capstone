@@ -14,10 +14,7 @@ public class PlayerInventory : MonoBehaviour
     public GameObject handL;
     public bool handLEquip;
 
-    public bool eqTorch;
-    public bool eqRifle;
-    public bool eqPistol;
-    public bool eqBow;
+    public bool eqTorch, eqWeapon, eqBow, eqGrav, eqTemp, eqMind;
 
     private Inventory craftSystemInventory;
     private CraftSystem cS;
@@ -294,6 +291,42 @@ public class PlayerInventory : MonoBehaviour
             handLEquip = false;
         else
             handLEquip = true;
+
+        UpdateTools();
+    }
+    public void UpdateTools()
+    {
+        if (handR.transform.childCount > 0)
+        {
+            if (handR.transform.GetChild(0).gameObject.name == "Equipped_Axe(Clone)" || handR.transform.GetChild(0).gameObject.name == "Equipped_Knife(Clone)")
+                eqWeapon = true;
+            else
+                eqWeapon = false;
+            if (handR.transform.GetChild(0).gameObject.name == "Equipped_Torch(Clone)")
+                eqTorch = true;
+            else
+                eqTorch = false;
+        }
+
+        if (handL.transform.childCount > 0)
+        {
+            if (handL.transform.GetChild(0).gameObject.name == "Equipped_Gravity(Clone)")
+                eqGrav = true;
+            else
+                eqGrav = false;
+            if (handL.transform.GetChild(0).gameObject.name == "Equipped_TempTool(Clone)")
+                eqTemp = true;
+            else
+                eqTemp = false;
+            if (handL.transform.GetChild(0).gameObject.name == "Equipped_(Clone)")
+                eqMind = true;
+            else
+                eqMind = false;
+            if (handL.transform.GetChild(0).gameObject.name == "Equipped_Bow(Clone)")
+                eqBow = true;
+            else
+                eqBow = false;
+        }
 
     }
 
