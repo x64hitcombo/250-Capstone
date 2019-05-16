@@ -27,6 +27,7 @@ public class AIController : MonoBehaviour
 
     public float distanceFromPlayerHunt = 10f;
     public float distanceFromBait = 10f;
+    public float distanceToStop = 2f;
 
     public float maxDistanceFromHome = 50f;
 
@@ -101,6 +102,7 @@ public class AIController : MonoBehaviour
                 if (target.tag == "Bait")
                 {
                     waitToEat -= Time.deltaTime;
+                    //Play eat/drink animation
                     if (waitToEat <= 0)
                     {
                         waitToEat = eatingTimer;
@@ -112,6 +114,7 @@ public class AIController : MonoBehaviour
                 else if (target.tag == "AnimalFood")
                 {
                     waitToEat -= Time.deltaTime;
+                    //Play eat/drink animation
                     if (waitToEat <= 0)
                     {
                         waitToEat = eatingTimer;
@@ -123,6 +126,7 @@ public class AIController : MonoBehaviour
                 else if (target.tag == "AnimalDrink")
                 {
                     waitToEat -= Time.deltaTime;
+                    //Play eat/drink animation
                     if (waitToEat <= 0)
                     {
                         currentThirst += increaseThirstBy;
@@ -146,13 +150,6 @@ public class AIController : MonoBehaviour
                 }
             }
         }
-
-        Vector3 position = gameObject.transform.position;
-        if (position == lastPosition)
-        {
-            //Idle animation or no animation
-        }
-        lastPosition = position;
     }
 
     private void HandleTimers()
@@ -284,7 +281,7 @@ public class AIController : MonoBehaviour
             {
                 agent.SetDestination(randomPoint);
                 waitToWander = waitTimer;
-                //walk animation
+                //Play walk animation
             }
         }
 
@@ -295,6 +292,13 @@ public class AIController : MonoBehaviour
             {
                 waitToWander = 0;
             }
+        }
+
+        if (agent.remainingDistance < distanceToStop)
+        {
+            agent.SetDestination(transform.position);
+            //play idle animation
+            //print(transform.name + " has stopped!");
         }
     }
 }
