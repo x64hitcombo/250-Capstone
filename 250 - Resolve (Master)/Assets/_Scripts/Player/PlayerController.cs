@@ -35,14 +35,22 @@ public class PlayerController : MonoBehaviour
     public float baseMovementSpeed;
     public bool movement = true;
 
+    public bool melee = false;
+
     AnimatorController anim;
+    PlayerInventory playerInventory;
+
+    public float attackRate = 3f;
+    private float nextAttack = 0.0f;
+
+    private int shotStage = 0;
 
     private void Awake()
     {
         charCont = GetComponent<CharacterController>();
         anim = GetComponentInChildren<AnimatorController>();
+        playerInventory = GetComponent<PlayerInventory>();
     }
-
 
     void Update()
     {
@@ -57,6 +65,15 @@ public class PlayerController : MonoBehaviour
         {
             ConsumeStamina();
         }
+
+        if (Input.GetButtonDown("Fire1") && Time.time > nextAttack)
+        {
+            nextAttack = Time.time + attackRate;       
+            Attack(1);
+        }
+        if (Input.GetButtonDown("Fire2")) Attack(2);
+        if (Input.GetButtonUp("Fire2") && shotStage == 1) Attack(3);
+
     }
 
     #region Movement, Slope, and Animation
@@ -138,6 +155,32 @@ public class PlayerController : MonoBehaviour
             climbing = false;
         }
     }
+
+
+    void Attack(int stage)
+    {
+        if (playerInventory.eqWeapon && stage == 1) anim.Attack();
+        else if (playerInventory.eqBow && stage == 2)
+        {
+            shotStage = 1;
+            anim.Fire(1);
+        }
+        else if (playerInventory.eqBow && stage == 1)
+        {
+            shotStage = 0;
+            anim.Fire(2);
+        }
+        else if (stage == 3)
+        {
+            shotStage = 0;
+            anim.Fire(3);
+        }
+    }
+
+
+
+
+
 
     private void OnTriggerEnter(Collider other)
     {

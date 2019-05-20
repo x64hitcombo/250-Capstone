@@ -52,7 +52,7 @@ public class AIController : MonoBehaviour
     private float waitToWander;
     private float waitToAttack;
 
-    private Animation anim;
+    private Animator anim;
     private Vector3 lastPosition;
 
     // Start is called before the first frame update
@@ -65,10 +65,7 @@ public class AIController : MonoBehaviour
         waitToEat = eatingTimer;
         waitToWander = waitTimer;
         waitToAttack = attackTimer;
-        if (GetComponent<Animation>() != null)
-        {
-            anim = GetComponent<Animation>();
-        }
+        anim = GetComponent<Animator>();
         lastPosition = transform.position;
     }
 
@@ -88,7 +85,9 @@ public class AIController : MonoBehaviour
         else if (target != null && Vector3.Distance(homeSpawner.position, target.position) <= maxDistanceFromHome)
         {
             agent.SetDestination(target.position);
-            //Play Walking Animation
+            //Move Animation
+            anim.SetBool("Movement", true);
+            anim.SetBool("Running", true);
         }
         else if (!hunting && Vector3.Distance(gameObject.transform.position, player.transform.position) > distanceFromPlayerHunt)
         {
@@ -103,6 +102,9 @@ public class AIController : MonoBehaviour
                 {
                     waitToEat -= Time.deltaTime;
                     //Play eat/drink animation
+                    //Might have a bug here -Nick
+                    anim.SetTrigger("Action");
+                    anim.SetTrigger("Eating");
                     if (waitToEat <= 0)
                     {
                         waitToEat = eatingTimer;
@@ -115,6 +117,9 @@ public class AIController : MonoBehaviour
                 {
                     waitToEat -= Time.deltaTime;
                     //Play eat/drink animation
+                    //Might have a bug here -Nick
+                    anim.SetTrigger("Action");
+                    anim.SetTrigger("Eating");
                     if (waitToEat <= 0)
                     {
                         waitToEat = eatingTimer;
@@ -127,6 +132,9 @@ public class AIController : MonoBehaviour
                 {
                     waitToEat -= Time.deltaTime;
                     //Play eat/drink animation
+                    //Might have a bug here -Nick
+                    anim.SetTrigger("Action");
+                    anim.SetTrigger("Eating");
                     if (waitToEat <= 0)
                     {
                         currentThirst += increaseThirstBy;
@@ -139,6 +147,8 @@ public class AIController : MonoBehaviour
                     if(waitToAttack <= 0)
                     {
                         //Play attack animation
+                        anim.SetTrigger("Action");
+                        anim.SetTrigger("Attack");
                         agent.SetDestination(transform.position); //Set to wait at position
                         if (target.GetComponent<Health>() != null)
                         {
@@ -146,6 +156,8 @@ public class AIController : MonoBehaviour
                         }
                         waitToAttack = attackTimer;
                         //after attack animation ends move again and play the movement animation
+                        anim.SetBool("Movement", true);
+                        anim.SetBool("Running", true);
                     }
                 }
             }
@@ -282,6 +294,8 @@ public class AIController : MonoBehaviour
                 agent.SetDestination(randomPoint);
                 waitToWander = waitTimer;
                 //Play walk animation
+                anim.SetBool("Movement", true);
+                anim.SetBool("Running", true);
             }
         }
 
@@ -298,6 +312,8 @@ public class AIController : MonoBehaviour
         {
             agent.SetDestination(transform.position);
             //play idle animation
+            anim.SetBool("Running", false);
+            anim.SetBool("Movement", false);
             //print(transform.name + " has stopped!");
         }
     }

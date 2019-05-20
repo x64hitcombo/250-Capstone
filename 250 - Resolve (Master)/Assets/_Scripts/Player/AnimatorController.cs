@@ -120,6 +120,43 @@ public class AnimatorController : MonoBehaviour
         gameObject.transform.position = playerPos.transform.position;
     }
 
+    public void Attack()
+    {
+        playerController.movement = false;
+        anim.SetBool("action", true);
+        anim.SetTrigger("attack");
+        action = true;
+    }
+
+    public void Fire(int stage)
+    {
+        if (stage == 1)
+        {
+            anim.SetBool("action", true);
+            anim.SetTrigger("aim");
+        }
+        else if (stage == 2)
+        {
+            anim.SetTrigger("fire");
+        }
+        else if (stage == 3)
+        {
+            anim.SetTrigger("cancelAim");
+        }
+    }
+
+    public void AimActionOff()
+    {
+        anim.SetBool("action", false);
+    }
+
+    public void AimActionOn()
+    {
+
+    }
+
+
+
 
 
 }
