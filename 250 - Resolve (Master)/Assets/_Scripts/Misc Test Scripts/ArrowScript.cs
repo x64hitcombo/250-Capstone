@@ -19,7 +19,7 @@ public class ArrowScript : MonoBehaviour {
     {
         if (arrowLoosed == true)
         {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
 
         if(arrowEmbedded == true)
@@ -31,8 +31,15 @@ public class ArrowScript : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        transform.parent = other.transform;
-        Embed();
+        if (arrowLoosed)
+        {
+            if(other.tag == "Enemy")
+            {
+                transform.parent = other.transform;
+                Embed();
+            }
+
+        }
     }
 
     public void ApplyForce()
