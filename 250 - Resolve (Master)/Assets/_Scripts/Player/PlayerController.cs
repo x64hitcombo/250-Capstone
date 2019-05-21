@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
 
     private int shotStage = 0;
 
+    public bool meleeAtk = true;
+
     private void Awake()
     {
         charCont = GetComponent<CharacterController>();

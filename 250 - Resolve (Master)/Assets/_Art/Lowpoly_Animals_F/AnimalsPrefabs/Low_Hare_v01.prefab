@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 2051599323199292189}
   m_Layer: 0
   m_Name: Low_Hare_v01
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -666,6 +666,7 @@ Transform:
   m_Children:
   - {fileID: 4452907261031494}
   - {fileID: 4738462315686394}
+  - {fileID: 6756889622844725552}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -709,6 +710,7 @@ MonoBehaviour:
   minThirstSearch: 50
   distanceFromPlayerHunt: 10
   distanceFromBait: 10
+  distanceToStop: 2
   maxDistanceFromHome: 50
   wanderRange: 10
   eatingTimer: 5
@@ -720,6 +722,7 @@ MonoBehaviour:
   currentTimer: 0
   currentHunger: 0
   currentThirst: 0
+  health: 0
 --- !u!195 &2103432111
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1790,3 +1793,60 @@ Transform:
   m_Father: {fileID: 4218588252141666}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7712674041738422184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6756889622844725552}
+  - component: {fileID: 8273100447872266449}
+  - component: {fileID: 6429892404838994026}
+  m_Layer: 0
+  m_Name: HitBox
+  m_TagString: Hitbox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6756889622844725552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7712674041738422184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.729, z: 0.038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4309290571700296}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8273100447872266449
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7712674041738422184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14, y: 1.48, z: 0.42}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6429892404838994026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7712674041738422184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174893378068bb04a87bb5c99fafd9db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

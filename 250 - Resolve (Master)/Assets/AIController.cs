@@ -55,6 +55,11 @@ public class AIController : MonoBehaviour
     private Animator anim;
     private Vector3 lastPosition;
 
+    #region Health Variables
+    [SerializeField]
+    private int health = 0;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -317,4 +322,31 @@ public class AIController : MonoBehaviour
             //print(transform.name + " has stopped!");
         }
     }
+    #region Health Functions
+    public void TakeDamage(int damage)
+    {
+        health = health - damage;
+        React();
+    }
+    public void React()
+    {
+        if (health > 0) Hit();
+        else if (health <= 0) Die();
+    }
+
+    public void Hit()
+    {
+        //Not in use -Nick
+    }
+
+    public void Die()
+    {
+        if (gameObject.tag == "Animal")
+        {
+            anim.SetTrigger("Action");
+            anim.SetBool("Dead", true);
+        }
+    }
+
+    #endregion
 }
