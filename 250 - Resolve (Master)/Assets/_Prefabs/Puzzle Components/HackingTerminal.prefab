@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2074812887}
   - component: {fileID: 2686977003441785356}
   - component: {fileID: 960922681808756015}
+  - component: {fileID: 3998304148010132365}
   m_Layer: 0
   m_Name: HackingTerminal
   m_TagString: Untagged
@@ -125,6 +126,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   confirm: 0
   ogTrans: {x: 0, y: 0, z: 0}
+--- !u!135 &3998304148010132365
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074812886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0.43285, z: 0}
 --- !u!1001 &352567662
 PrefabInstance:
   m_ObjectHideFlags: 0
