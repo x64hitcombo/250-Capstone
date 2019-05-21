@@ -32,99 +32,8 @@ Transform:
   - {fileID: 8725152708964033478}
   - {fileID: 8725152708257701120}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8725152708416022663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8725152708416022660}
-  - component: {fileID: 8725152708416022659}
-  - component: {fileID: 8725152708416022658}
-  - component: {fileID: 8725152708416022661}
-  m_Layer: 0
-  m_Name: East Tower
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8725152708416022660
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708416022663}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.149994, y: -105.81, z: 91.79999}
-  m_LocalScale: {x: 16, y: 18, z: 16}
-  m_Children: []
-  m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8725152708416022659
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708416022663}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8725152708416022658
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708416022663}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &8725152708416022661
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708416022663}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152708680348353
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +65,7 @@ Transform:
   m_LocalScale: {x: 7, y: 15, z: 7}
   m_Children: []
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8725152708680348365
 MeshFilter:
@@ -249,7 +158,7 @@ Transform:
   - {fileID: 8725152709089461841}
   - {fileID: 7026757094585602762}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152708856553820
 GameObject:
@@ -279,13 +188,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8725152708956416087}
-  - {fileID: 8725152708416022660}
   - {fileID: 8725152709172334978}
   - {fileID: 8725152709412108598}
   - {fileID: 8725152708145891485}
   - {fileID: 8725152709598933004}
-  - {fileID: 8725152708938684372}
   - {fileID: 8725152708680348366}
   - {fileID: 8725152708718152595}
   - {fileID: 8725152709602033523}
@@ -310,188 +216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsOnFloor: []
   onThisFloor: 0
---- !u!1 &8725152708938684375
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8725152708938684372}
-  - component: {fileID: 8725152708938684371}
-  - component: {fileID: 8725152708938684370}
-  - component: {fileID: 8725152708938684373}
-  m_Layer: 0
-  m_Name: West Walkway
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8725152708938684372
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708938684375}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -108, z: -5}
-  m_LocalScale: {x: 52, y: 1, z: 4}
-  m_Children: []
-  m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8725152708938684371
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708938684375}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8725152708938684370
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708938684375}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &8725152708938684373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708938684375}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &8725152708956416086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8725152708956416087}
-  - component: {fileID: 8725152708956416082}
-  - component: {fileID: 8725152708956416085}
-  - component: {fileID: 8725152708956416084}
-  m_Layer: 0
-  m_Name: West Tower
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8725152708956416087
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708956416086}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37, y: -107, z: -7}
-  m_LocalScale: {x: 16, y: 16, z: 16}
-  m_Children: []
-  m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8725152708956416082
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708956416086}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8725152708956416085
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708956416086}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &8725152708956416084
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725152708956416086}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152709172334981
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +248,7 @@ Transform:
   - {fileID: 8725152709378039656}
   - {fileID: 8725152708254050948}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &8725152709412108553
 GameObject:
@@ -557,7 +281,7 @@ Transform:
   - {fileID: 8725152709958992785}
   - {fileID: 8725152709935227499}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &8725152709433174721
 GameObject:
@@ -614,7 +338,7 @@ Transform:
   - {fileID: 8725152710044034413}
   - {fileID: 8725152709974733881}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152709598933007
 GameObject:
@@ -650,7 +374,7 @@ Transform:
   - {fileID: 8725152709569988620}
   - {fileID: 8725152708660413613}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152709602033522
 GameObject:
@@ -693,7 +417,7 @@ Transform:
   - {fileID: 8725152709599735327}
   - {fileID: 8725152708253397865}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152709723316292
 GameObject:
@@ -729,7 +453,7 @@ Transform:
   - {fileID: 8725152709004477042}
   - {fileID: 8725152708525910437}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152709853118080
 GameObject:
@@ -818,7 +542,7 @@ Transform:
   - {fileID: 8725152710119523001}
   - {fileID: 8725152708579024485}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8725152710152435435
 GameObject:
@@ -854,7 +578,7 @@ Transform:
   - {fileID: 8725152708512842563}
   - {fileID: 8725152709985237858}
   m_Father: {fileID: 8725152708856553821}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &8725152708079233768
 PrefabInstance:
@@ -989,11 +713,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152710103615246}
     m_Modifications:
-    - target: {fileID: 7754388696742971984, guid: 1e7c929573c21484d9e59e070aeaf165,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Entrance_Half_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1770467091369698036, guid: 1e7c929573c21484d9e59e070aeaf165,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1058,6 +777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754388696742971984, guid: 1e7c929573c21484d9e59e070aeaf165,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Entrance_Half_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 6269405292470995773, guid: 1e7c929573c21484d9e59e070aeaf165,
         type: 3}
@@ -1154,11 +878,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood) (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23
@@ -1210,6 +929,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood) (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -1447,11 +1171,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood) (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23
@@ -1503,6 +1222,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood) (6)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -1799,11 +1523,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709723316293}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -1847,6 +1566,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -2292,11 +2016,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood) (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -2340,6 +2059,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood) (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -2439,11 +2163,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152710103615246}
     m_Modifications:
-    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24
@@ -2487,6 +2206,11 @@ PrefabInstance:
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 4839295638857788538, guid: 37b750e60f254d942b9d1da67390e0e0,
         type: 3}
@@ -3345,11 +3069,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -3393,6 +3112,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -3555,11 +3279,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152708718152595}
     m_Modifications:
-    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Base (Wood) (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16
@@ -3611,6 +3330,11 @@ PrefabInstance:
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Base (Wood) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4839295638857788538, guid: 37b750e60f254d942b9d1da67390e0e0,
         type: 3}
@@ -3823,11 +3547,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 2255765708438655012, guid: a7bc9fe8a88f678478cfb222ab190950,
-        type: 3}
-      propertyPath: m_Name
-      value: Entrance_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 627287339, guid: a7bc9fe8a88f678478cfb222ab190950, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18
@@ -3879,6 +3598,11 @@ PrefabInstance:
     - target: {fileID: 627287339, guid: a7bc9fe8a88f678478cfb222ab190950, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255765708438655012, guid: a7bc9fe8a88f678478cfb222ab190950,
+        type: 3}
+      propertyPath: m_Name
+      value: Entrance_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 5363090798734892490, guid: a7bc9fe8a88f678478cfb222ab190950,
         type: 3}
@@ -3955,11 +3679,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood) (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23
@@ -4011,6 +3730,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -4340,11 +4064,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709723316293}
     m_Modifications:
-    - target: {fileID: 7611827360638178000, guid: 24b1a50fa7289a64ca17e8335b6357fd,
-        type: 3}
-      propertyPath: m_Name
-      value: Hallway_1Door_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 201746553, guid: 24b1a50fa7289a64ca17e8335b6357fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -4396,6 +4115,11 @@ PrefabInstance:
     - target: {fileID: 201746553, guid: 24b1a50fa7289a64ca17e8335b6357fd, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7611827360638178000, guid: 24b1a50fa7289a64ca17e8335b6357fd,
+        type: 3}
+      propertyPath: m_Name
+      value: Hallway_1Door_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 6842858717461329080, guid: 24b1a50fa7289a64ca17e8335b6357fd,
         type: 3}
@@ -4944,11 +4668,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152710103615246}
     m_Modifications:
-    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Base (Wood) (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44
@@ -4992,6 +4711,11 @@ PrefabInstance:
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Base (Wood) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4839295638857788538, guid: 37b750e60f254d942b9d1da67390e0e0,
         type: 3}
@@ -5078,11 +4802,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152710103615246}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44
@@ -5127,6 +4846,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood)
+      objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
       propertyPath: m_Mesh
@@ -5162,11 +4886,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152710103615246}
     m_Modifications:
-    - target: {fileID: 7754388696742971984, guid: 1e7c929573c21484d9e59e070aeaf165,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Entrance_Half_Base (Wood) (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1770467091369698036, guid: 1e7c929573c21484d9e59e070aeaf165,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5231,6 +4950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754388696742971984, guid: 1e7c929573c21484d9e59e070aeaf165,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Entrance_Half_Base (Wood) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6269405292470995773, guid: 1e7c929573c21484d9e59e070aeaf165,
         type: 3}
@@ -5557,11 +5281,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152708718152595}
     m_Modifications:
-    - target: {fileID: 7754388696742971984, guid: 1e7c929573c21484d9e59e070aeaf165,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Entrance_Half_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1770467091369698036, guid: 1e7c929573c21484d9e59e070aeaf165,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5626,6 +5345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754388696742971984, guid: 1e7c929573c21484d9e59e070aeaf165,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Entrance_Half_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 6269405292470995773, guid: 1e7c929573c21484d9e59e070aeaf165,
         type: 3}
@@ -5722,11 +5446,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709723316293}
     m_Modifications:
-    - target: {fileID: 6313151540443663779, guid: de432a80600a36b4ca9e4b1e391e65de,
-        type: 3}
-      propertyPath: m_Name
-      value: Hallway_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1339476457, guid: de432a80600a36b4ca9e4b1e391e65de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19
@@ -5778,6 +5497,11 @@ PrefabInstance:
     - target: {fileID: 1339476457, guid: de432a80600a36b4ca9e4b1e391e65de, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313151540443663779, guid: de432a80600a36b4ca9e4b1e391e65de,
+        type: 3}
+      propertyPath: m_Name
+      value: Hallway_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 425994116910519745, guid: de432a80600a36b4ca9e4b1e391e65de,
         type: 3}
@@ -6015,11 +5739,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood) (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -6063,6 +5782,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood) (7)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -6203,11 +5927,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood) (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23
@@ -6260,6 +5979,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood) (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
       propertyPath: m_Mesh
@@ -6295,11 +6019,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152708718152595}
     m_Modifications:
-    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Base (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.031525
@@ -6343,6 +6062,11 @@ PrefabInstance:
     - target: {fileID: 1676985374, guid: 37b750e60f254d942b9d1da67390e0e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976050989758436411, guid: 37b750e60f254d942b9d1da67390e0e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Base (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 4839295638857788538, guid: 37b750e60f254d942b9d1da67390e0e0,
         type: 3}
@@ -6567,10 +6291,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709433174734}
     m_Modifications:
-    - target: {fileID: 192000, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
-      propertyPath: m_Name
-      value: Shed 1
-      objectReference: {fileID: 0}
     - target: {fileID: 403306, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41
@@ -6615,6 +6335,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 192000, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
+      propertyPath: m_Name
+      value: Shed 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
 --- !u!4 &8725152709907489745 stripped
@@ -6630,11 +6354,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152708718152595}
     m_Modifications:
-    - target: {fileID: 2718110156095623994, guid: 22baaacf027ae0b4e97597e22ea16e25,
-        type: 3}
-      propertyPath: m_Name
-      value: Corner_Entrance_Half_Base2 (Wood)
-      objectReference: {fileID: 0}
     - target: {fileID: 1366284141, guid: 22baaacf027ae0b4e97597e22ea16e25, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.0316772
@@ -6678,6 +6397,11 @@ PrefabInstance:
     - target: {fileID: 1366284141, guid: 22baaacf027ae0b4e97597e22ea16e25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718110156095623994, guid: 22baaacf027ae0b4e97597e22ea16e25,
+        type: 3}
+      propertyPath: m_Name
+      value: Corner_Entrance_Half_Base2 (Wood)
       objectReference: {fileID: 0}
     - target: {fileID: 906422927860807249, guid: 22baaacf027ae0b4e97597e22ea16e25,
         type: 3}
@@ -6849,11 +6573,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709602033523}
     m_Modifications:
-    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Small_Wall_Base (Wood) (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -6897,6 +6616,11 @@ PrefabInstance:
     - target: {fileID: 1470244948, guid: 71a09710374e8d84fa76c4d14fbc05aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196772995596392365, guid: 71a09710374e8d84fa76c4d14fbc05aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Small_Wall_Base (Wood) (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4721477028031455285, guid: 71a09710374e8d84fa76c4d14fbc05aa,
         type: 3}
@@ -7490,10 +7214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8725152709433174734}
     m_Modifications:
-    - target: {fileID: 192000, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
-      propertyPath: m_Name
-      value: Shed 2
-      objectReference: {fileID: 0}
     - target: {fileID: 403306, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41
@@ -7537,6 +7257,10 @@ PrefabInstance:
     - target: {fileID: 403306, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192000, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
+      propertyPath: m_Name
+      value: Shed 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d1b68dab7390584b92a89130dfe1173, type: 3}
