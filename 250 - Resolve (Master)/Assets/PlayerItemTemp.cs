@@ -54,7 +54,7 @@ public class PlayerItemTemp : MonoBehaviour
 
     public void ChangeItemTemp()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (hot)
             {

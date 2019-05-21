@@ -155,9 +155,15 @@ public class HandleCamera : MonoBehaviour
 
         if (controllingObject && Input.GetKeyDown(KeyCode.LeftShift))
         {
-            controllingObject = false;
-            GetComponent<PlayerController>().enabled = true;
-            objectToControl.GetComponent<PsychicControlledMovement>().enabled = false;
+            if (Physics.Raycast(mousePos, out hit, 1000))
+            {
+                if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.tag == "ControlledObject")
+                {
+                    controllingObject = false;
+                    GetComponent<PlayerController>().enabled = true;
+                    objectToControl.GetComponent<PsychicControlledMovement>().enabled = false;
+                }
+            }
         }
     }
 
@@ -177,11 +183,22 @@ public class HandleCamera : MonoBehaviour
         
         if (linkedKineticObject)
         {
+            if (Input.GetKeyDown(KeyCode.E) && Vector3.Distance(linkedKineticObject.transform.position, transform.position) > 3)
+            {
+                Vector3.MoveTowards(linkedKineticObject.transform.position, transform.position, 3f);
+            }
+
             if (linkedKineticObject.GetComponent<KineticControlledMovement>().enabled && Input.GetKeyDown(KeyCode.LeftShift))
             {
-                linkedKineticObject.GetComponent<KineticControlledMovement>().enabled = false;
-                linkedKineticObject.GetComponent<Rigidbody>().useGravity = true;
-                linkedKineticObject = null;
+                if (Physics.Raycast(mousePos, out hit, 1000))
+                {
+                    if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.tag == "KineticObject")
+                    {
+                        linkedKineticObject.GetComponent<KineticControlledMovement>().enabled = false;
+                        linkedKineticObject.GetComponent<Rigidbody>().useGravity = true;
+                        linkedKineticObject = null;
+                    }
+                }
             }
         }
     }

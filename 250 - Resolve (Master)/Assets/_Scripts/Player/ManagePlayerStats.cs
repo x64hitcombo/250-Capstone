@@ -78,6 +78,8 @@ public class ManagePlayerStats : MonoBehaviour
         {
             currentExposure = 60;
         }
+
+        
     }
 
     public void ManageDecreaseOverTime()
