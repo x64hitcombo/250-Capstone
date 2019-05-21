@@ -41,12 +41,15 @@ public class TempBowScript : MonoBehaviour {
 
     void SpawnArrow()
     {
-        if(numberOfArrows > 0)
-        {
-            arrowSlotted = true;
-            arrow = Instantiate(arrowPrefab, transform.position, transform.rotation) as GameObject;
-            arrow.transform.parent = transform;
-        }
+        //if(numberOfArrows > 0)
+        //{
+        //    arrowSlotted = true;
+        //    arrow = Instantiate(arrowPrefab, transform.position, transform.rotation) as GameObject;
+        //    arrow.transform.parent = transform;
+        //}
+        arrowSlotted = true;
+        arrow = Instantiate(arrowPrefab, transform.position, transform.rotation) as GameObject;
+        arrow.transform.parent = transform;
     }
 
     IEnumerator Reload()

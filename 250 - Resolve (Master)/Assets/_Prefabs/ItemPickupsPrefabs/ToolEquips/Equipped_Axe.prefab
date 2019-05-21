@@ -54,7 +54,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4559979153214560959}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8, y: 2.5, z: 0.5}
@@ -66,6 +66,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4167377560299946168}
     m_Modifications:
+    - target: {fileID: 100000, guid: c0e023263d2c1674094011fee7dd62d1, type: 3}
+      propertyPath: m_Name
+      value: axe
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c0e023263d2c1674094011fee7dd62d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -121,10 +125,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: c0e023263d2c1674094011fee7dd62d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c0e023263d2c1674094011fee7dd62d1, type: 3}
-      propertyPath: m_Name
-      value: axe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0e023263d2c1674094011fee7dd62d1, type: 3}
