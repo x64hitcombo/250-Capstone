@@ -9,6 +9,8 @@ public class ArrowScript : MonoBehaviour {
     int destroyArrowTime = 3;
     bool arrowLoosed = false;
     bool arrowEmbedded = false;
+    [SerializeField]
+    private int damage = 0;
 
 	void Enable ()
     {
@@ -33,10 +35,11 @@ public class ArrowScript : MonoBehaviour {
     {
         if (arrowLoosed)
         {
-            if(other.tag == "Enemy")
+            if(other.tag == "Hitbox")
             {
-                transform.parent = other.transform;
-                Embed();
+                //transform.parent = other.transform;
+                other.GetComponent<HitBox>().Ouch(damage);
+                Destroy();
             }
 
         }
@@ -55,6 +58,11 @@ public class ArrowScript : MonoBehaviour {
         GetComponent<Collider>().enabled = false;
         arrowEmbedded = true;
         
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 
     private void OnBecameInvisible()
