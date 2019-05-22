@@ -138,27 +138,73 @@ public class AnimatorController : MonoBehaviour
         if (stage == 1)
         {
             anim.SetBool("action", true);
-            anim.SetTrigger("aim");
+            anim.SetBool("aim", true);
+
         }
         else if (stage == 2)
         {
-            anim.SetTrigger("fire");
+            anim.SetBool("fire", true);
         }
         else if (stage == 3)
         {
-            anim.SetTrigger("cancelAim");
+            anim.SetBool("fire", false);
+            //anim.SetBool("aim", false);
         }
     }
 
-    public void AimActionOff()
+    public void FireArrow()
+    {
+        playerController.fireArrow = true;
+        anim.SetBool("fire", false);
+        playerController.isAiming = false;
+    }
+
+    public void DisableArrow()
+    {
+        playerController.fireArrow = false;
+    }
+
+    public void EndAction()
     {
         anim.SetBool("action", false);
     }
 
-    public void AimActionOn()
+    public void CancelAim()
     {
-
+        anim.SetBool("CancelAim", true);
     }
+
+    public void ReadyToAim()
+    {
+        playerController.isAiming = false;
+        if (playerController.aimAction == true)
+        {
+            anim.SetBool("action", false);
+            playerController.aimAction = false;
+        }
+    }
+
+    public void FireCheck()
+    {
+        if(playerController.readyToFire == false)
+        {
+            anim.SetBool("aim", false);
+        }
+    }
+
+    public void AimDisable()
+    {
+        anim.SetBool("aim", false);
+        anim.SetBool("action", false);
+        playerController.movement = true;
+    }
+
+    public void StopAction()
+    {
+        anim.SetInteger("moveSpeed", 0);
+    }
+
+
 
 
 
