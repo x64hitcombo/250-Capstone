@@ -102,6 +102,11 @@ public class AnimatorController : MonoBehaviour
 
     }
 
+    public void StopDamage()
+    {
+        playerController.meleeAtk = false;
+    }
+
     public void GoToBed()
     {
         anim.SetBool("action", true);
