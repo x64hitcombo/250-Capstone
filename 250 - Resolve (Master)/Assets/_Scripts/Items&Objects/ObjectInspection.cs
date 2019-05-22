@@ -13,6 +13,11 @@ public class ObjectInspection : MonoBehaviour {
 
     public string playerTag = "Player";
     public string inspectString;
+
+    private void Start()
+    {
+        inspectUI = GameObject.FindGameObjectWithTag("NoteUI");
+    }
     public void OnTriggerEnter(Collider other)
     {
         playerView = true;

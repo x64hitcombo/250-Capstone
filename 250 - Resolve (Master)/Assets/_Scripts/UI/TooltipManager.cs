@@ -80,7 +80,16 @@ public class TooltipManager : MonoBehaviour {
                 tip.tipValue.color = target.valueColor;
             }
 
-                mShowTip();
+            else if (target.Type == TooltipTarget.InfoType.other)
+            {
+                tip.tipTitle.text = target.newTipTitle;
+                tip.tipDesc.text = target.newTipDesc;
+                tip.sprite.GetComponent<Image>().sprite = target.newTipIcon;
+                tip.tipDesc.text = target.newTipDesc;
+
+            }
+
+            mShowTip();
             }
         }
 

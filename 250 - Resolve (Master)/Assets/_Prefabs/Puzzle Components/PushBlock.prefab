@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 673474495159386214}
   - component: {fileID: 5705216040861970299}
   - component: {fileID: 1185868864959441083}
-  - component: {fileID: 4080030869047085275}
   m_Layer: 0
   m_Name: PushBlock
   m_TagString: Pushable
@@ -123,20 +122,6 @@ MonoBehaviour:
   flashTime: 0
   flashMat: {fileID: 0}
   flashMesh: {fileID: 0}
---- !u!114 &4080030869047085275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673474495159386215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775503a9ab5329a4fb53bd864abf2302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 4
-  mainCamera: {fileID: 0}
 --- !u!1 &6143308539035402243
 GameObject:
   m_ObjectHideFlags: 0
