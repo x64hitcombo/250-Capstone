@@ -42,9 +42,16 @@ public class PlayerController : MonoBehaviour
     public float attackRate = 3f;
     private float nextAttack = 0.0f;
 
-    private int shotStage = 0;
-
+    [HideInInspector]
     public bool meleeAtk = false;
+    [HideInInspector]
+    public bool fireArrow = false;
+    [HideInInspector]
+    public bool readyToFire = false;
+    [HideInInspector]
+    public bool isAiming = false;
+    //[HideInInspector]
+    public bool aimAction = false;
 
     private void Awake()
     {
@@ -55,6 +62,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (readyToFire == true) movement = false;
+        else movement = true;
         if(movement == true)
         {
             AnimateMovement();
@@ -69,11 +78,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackRate;       
+                   
             Attack(1);
         }
         if (Input.GetButtonDown("Fire2")) Attack(2);
-        if (Input.GetButtonUp("Fire2") && shotStage == 1) Attack(3);
+        if (Input.GetButtonUp("Fire2") && isAiming == true) Attack(3);
 
     }
 
@@ -162,30 +171,43 @@ public class PlayerController : MonoBehaviour
     {
         if (playerInventory.eqWeapon && stage == 1)
         {
+            nextAttack = Time.time + attackRate;
             anim.Attack();
             meleeAtk = true;
+            return;
         }
         else if (playerInventory.eqBow && stage == 2)
         {
-            shotStage = 1;
-            anim.Fire(1);
+            if(isAiming == false)
+            {
+                anim.StopAction();
+                anim.Fire(1);
+                readyToFire = true;
+                isAiming = true;
+                aimAction = true;
+                return;
+            }
+            return;
         }
         else if (playerInventory.eqBow && stage == 1)
         {
-            shotStage = 0;
-            anim.Fire(2);
+            if(readyToFire == true)
+            {
+                nextAttack = Time.time + attackRate;
+                anim.Fire(2);
+                return;
+            }
         }
         else if (stage == 3)
         {
-            shotStage = 0;
             anim.Fire(3);
+            readyToFire = false;
+            anim.FireCheck();
+            anim.DisableArrow();
+            anim.ReadyToAim();
+            return;
         }
     }
-
-
-
-
-
 
     private void OnTriggerEnter(Collider other)
     {
