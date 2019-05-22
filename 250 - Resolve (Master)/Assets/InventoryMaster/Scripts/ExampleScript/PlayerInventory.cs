@@ -317,7 +317,7 @@ public class PlayerInventory : MonoBehaviour
             if (handL.transform.GetChild(0).gameObject.name == "Equipped_TempTool(Clone)")
                 eqTemp = true;
             else
-                eqTemp = false;
+                eqMind = false;
             if (handL.transform.GetChild(0).gameObject.name == "Equipped_(Clone)")
                 eqMind = true;
             else
@@ -326,6 +326,22 @@ public class PlayerInventory : MonoBehaviour
                 eqBow = true;
             else
                 eqBow = false;
+        }
+
+        if (handR.transform.childCount == 0)
+        {
+            eqWeapon = false;
+            eqTorch = false;
+
+        }
+
+        if (handL.transform.childCount == 0)
+        {
+            eqBow = false;
+            eqMind = false;
+            eqMind = false;
+            eqGrav = false;
+
         }
 
     }
