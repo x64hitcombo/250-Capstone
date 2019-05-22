@@ -1385,6 +1385,7 @@ Transform:
   m_Children:
   - {fileID: 4596126433254240}
   - {fileID: 4807795550434290}
+  - {fileID: 4848466741201262259}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1428,6 +1429,7 @@ MonoBehaviour:
   minThirstSearch: 50
   distanceFromPlayerHunt: 10
   distanceFromBait: 10
+  distanceToStop: 2
   maxDistanceFromHome: 50
   wanderRange: 10
   eatingTimer: 5
@@ -1439,6 +1441,7 @@ MonoBehaviour:
   currentTimer: 0
   currentHunger: 0
   currentThirst: 0
+  health: 15
 --- !u!195 &1363321238
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1603,3 +1606,60 @@ Transform:
   m_Father: {fileID: 4028331304635300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1803971131336165765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4848466741201262259}
+  - component: {fileID: 3591641830252908830}
+  - component: {fileID: 7844291881491705534}
+  m_Layer: 0
+  m_Name: HitBox
+  m_TagString: Hitbox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4848466741201262259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803971131336165765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.508, z: 0.319}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4888045419233748}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3591641830252908830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803971131336165765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.01, y: 2.78, z: 2.54}
+  m_Center: {x: 0, y: -0.13, z: 0}
+--- !u!114 &7844291881491705534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803971131336165765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174893378068bb04a87bb5c99fafd9db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

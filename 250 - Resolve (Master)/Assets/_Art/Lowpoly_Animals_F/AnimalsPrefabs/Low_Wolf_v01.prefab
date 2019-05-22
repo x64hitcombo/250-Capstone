@@ -1588,7 +1588,7 @@ GameObject:
   - component: {fileID: 2170476500565877560}
   m_Layer: 0
   m_Name: Low_Wolf_v01
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1602,11 +1602,12 @@ Transform:
   m_GameObject: {fileID: 1738168248210958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2.2314346, y: 2.2314346, z: 2.2314346}
   m_Children:
   - {fileID: 4209734638848592}
   - {fileID: 4557214776932408}
   - {fileID: 4763775500263836}
+  - {fileID: 4792957786341548753}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1672,6 +1673,7 @@ MonoBehaviour:
   minThirstSearch: 50
   distanceFromPlayerHunt: 10
   distanceFromBait: 10
+  distanceToStop: 2
   maxDistanceFromHome: 50
   wanderRange: 10
   eatingTimer: 5
@@ -1683,6 +1685,7 @@ MonoBehaviour:
   currentTimer: 0
   currentHunger: 0
   currentThirst: 0
+  health: 15
 --- !u!95 &2170476500565877560
 Animator:
   serializedVersion: 3
@@ -2204,3 +2207,60 @@ Transform:
   m_Father: {fileID: 4810104208498368}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 46.56994, y: 8.838934, z: 13.3943615}
+--- !u!1 &1679977827496969892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4792957786341548753}
+  - component: {fileID: 2301204290510459850}
+  - component: {fileID: 3370528311602648904}
+  m_Layer: 0
+  m_Name: Hitbox
+  m_TagString: Hitbox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4792957786341548753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679977827496969892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.489, z: 0.063}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4542711982094802}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2301204290510459850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679977827496969892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35, y: 1.03, z: 1.48}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3370528311602648904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679977827496969892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174893378068bb04a87bb5c99fafd9db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

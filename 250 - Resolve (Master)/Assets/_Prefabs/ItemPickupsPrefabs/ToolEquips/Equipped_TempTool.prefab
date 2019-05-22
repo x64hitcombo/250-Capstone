@@ -315,7 +315,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1353118400888217092}
-  - component: {fileID: 5921860551058144046}
   m_Layer: 0
   m_Name: Equipped_TempTool
   m_TagString: HurtBox
@@ -341,16 +340,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: -60.000004}
---- !u!114 &5921860551058144046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8339529332509045571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5f32442effe214b903c8a2b5618992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
