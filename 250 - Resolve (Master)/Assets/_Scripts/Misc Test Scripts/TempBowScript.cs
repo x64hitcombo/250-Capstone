@@ -18,7 +18,7 @@ public class TempBowScript : MonoBehaviour {
 
     public void Awake()
     {
-        playerController = transform.Find("/!PlayerManager/PlayerController").GetComponent<PlayerController>();
+        playerController = GameObject.Find("PlayerController 1").GetComponent<PlayerController>();
     }
 
     void Start ()
