@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     public float baseMovementSpeed;
     public bool movement = true;
 
-    public bool melee = false;
 
     AnimatorController anim;
     PlayerInventory playerInventory;
@@ -45,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     private int shotStage = 0;
 
-    public bool meleeAtk = true;
+    public bool meleeAtk = false;
 
     private void Awake()
     {
@@ -161,7 +160,11 @@ public class PlayerController : MonoBehaviour
 
     void Attack(int stage)
     {
-        if (playerInventory.eqWeapon && stage == 1) anim.Attack();
+        if (playerInventory.eqWeapon && stage == 1)
+        {
+            anim.Attack();
+            meleeAtk = true;
+        }
         else if (playerInventory.eqBow && stage == 2)
         {
             shotStage = 1;

@@ -8,22 +8,39 @@ public class Hurtbox : MonoBehaviour {
 
     public int damage;
     PlayerController playerController;
+    private int touchedC = 0;
 
     public void Awake()
     {
-        playerController = GameObject.Find("/!PlayerController/PlayerController").GetComponent<PlayerController>();
+        playerController = transform.Find("/!PlayerManager/PlayerController").GetComponent<PlayerController>();
     }
 
     private void Start()
     {
-        //this.gameObject.tag = "Hurtbox";
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Hitbox")
+         if (other.tag == "Hitbox" && playerController.meleeAtk == true)
+         {
+            if (touchedC == 0)
+            {
+                Debug.Log("What up duck");
+                other.gameObject.GetComponent<HitBox>().Ouch(damage);
+                touchedC = 1;
+            }
+                
+         }
+       
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        if(touchedC == 1)
         {
-            other.gameObject.GetComponent<HitBox>().Ouch(damage);
+            touchedC = 0;
         }
     }
 }

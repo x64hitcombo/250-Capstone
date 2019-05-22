@@ -58,6 +58,7 @@ public class AIController : MonoBehaviour
     #region Health Variables
     [SerializeField]
     private int health = 0;
+    private bool alive = true;
     #endregion
 
     // Start is called before the first frame update
@@ -82,87 +83,90 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FindTarget();
-        if (target == null)
+        if (alive == true)
         {
-            Wandering();
-        }
-        else if (target != null && Vector3.Distance(homeSpawner.position, target.position) <= maxDistanceFromHome)
-        {
-            agent.SetDestination(target.position);
-            //Move Animation
-            anim.SetBool("Movement", true);
-            anim.SetBool("Running", true);
-        }
-        else if (!hunting && Vector3.Distance(gameObject.transform.position, player.transform.position) > distanceFromPlayerHunt)
-        {
-            Wandering();
-        }
-
-        if (agent.remainingDistance <= agent.stoppingDistance)
-        {
-            if (target != null)
+            FindTarget();
+            if (target == null)
             {
-                if (target.tag == "Bait")
+                Wandering();
+            }
+            else if (target != null && Vector3.Distance(homeSpawner.position, target.position) <= maxDistanceFromHome)
+            {
+                agent.SetDestination(target.position);
+                //Move Animation
+                anim.SetBool("Movement", true);
+                anim.SetBool("Running", true);
+            }
+            else if (!hunting && Vector3.Distance(gameObject.transform.position, player.transform.position) > distanceFromPlayerHunt)
+            {
+                Wandering();
+            }
+
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                if (target != null)
                 {
-                    waitToEat -= Time.deltaTime;
-                    //Play eat/drink animation
-                    //Might have a bug here -Nick
-                    anim.SetTrigger("Action");
-                    anim.SetTrigger("Eating");
-                    if (waitToEat <= 0)
+                    if (target.tag == "Bait")
                     {
-                        waitToEat = eatingTimer;
-                        Destroy(target.gameObject);
-                        target = null;
-                        hunting = false;
-                    }
-                }
-                else if (target.tag == "AnimalFood")
-                {
-                    waitToEat -= Time.deltaTime;
-                    //Play eat/drink animation
-                    //Might have a bug here -Nick
-                    anim.SetTrigger("Action");
-                    anim.SetTrigger("Eating");
-                    if (waitToEat <= 0)
-                    {
-                        waitToEat = eatingTimer;
-                        currentHunger += increaseHungerBy;
-                        target = null;
-                        hunting = false;
-                    }
-                }
-                else if (target.tag == "AnimalDrink")
-                {
-                    waitToEat -= Time.deltaTime;
-                    //Play eat/drink animation
-                    //Might have a bug here -Nick
-                    anim.SetTrigger("Action");
-                    anim.SetTrigger("Eating");
-                    if (waitToEat <= 0)
-                    {
-                        currentThirst += increaseThirstBy;
-                        target = null;
-                        hunting = false;
-                    }
-                }
-                else if (target.tag == "Player")
-                {
-                    if(waitToAttack <= 0)
-                    {
-                        //Play attack animation
+                        waitToEat -= Time.deltaTime;
+                        //Play eat/drink animation
+                        //Might have a bug here -Nick
                         anim.SetTrigger("Action");
-                        anim.SetTrigger("Attack");
-                        agent.SetDestination(transform.position); //Set to wait at position
-                        if (target.GetComponent<Health>() != null)
+                        anim.SetTrigger("Eating");
+                        if (waitToEat <= 0)
                         {
-                            target.GetComponent<Health>().curHealth -= damageDealt;
+                            waitToEat = eatingTimer;
+                            Destroy(target.gameObject);
+                            target = null;
+                            hunting = false;
                         }
-                        waitToAttack = attackTimer;
-                        //after attack animation ends move again and play the movement animation
-                        anim.SetBool("Movement", true);
-                        anim.SetBool("Running", true);
+                    }
+                    else if (target.tag == "AnimalFood")
+                    {
+                        waitToEat -= Time.deltaTime;
+                        //Play eat/drink animation
+                        //Might have a bug here -Nick
+                        anim.SetTrigger("Action");
+                        anim.SetTrigger("Eating");
+                        if (waitToEat <= 0)
+                        {
+                            waitToEat = eatingTimer;
+                            currentHunger += increaseHungerBy;
+                            target = null;
+                            hunting = false;
+                        }
+                    }
+                    else if (target.tag == "AnimalDrink")
+                    {
+                        waitToEat -= Time.deltaTime;
+                        //Play eat/drink animation
+                        //Might have a bug here -Nick
+                        anim.SetTrigger("Action");
+                        anim.SetTrigger("Eating");
+                        if (waitToEat <= 0)
+                        {
+                            currentThirst += increaseThirstBy;
+                            target = null;
+                            hunting = false;
+                        }
+                    }
+                    else if (target.tag == "Player")
+                    {
+                        if (waitToAttack <= 0)
+                        {
+                            //Play attack animation
+                            anim.SetTrigger("Action");
+                            anim.SetTrigger("Attack");
+                            agent.SetDestination(transform.position); //Set to wait at position
+                            if (target.GetComponent<Health>() != null)
+                            {
+                                target.GetComponent<Health>().curHealth -= damageDealt;
+                            }
+                            waitToAttack = attackTimer;
+                            //after attack animation ends move again and play the movement animation
+                            anim.SetBool("Movement", true);
+                            anim.SetBool("Running", true);
+                        }
                     }
                 }
             }
@@ -345,7 +349,14 @@ public class AIController : MonoBehaviour
         {
             anim.SetTrigger("Action");
             anim.SetBool("Dead", true);
+            alive = false;
+            SelfDestruct();
         }
+    }
+
+    private void SelfDestruct()
+    {
+        Destroy(gameObject, 10f);
     }
 
     #endregion
