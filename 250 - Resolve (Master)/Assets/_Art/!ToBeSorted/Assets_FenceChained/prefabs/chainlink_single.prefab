@@ -164,6 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012378391202}
   - component: {fileID: 205000010092046266}
+  - component: {fileID: 8575356608388163852}
   m_Layer: 0
   m_Name: chainlink_single
   m_TagString: Untagged
@@ -179,8 +180,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013955223658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4000012015980754}
   - {fileID: 4000011065470460}
@@ -210,3 +211,16 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23000012348044720}
   m_Enabled: 1
+--- !u!65 &8575356608388163852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013955223658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2, z: 0.5}
+  m_Center: {x: 0, y: 1, z: 0}
