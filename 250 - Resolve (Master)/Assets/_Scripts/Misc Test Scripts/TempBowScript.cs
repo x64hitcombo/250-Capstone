@@ -13,7 +13,15 @@ public class TempBowScript : MonoBehaviour {
     bool arrowSlotted = false;
     private bool isReloading = false;
     float arrowDraw = 0;
-	void Start ()
+
+    PlayerController playerController;
+
+    public void Awake()
+    {
+        playerController = GameObject.Find("PlayerController 1").GetComponent<PlayerController>();
+    }
+
+    void Start ()
     {
         SpawnArrow();
 	}
@@ -28,8 +36,9 @@ public class TempBowScript : MonoBehaviour {
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (playerController.fireArrow == true)
         {
+            Debug.Log("Dog!!!!!");
             arrow.GetComponent<ArrowScript>().ApplyForce();
             numberOfArrows--;
             StartCoroutine(Reload());

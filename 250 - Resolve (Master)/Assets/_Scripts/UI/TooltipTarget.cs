@@ -9,7 +9,8 @@ public class TooltipTarget : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public enum InfoType
     {
         invItem,
-        Survival
+        Survival,
+        other
     };
     public InfoType Type;
 

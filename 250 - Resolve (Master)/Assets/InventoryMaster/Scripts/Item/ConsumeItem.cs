@@ -24,7 +24,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
 
         if (GameObject.FindGameObjectWithTag("MainInventory") != null)
             mainInventory = GameObject.FindGameObjectWithTag("MainInventory");
-        anim = GameObject.Find("/!PlayerManager/PlayerController/CharacterMesh").GetComponent<AnimatorController>();
+        anim = GameObject.Find("PlayerController 1/CharacterMesh").GetComponent<AnimatorController>();
     }
 
     public void OnPointerDown(PointerEventData data)

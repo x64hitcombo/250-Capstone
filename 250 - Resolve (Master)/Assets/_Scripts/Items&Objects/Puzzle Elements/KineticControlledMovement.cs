@@ -10,7 +10,7 @@ public class KineticControlledMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
