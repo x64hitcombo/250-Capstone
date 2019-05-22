@@ -42,6 +42,8 @@ public class AIController : MonoBehaviour
 
     public float damageDealt = 5f;
 
+    public GameObject itemDrop;
+
     [SerializeField]
     private float currentTimer, currentHunger, currentThirst;
 
@@ -57,8 +59,8 @@ public class AIController : MonoBehaviour
 
     #region Health Variables
     [SerializeField]
-    private int health = 0;
-    private bool alive = true;
+    public int health = 0;
+    public bool alive = true;
     #endregion
 
     // Start is called before the first frame update
@@ -83,6 +85,11 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            Die();
+        }
+
         if (alive == true)
         {
             FindTarget();
@@ -92,6 +99,8 @@ public class AIController : MonoBehaviour
             }
             else if (target != null && Vector3.Distance(homeSpawner.position, target.position) <= maxDistanceFromHome)
             {
+
+                agent.isStopped = false;
                 agent.SetDestination(target.position);
                 //Move Animation
                 anim.SetBool("Movement", true);
@@ -164,8 +173,16 @@ public class AIController : MonoBehaviour
                             }
                             waitToAttack = attackTimer;
                             //after attack animation ends move again and play the movement animation
-                            anim.SetBool("Movement", true);
-                            anim.SetBool("Running", true);
+                            if (agent.remainingDistance > distanceToStop)
+                            {
+                                anim.SetBool("Movement", true);
+                                anim.SetBool("Running", true);
+                            }
+                            else
+                            {
+                                anim.SetBool("Movement", false);
+                                anim.SetBool("Running", false);
+                            }
                         }
                     }
                 }
@@ -300,6 +317,7 @@ public class AIController : MonoBehaviour
         {
             if (waitToWander <= 0)
             {
+                agent.isStopped = false;
                 agent.SetDestination(randomPoint);
                 waitToWander = waitTimer;
                 //Play walk animation
@@ -317,14 +335,15 @@ public class AIController : MonoBehaviour
             }
         }
 
-        if (agent.remainingDistance < distanceToStop)
+        if (agent.remainingDistance <= distanceToStop)
         {
-            agent.SetDestination(transform.position);
+            agent.isStopped = true;
             //play idle animation
             anim.SetBool("Running", false);
             anim.SetBool("Movement", false);
             //print(transform.name + " has stopped!");
         }
+
     }
     #region Health Functions
     public void TakeDamage(int damage)
@@ -349,6 +368,12 @@ public class AIController : MonoBehaviour
         {
             anim.SetTrigger("Action");
             anim.SetBool("Dead", true);
+            if (alive == true)
+            {
+                GameObject newItem = Instantiate(itemDrop);
+                newItem.transform.position = transform.position;
+                newItem.transform.localScale = transform.localScale / 2;
+            }
             alive = false;
             SelfDestruct();
         }
@@ -360,4 +385,13 @@ public class AIController : MonoBehaviour
     }
 
     #endregion
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Animal")
+        {
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
+        }
+    }
 }

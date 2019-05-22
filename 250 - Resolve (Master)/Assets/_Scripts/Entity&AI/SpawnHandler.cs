@@ -9,7 +9,7 @@ public class SpawnHandler : MonoBehaviour
 
     public bool canSpawnsAttack = false;
 
-    private float currentTimer;
+    private float currentTimer = 0;
     private float currentSpawn;
 
     public GameObject objectToSpawn;
@@ -19,7 +19,7 @@ public class SpawnHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTimer = spawnTimer;
+        //currentTimer = spawnTimer;
     }
 
     // Update is called once per frame
